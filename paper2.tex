@@ -170,41 +170,48 @@
 %\dochead{}
 %% Use \dochead if there is an article header, e.g. \dochead{Short communication}
 
-\title{Testing the Consistency of Performance Scores Reported for Binary Classification Problems}
+\title{Testing the Consistency of Performance Scores Reported for Multiclass Classification Problems}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{<author name>}
 %% \address[label1]{<address>}
 %% \address[label2]{<address>}
 
-\author[1]{Attila Fazekas} 
-\ead{attila.fazekas@inf.unideb.hu}
-
-\author[2]{Gy\"orgy Kov\'acs}
+\author[1]{Gy\"orgy Kov\'acs}
 \ead{gyuriofkovacs@gmail.com}
 
+\author[2]{Avi}
+\ead{avi@gmail.com}
 
-\affiliation[1]{organization={Faculty of Informatics, University of Debrecen},
-    addressline={Kassai út 26}, 
-    city={Debrecen},
-    postcode={4028}, 
-    country={Hungary}}
-\affiliation[2]{organization={Analytical Minds Ltd.},
+\author[3]{Attila Fazekas} 
+\ead{attila.fazekas@inf.unideb.hu}
+
+
+
+\affiliation[1]{organization={Analytical Minds Ltd.},
     addressline={Árpád út 5}, 
     city={Beregsurány},
     postcode={4933}, 
     country={Hungary}}
 
+\affiliation[2]{organization={Avi Ltd.},
+    addressline={Avi street 1}, 
+    city={Avi city},
+    postcode={4933}, 
+    country={US}}
+
+\affiliation[3]{organization={Faculty of Informatics, University of Debrecen},
+    addressline={Kassai út 26}, 
+    city={Debrecen},
+    postcode={4028}, 
+    country={Hungary}}
+
 \begin{abstract}
-{
-Binary classification is a fundamental task in machine learning, with applications across various scientific domains. Whether conducting fundamental research or refining practical applications, scientists typically assess and rank classification techniques based on performance metrics such as \emph{accuracy}, \emph{sensitivity}, and \emph{specificity}. However, reported performance scores may not always provide a reliable basis for research ranking. The unreliability can be attributed to undisclosed or unconventional practices related to cross-validation, typographical errors, and other factors.}
+Multi-class classification is a cornerstone of modern machine learning, with widespread applications across scientific and engineering domains. Whether exploring theoretical models or developing practical tools, researchers commonly evaluate and compare classification methods using metrics such as overall accuracy, macro-averaged F1 score, and per-class precision and recall. However, these reported performance metrics may not always provide a reliable basis for comparing research findings. Potential sources of unreliability include unreported methodological choices, misinterpretations of multi-class evaluation protocols, or typographical and computational errors.
 
-{
-In a given experimental setup with a specific number of positive and negative test items, performance scores can only assume specific, interrelated values. 
-Based on this observation, in this paper, we introduce numerical techniques to assess the consistency of reported performance scores with the assumed experimental setup. Importantly, the proposed approaches do not rely on statistical inference. Instead, they use numerical methods (interval computing and integer linear programming) to identify inconsistencies with certainty.} 
+In any given experimental setup—defined by a specific number of test samples per class—performance metrics are constrained to a finite and interdependent set of values. Leveraging this property, we propose numerical techniques to verify the internal consistency of reported multi-class classification metrics with their implied experimental configuration. These methods do not rely on statistical inference; instead, they employ numerical tools such as interval analysis and integer linear programming to deterministically identify inconsistencies.
 
-{
-Through three applications in different fields of medicine, we demonstrate how the proposed tests can detect inconsistencies, thereby safeguarding the integrity of research fields. The power analyses of the tests in these applications show at least 71\% of power when the performance scores are reported to four decimal places. In the investigated areas, the tests have so far identified inconsistencies in more than 100 scientific papers. To benefit the scientific community, we have made the consistency tests available in the open-source Python package \emph{mlscorecheck}.}
+We illustrate the utility of our approach through case studies in diverse medical imaging and diagnostic applications. The proposed consistency tests successfully reveal discrepancies in reported metrics, offering a practical tool for safeguarding the integrity of empirical research. Power analyses indicate that the tests achieve at least 71\% power when performance scores are reported with four decimal places. The tests have already identified inconsistencies in over 100 scientific publications. To support reproducible research practices, we have released our consistency checking tools as part of the open-source Python package mlscorecheck.
 
 \end{abstract}
 
@@ -238,37 +245,42 @@ consistency
 
 \section{Introduction}\label{section:Introduction}
 
-Recently, various authors have warned the scientific community about the so-called \emph{reproducibility crisis} in artificial intelligence and machine learning-based research \cite{leakage, reprcrisis, repr0, repr1}. The crisis is characterized by a significant body of research results that prove challenging to replicate through independent experiments or are built upon flawed evaluation methodologies. Among several reasons, notable ones include the absence of shared code \cite{leakage}, improper use of statistics \cite{leakage, staterrors}, 'cosmetic' adjustments of findings \cite{fabrication} and the presence of typographical errors in reported figures.
+Concerns over the \emph{reproducibility crisis} in artificial intelligence and machine learning research have been voiced repeatedly in recent years~\cite{leakage, reprcrisis, repr0, repr1}. A substantial fraction of published findings prove difficult to replicate or rest on questionable methodological foundations. The causes are diverse: missing or inaccessible source code~\cite{leakage}, inappropriate statistical methods~\cite{leakage, staterrors}, selective reporting or ``polishing'' of results~\cite{fabrication}, and inadvertent errors in tabulated metrics all contribute to the problem.
 
-To address the crisis, various recommendations have been proposed \cite{repr0, repr2} regarding the proper reporting of machine learning research results. Unfortunately, the adoption of these standards has been relatively slow, and they are unable to rectify existing issues in numerous fields.
-In practical terms, many domains within machine learning research operate as self-organized, ongoing competitions, with the primary goal of achieving the best outcomes for specific problems and datasets. Within these domains, research quality is often assessed solely based on reported performance scores, despite the proven difficulty of this task even under controlled circumstances \cite{ranking}. Consequently, addressing the reliability of reported performance scores becomes crucial. Once published, unrealistically high performance results can inadvertently validate flawed methodologies and may be amplified by the publication bias \cite{publicationbias}, ultimately distorting entire research fields.
-For example, recently, multiple authors reported nearly perfect predictive results for premature delivery in pregnancy based on electrohysterograms (EHG) \cite{ehgreview}. Subsequently, in \cite{ehg}, it was discovered that the overly optimistic results in 11 papers were due to systematic data leakage in the evaluation methodology.
+To mitigate these issues, several best-practice guidelines have been proposed for the transparent and rigorous reporting of machine learning experiments~\cite{repr0, repr2}. Yet despite growing awareness, adoption has been slow, and the existing literature remains replete with problematic results. In many subfields of machine learning, research advances are driven by informal benchmarking races, where algorithmic contributions are judged primarily by their reported performance on standard datasets. This dynamic reinforces a focus on numerical scores as the principal---or even sole---indicator of scientific merit. However, comparing performance scores is fraught with challenges, even when the evaluation protocol is fully specified~\cite{ranking}. Once published, inflated or implausible results can lend credibility to flawed procedures and, through citation and replication, propagate distortions across entire fields. Publication bias only exacerbates this effect~\cite{publicationbias}.
 
-In general, most meta-analyses \cite{metaresearch} related to reproducibility necessitate manual effort. One approach involves a thorough examination of the relevant papers, seeking deviations from the scientific method and best practices of statistics, as demonstrated in studies such as \cite{psychiatry}, \cite{csecurity}, and \cite{satellite}. Another approach entails attempting to replicate various results by re-implementing the techniques, as exemplified by the authors of the EHG report \cite{ehg}, which demands even more manual labor and becomes impractical at a larger scale.
-To facilitate meta-analysis, in this paper, we introduce numerical techniques to test the consistency of reported performance scores with the described experimental setups in binary classification.
+Traditional approaches to scrutinizing the reliability of published machine learning results typically involve painstaking manual effort. Analysts may review methodological details for signs of misapplied statistical logic or implementation flaws~\cite{psychiatry, csecurity, satellite}, or they may attempt to reproduce results from scratch---an approach that is both time-consuming and unscalable. In light of these limitations, there is a need for tools that enable automated or semi-automated validation of published metrics.
 
-Being one of the fundamental tasks in machine learning, binary classification \cite{mlbook} also suffers from the aforementioned problems, resulting in performance scores that are often incomparable or even irreproducible (for example, \cite{ehg, vessel}). In fundamental research and practical applications alike, binary classification performance is typically assessed by making predictions on a test set (often employing cross-validation schemes \cite{cv1}). Then, the confusion matrix \cite{scores} is constructed to tabulate the counts of correctly and incorrectly classified positive and negative instances. In practice, confusion matrices are rarely presented directly. Instead, these matrices are usually condensed into multiple scalar metrics (such as accuracy and F1-score \cite{scores}), often aggregated across multiple folds or different datasets. 
-Although there is ongoing research to identify the most suitable performance scores and evaluation methodologies for certain fields \cite{mccbetter, add1, add0}, typically, a multitude of scores is reported to quantify various aspects of predictive performance.
+In this paper, we propose numerical techniques for testing the internal consistency of performance scores reported in multi-class classification settings.
 
-Given the natural constraints imposed by the experimental setup on the confusion matrix (e.g., the sum of all entries must match the cardinality of the test set) and considering that the reported performance scores are interrelated (they cannot take arbitrary values independently), the question arises: \emph{Can the reported performance scores be the result of the experiment?} Mathematically, this question relates to the existence of at least one compatible confusion matrix that aligns with the experimental conditions and yields the reported performance scores. Additional complexity is introduced by rounding and potential aggregations. If the problem proves infeasible (there is no confusion matrix that fulfills all constraints), any attempts to reproduce the results are bound to fail. 
+Multi-class classification, a core task in supervised learning~\cite{mlbook}, is not immune to the reproducibility challenges observed in binary problems. Evaluation is typically performed by computing predictions over a labeled test set, often using cross-validation or resampling schemes~\cite{cv1}. From these predictions, a confusion matrix of size $C \times C$ is constructed, where $C$ denotes the number of classes. This matrix captures how often each true class was assigned to each predicted class. In published work, however, the full matrix is rarely presented. Instead, scalar metrics derived from it---such as overall accuracy, macro-averaged F1-score, or per-class recall---are reported, frequently averaged across folds or datasets~\cite{scores}.
 
-Earlier, a technique called \emph{DConfusion} was proposed in \cite{dconfusion} to reconstruct certain characteristics (but not the exact entries) of the confusion matrix from reported scores. \emph{DConfusion} was then effectively applied to various studies involving binary classification \cite{errorsml} to assess the validity of reported scores.
-Independently, in a previous paper of ours, we introduced a similar approach to estimate the exact number of pixels used for evaluating retinal vessel segmentation techniques \cite{vesselsegm}. Later on, refining the method, we developed a test sensitive enough to identify significant methodological inconsistencies in the evaluation of retinal vessel segmentation: Our analysis of over 100 papers concluded that the rankings of algorithms in the majority of studies are based on figures that cannot be compared directly \cite{vessel}, despite the authors using the same test set of images for evaluation. Drawing inspiration from the successful application of the concept, this paper generalizes the method and develops consistency tests for many commonly used performance scores and evaluation schemes in binary classification.
-The proposed approach differs from \emph{DConfusion} \cite{dconfusion} in several key ways: (a) while \emph{DConfusion} supports only a limited set of performance scores typically encountered in the field of software fault prediction systems, the proposed technique supports the majority of performance scores used in the literature; (b) \emph{DConfusion} neglects the impact of aggregations, whereas the proposed method addresses the aggregation of scores with mathematical rigor; (c) due to the omission of aggregations and the propagation of rounding errors, \emph{DConfusion} might produce false alarms of inconsistency, whereas the inconsistencies identified by the proposed technique are certain.
+Despite their prevalence, these metrics are not unconstrained: they are interdependent and bounded by the structure of the test data. For instance, the size of the confusion matrix is fixed by the number of test examples, and the scores themselves are mathematically tied to the counts in the matrix. This raises an important question: 
+\emph{Are the reported metrics consistent with any plausible confusion matrix under the described evaluation setup?} 
+Put differently, does there exist a confusion matrix---subject to known constraints such as test set size and score definitions---that could give rise to the published performance values? Complicating this question further are effects such as rounding and aggregation across multiple folds. If no such matrix can exist, then the result is necessarily flawed and cannot be reproduced under the assumed conditions.
 
-We emphasize that the proposed consistency tests are numerical rather than statistical; thus, type-I errors (false positives) cannot occur. In other words, inconsistencies are conclusively identified, implying that either the assumed experimental setup or the reported scores are incorrect. 
-As in statistical hypothesis testing, the probability of type-II errors (false negatives) depends on the specifics of the problem. However, as demonstrated in subsection \ref{sec:third}, it can reach 0\% in real applications.
-Due to their robustness and ease of use, we believe that the proposed techniques can serve as effective tools for meta-analysis and contribute to enhancing the reproducibility of machine learning-based science.
+In earlier work, tools such as \texttt{DConfusion}~\cite{dconfusion} have attempted to infer partial properties of confusion matrices from reported scores, primarily in binary settings. However, these tools offer limited score coverage and do not account for score aggregation or numerical precision effects, making them prone to overestimating inconsistency. Our previous research introduced exact inference techniques in binary contexts, highlighting how consistent scoring claims can be deterministically verified or falsified using constraint-based reasoning~\cite{vesselsegm, vessel}.
 
-The contributions of the paper to the field can be summarized as follows:
+Building on these insights, the present paper extends the consistency checking framework to the general multi-class case. Unlike prior approaches, our method handles a broad range of evaluation metrics, accommodates cross-fold averaging, and rigorously incorporates rounding effects and numerical tolerances. In doing so, we enable deterministic inconsistency detection that is both precise and broadly applicable.
+
+A key advantage of our method is that it is numerical rather than statistical. This means that the detection of an inconsistency implies a logical contradiction in the reported data---\emph{type-I errors (false positives) are impossible}. As in hypothesis testing, there may be false negatives depending on the setup, but we show that in real-world cases the power of the method is often high enough to detect subtle inconsistencies with certainty.
+
+We believe these techniques can serve as valuable tools for meta-research, enabling the community to audit published results and identify cases where evaluation procedures or numerical reporting may be flawed. This contributes to improving the transparency and reproducibility of multi-class classification studies in machine learning.
+
+\subsection*{Contributions}
+
+The main contributions of this work are:
 \begin{enumerate}
-\item For performance scores calculated directly from confusion matrices, we introduce a consistency test that supports 20 of the most commonly used performance scores (without synonyms and complements). We highlight that the test can be easily extended to accommodate further score functions.
-\item For experimental setups that involve the averaging of performance scores across dataset folds or multiple datasets, we propose a consistency test that supports four widely used scores: accuracy, sensitivity, specificity, and balanced accuracy.
-\item We illustrate the practical application of the proposed techniques in three real-world problems, showcasing its effectiveness in identifying research with flawed evaluation methodologies and unreliable performance scores. {Through power analyses we show that under mild circumstances, the proposed tests have more than 71\% power in these real applications.}
-\item To benefit the research community, we have released the proposed tests as part of the open-source Python package \verb|mlscorecheck| \cite{mlscorecheck}. This package is available in the standard PyPI repository or on GitHub at \url{https://github.com/FalseNegativeLab/mlscorecheck}.
+    \item We present a general-purpose consistency test for performance scores computed from multi-class confusion matrices, supporting over 20 commonly used evaluation metrics.
+    \item For scenarios involving score aggregation across folds or datasets, we extend our method to handle averaging schemes while accounting for rounding and interval tolerances.
+    \item We demonstrate how the method enables reliable meta-analysis by uncovering incompatible results in real-world use cases.
+    \item The implementation is made available through the open-source Python package \texttt{mlscorecheck}~\cite{mlscorecheck}, accessible via PyPI and GitHub: \url{https://github.com/FalseNegativeLab/mlscorecheck}.
 \end{enumerate}
 
-The paper is organized as follows: Section \ref{sec:problem} introduces the notations, the concept of binary classification, the performance scores, and outlines the problem of consistency testing. Sections \ref{sec:ind} and \ref{sec:agg} present the proposed techniques for various evaluation schemes and scores, and Section \ref{sec:applications} demonstrates how the techniques can be applied in practice. Finally, conclusions are drawn in Section \ref{sec:conclusions}.
+\subsection*{Paper Structure}
+
+The remainder of this paper is structured as follows. Section~\ref{sec:problem} introduces the notation, problem setup, and performance metrics used in multi-class evaluation. Sections~\ref{sec:ind} and~\ref{sec:agg} present our proposed consistency checking methods for individual and aggregated scores, respectively. Section~\ref{sec:applications} showcases their application in real-world contexts. Finally, Section~\ref{sec:conclusions} concludes the paper.
+
 
 \section{Problem formulation}
 \label{sec:problem}
