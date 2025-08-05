@@ -1,0 +1,593 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{leakage}
+S.~Kapoor, A.~Narayanan,
+  \href{https://www.cell.com/patterns/abstract/S2666-3899(23)00159-9}{Leakage
+  and the reproducibility crisis in machine-learning-based science},
+  PatternsPublisher: Elsevier (Aug. 2023).
+\newblock \href {https://doi.org/10.1016/j.patter.2023.100804}
+  {\path{doi:10.1016/j.patter.2023.100804}}.
+\newline\urlprefix\url{https://www.cell.com/patterns/abstract/S2666-3899(23)00159-9}
+
+\bibitem{reprcrisis}
+M.~Hutson, \href{https://doi.org/10.1126/science.359.6377.725}{Artificial
+  intelligence faces reproducibility crisis}, Science 359~(6377) (2018)
+  725--726.
+\newblock \href {https://doi.org/10.1126/science.359.6377.725}
+  {\path{doi:10.1126/science.359.6377.725}}.
+\newline\urlprefix\url{https://doi.org/10.1126/science.359.6377.725}
+
+\bibitem{repr0}
+M.~McDermott, S.~Wang, N.~Marinsek, R.~Ranganath, L.~Foschini, M.~Ghassemi,
+  Reproducibility in machine learning for health research: Still a ways to go,
+  Science Translational Medicine 13 (2021) eabb1655.
+\newblock \href {https://doi.org/10.1126/scitranslmed.abb1655}
+  {\path{doi:10.1126/scitranslmed.abb1655}}.
+
+\bibitem{repr1}
+B.~Haibe-Kains, G.~A. Adam, A.~Hosny, F.~Khodakarami, T.~Shraddha, R.~Kusko,
+  S.-A. Sansone, W.~Tong, R.~D. Wolfinger, C.~E. Mason, W.~Jones, J.~Dopazo,
+  C.~Furlanello, L.~Waldron, B.~Wang, C.~McIntosh, A.~Goldenberg, A.~Kundaje,
+  C.~S. Greene, T.~Broderick, M.~M. Hoffman, J.~T. Leek, K.~Korthauer,
+  W.~Huber, A.~Brazma, J.~Pineau, R.~Tibshirani, T.~Hastie, J.~P.~A. Ioannidis,
+  J.~Quackenbush, H.~J. W. L.~A. and,
+  \href{https://doi.org/10.1038/s41586-020-2766-y}{Transparency and
+  reproducibility in artificial intelligence}, Nature 586~(7829) (2020)
+  E14--E16.
+\newblock \href {https://doi.org/10.1038/s41586-020-2766-y}
+  {\path{doi:10.1038/s41586-020-2766-y}}.
+\newline\urlprefix\url{https://doi.org/10.1038/s41586-020-2766-y}
+
+\bibitem{staterrors}
+D.~Slutsky, \href{https://doi.org/10.1055/s-0033-1359421}{Statistical errors in
+  clinical studies}, Journal of Wrist Surgery 02~(04) (2013) 285--287.
+\newblock \href {https://doi.org/10.1055/s-0033-1359421}
+  {\path{doi:10.1055/s-0033-1359421}}.
+\newline\urlprefix\url{https://doi.org/10.1055/s-0033-1359421}
+
+\bibitem{fabrication}
+D.~Fanelli, \href{https://doi.org/10.1371/journal.pone.0005738}{How many
+  scientists fabricate and falsify research? a systematic review and
+  meta-analysis of survey data}, PLOS ONE 4~(5) (2009) 1--11.
+\newblock \href {https://doi.org/10.1371/journal.pone.0005738}
+  {\path{doi:10.1371/journal.pone.0005738}}.
+\newline\urlprefix\url{https://doi.org/10.1371/journal.pone.0005738}
+
+\bibitem{repr2}
+B.~J. Heil, M.~M. Hoffman, F.~Markowetz, S.-I. Lee, C.~S. Greene, S.~C. Hicks,
+  \href{https://doi.org/10.1038/s41592-021-01256-7}{Reproducibility standards
+  for machine learning in the life sciences}, Nature Methods 18~(10) (2021)
+  1132--1135.
+\newblock \href {https://doi.org/10.1038/s41592-021-01256-7}
+  {\path{doi:10.1038/s41592-021-01256-7}}.
+\newline\urlprefix\url{https://doi.org/10.1038/s41592-021-01256-7}
+
+\bibitem{ranking}
+L.~Maier-Hein, M.~Eisenmann, A.~Reinke, S.~Onogur, M.~Stankovic, P.~Scholz,
+  T.~Arbel, H.~Bogunovic, A.~P. Bradley, A.~Carass, C.~Feldmann, A.~F. Frangi,
+  P.~M. Full, B.~van Ginneken, A.~Hanbury, K.~Honauer, M.~Kozubek, B.~A.
+  Landman, K.~M\"{a}rz, O.~Maier, K.~Maier-Hein, B.~H. Menze, H.~M\"{u}ller,
+  P.~F. Neher, W.~Niessen, N.~Rajpoot, G.~C. Sharp, K.~Sirinukunwattana,
+  S.~Speidel, C.~Stock, D.~Stoyanov, A.~A. Taha, F.~van~der Sommen, C.-W. Wang,
+  M.-A. Weber, G.~Zheng, P.~Jannin, A.~Kopp-Schneider,
+  \href{https://doi.org/10.1038/s41467-018-07619-7}{Why rankings of biomedical
+  image analysis competitions should be interpreted with care}, Nature
+  Communications 9~(1) (Dec. 2018).
+\newblock \href {https://doi.org/10.1038/s41467-018-07619-7}
+  {\path{doi:10.1038/s41467-018-07619-7}}.
+\newline\urlprefix\url{https://doi.org/10.1038/s41467-018-07619-7}
+
+\bibitem{publicationbias}
+S.~B. Nissen, T.~Magidson, K.~Gross, C.~T. Bergstrom,
+  \href{https://doi.org/10.7554/elife.21451}{Publication bias and the
+  canonization of false facts}, {eLife} 5 (Dec. 2016).
+\newblock \href {https://doi.org/10.7554/elife.21451}
+  {\path{doi:10.7554/elife.21451}}.
+\newline\urlprefix\url{https://doi.org/10.7554/elife.21451}
+
+\bibitem{ehgreview}
+J.~Garcia-Casado, Y.~Ye-Lin, G.~Prats-Boluda, J.~Mas-Cabo, J.~Alberola-Rubio,
+  A.~Perales,
+  \href{https://doi.org/10.1088/1361-6579/aaad56}{Electrohysterography in the
+  diagnosis of preterm birth: a review}, Physiological Measurement 39~(2)
+  (2018) 02TR01.
+\newblock \href {https://doi.org/10.1088/1361-6579/aaad56}
+  {\path{doi:10.1088/1361-6579/aaad56}}.
+\newline\urlprefix\url{https://doi.org/10.1088/1361-6579/aaad56}
+
+\bibitem{ehg}
+G.~Vandewiele, I.~Dehaene, G.~Kov\'acs, L.~Sterckx, O.~Janssens, F.~Ongenae,
+  F.~D. Backere, F.~D. Turck, K.~Roelens, J.~Decruyenaere, S.~V. Hoecke,
+  T.~Demeester, Overly optimistic prediction results on imbalanced data: a case
+  study of flaws and benefits when applying over-sampling, Artificial
+  Intelligence in Medicine 111 (2021) 101987.
+\newblock \href {https://doi.org/10.1016/j.artmed.2020.101987}
+  {\path{doi:10.1016/j.artmed.2020.101987}}.
+
+\bibitem{metaresearch}
+J.~P.~A. Ioannidis, D.~Fanelli, D.~D. Dunne, S.~N. Goodman,
+  \href{https://doi.org/10.1371/journal.pbio.1002264}{Meta-research: Evaluation
+  and improvement of research methods and practices}, {PLOS} Biology 13~(10)
+  (2015) e1002264.
+\newblock \href {https://doi.org/10.1371/journal.pbio.1002264}
+  {\path{doi:10.1371/journal.pbio.1002264}}.
+\newline\urlprefix\url{https://doi.org/10.1371/journal.pbio.1002264}
+
+\bibitem{psychiatry}
+R.~A. Poldrack, G.~Huckins, G.~Varoquaux,
+  \href{https://doi.org/10.1001/jamapsychiatry.2019.3671}{Establishment of best
+  practices for evidence for prediction}, {JAMA} Psychiatry 77~(5) (2020) 534.
+\newblock \href {https://doi.org/10.1001/jamapsychiatry.2019.3671}
+  {\path{doi:10.1001/jamapsychiatry.2019.3671}}.
+\newline\urlprefix\url{https://doi.org/10.1001/jamapsychiatry.2019.3671}
+
+\bibitem{csecurity}
+D.~Arp, E.~Quiring, F.~Pendlebury, A.~Warnecke, F.~Pierazzi, C.~Wressnegger,
+  L.~Cavallaro, K.~Rieck,
+  \href{https://www.usenix.org/conference/usenixsecurity22/presentation/arp}{Dos
+  and don{\textquoteright}ts of machine learning in computer security}, in:
+  31st USENIX Security Symposium (USENIX Security 22), USENIX Association,
+  Boston, MA, 2022, pp. 3971--3988.
+\newline\urlprefix\url{https://www.usenix.org/conference/usenixsecurity22/presentation/arp}
+
+\bibitem{satellite}
+J.~Nalepa, M.~Myller, M.~Kawulok,
+  \href{https://doi.org/10.1109/lgrs.2019.2895697}{Validating hyperspectral
+  image segmentation}, {IEEE} Geoscience and Remote Sensing Letters 16~(8)
+  (2019) 1264--1268.
+\newblock \href {https://doi.org/10.1109/lgrs.2019.2895697}
+  {\path{doi:10.1109/lgrs.2019.2895697}}.
+\newline\urlprefix\url{https://doi.org/10.1109/lgrs.2019.2895697}
+
+\bibitem{mlbook}
+S.~Shalev-Shwartz, S.~Ben-David,
+  \href{https://doi.org/10.1017/cbo9781107298019}{Understanding Machine
+  Learning}, Cambridge University Press, 2014.
+\newblock \href {https://doi.org/10.1017/cbo9781107298019}
+  {\path{doi:10.1017/cbo9781107298019}}.
+\newline\urlprefix\url{https://doi.org/10.1017/cbo9781107298019}
+
+\bibitem{cv1}
+S.~Bates, T.~Hastie, R.~Tibshirani,
+  \href{https://doi.org/10.1080/01621459.2023.2197686}{Cross-validation: What
+  does it estimate and how well does it do it?}, Journal of the American
+  Statistical Association (2023) 1--12\href
+  {https://doi.org/10.1080/01621459.2023.2197686}
+  {\path{doi:10.1080/01621459.2023.2197686}}.
+\newline\urlprefix\url{https://doi.org/10.1080/01621459.2023.2197686}
+
+\bibitem{scores}
+A.~Tharwat, \href{https://doi.org/10.1016/j.aci.2018.08.003}{Classification
+  assessment methods}, Applied Computing and Informatics 17~(1) (2020)
+  168--192.
+\newblock \href {https://doi.org/10.1016/j.aci.2018.08.003}
+  {\path{doi:10.1016/j.aci.2018.08.003}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.aci.2018.08.003}
+
+\bibitem{dconfusion}
+D.~Bowes, T.~Hall, D.~Gray,
+  \href{https://doi.org/10.1007/s10515-013-0129-8}{{DConfusion}: a technique to
+  allow cross study performance evaluation of fault prediction studies},
+  Automated Software Engineering 21~(2) (2013) 287--313.
+\newblock \href {https://doi.org/10.1007/s10515-013-0129-8}
+  {\path{doi:10.1007/s10515-013-0129-8}}.
+\newline\urlprefix\url{https://doi.org/10.1007/s10515-013-0129-8}
+
+\bibitem{errorsml}
+M.~Shepperd, Y.~Guo, N.~Li, M.~Arzoky, A.~Capiluppi, S.~Counsell,
+  G.~Destefanis, S.~Swift, A.~Tucker, L.~Yousefi,
+  \href{https://doi.org/10.1007/978-3-030-33607-3_12}{The prevalence of errors
+  in machine learning experiments}, in: Intelligent Data Engineering and
+  Automated Learning {\textendash} {IDEAL} 2019, Springer International
+  Publishing, 2019, pp. 102--109.
+\newblock \href {https://doi.org/10.1007/978-3-030-33607-3_12}
+  {\path{doi:10.1007/978-3-030-33607-3_12}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-3-030-33607-3_12}
+
+\bibitem{vesselsegm}
+G.~Kov\'acs, A.~Hajdu, A self-calibrating approach for the segmentation of
+  retinal vessels by template matching and contour reconstruction, Medical
+  Image Analysis 29(4) (2016) 24--46.
+\newblock \href {https://doi.org/10.1016/j.media.2015.12.003}
+  {\path{doi:10.1016/j.media.2015.12.003}}.
+
+\bibitem{vessel}
+G.~Kov\'acs, A.~Fazekas, A new baseline for retinal vessel segmentation:
+  Numerical identification and correction of methodological inconsistencies
+  affecting 100+ papers, Medical Image Analysis 75 (2022) 102300.
+\newblock \href {https://doi.org/https://doi.org/10.1016/j.media.2021.102300}
+  {\path{doi:https://doi.org/10.1016/j.media.2021.102300}}.
+
+\bibitem{bayesclassifier}
+L.~Devroye, L.~Gy\"{o}rfi, G.~Lugosi,
+  \href{https://doi.org/10.1007/978-1-4612-0711-5}{A Probabilistic Theory of
+  Pattern Recognition}, Springer New York, 1996.
+\newblock \href {https://doi.org/10.1007/978-1-4612-0711-5}
+  {\path{doi:10.1007/978-1-4612-0711-5}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-1-4612-0711-5}
+
+\bibitem{segmentation}
+Y.~Wang, U.~Ahsan, H.~Li, M.~Hagen, \href{https://doi.org/10.1561/0600000097}{A
+  comprehensive review of modern object segmentation approaches}, Foundations
+  and Trends{\textregistered} in Computer Graphics and Vision 13~(2-3) (2022)
+  111--283.
+\newblock \href {https://doi.org/10.1561/0600000097}
+  {\path{doi:10.1561/0600000097}}.
+\newline\urlprefix\url{https://doi.org/10.1561/0600000097}
+
+\bibitem{binclasranking}
+M.~E. Shipe, S.~A. Deppen, F.~Farjah, E.~L. Grogan,
+  \href{https://doi.org/10.21037/jtd.2019.01.25}{Developing prediction models
+  for clinical use using logistic regression: an overview}, Journal of Thoracic
+  Disease 11~(S4) (2019) S574--S584.
+\newblock \href {https://doi.org/10.21037/jtd.2019.01.25}
+  {\path{doi:10.21037/jtd.2019.01.25}}.
+\newline\urlprefix\url{https://doi.org/10.21037/jtd.2019.01.25}
+
+\bibitem{aucsurvey}
+T.~Yang, Y.~Ying, \href{https://doi.org/10.1145/3554729}{Auc maximization in
+  the era of big data and ai: A survey}, ACM Comput. Surv. 55~(8) (dec 2022).
+\newblock \href {https://doi.org/10.1145/3554729} {\path{doi:10.1145/3554729}}.
+\newline\urlprefix\url{https://doi.org/10.1145/3554729}
+
+\bibitem{auc}
+T.~Hastie, R.~Tibshirani, J.~Friedman,
+  \href{https://doi.org/10.1007/978-0-387-84858-7}{The Elements of Statistical
+  Learning}, Springer New York, 2009.
+\newblock \href {https://doi.org/10.1007/978-0-387-84858-7}
+  {\path{doi:10.1007/978-0-387-84858-7}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-0-387-84858-7}
+
+\bibitem{dor}
+J.~A. Gallis, E.~L. Turner, \href{https://doi.org/10.5334/aogh.2581}{Relative
+  measures of association for binary outcomes: Challenges and recommendations
+  for the global health researcher}, Annals of Global Health 85~(1) (2019).
+\newblock \href {https://doi.org/10.5334/aogh.2581}
+  {\path{doi:10.5334/aogh.2581}}.
+\newline\urlprefix\url{https://doi.org/10.5334/aogh.2581}
+
+\bibitem{upm}
+A.~R. Redondo, J.~Navarro, R.~R. Fern{\'{a}}ndez, I.~M. de~Diego, J.~M.
+  Moguerza, J.~J. Fern{\'{a}}ndez-Mu{\~{n}}oz,
+  \href{https://doi.org/10.1007/978-3-030-62365-4_10}{Unified performance
+  measure for binary classification problems}, in: Lecture Notes in Computer
+  Science, Springer International Publishing, 2020, pp. 104--112.
+\newblock \href {https://doi.org/10.1007/978-3-030-62365-4_10}
+  {\path{doi:10.1007/978-3-030-62365-4_10}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-3-030-62365-4_10}
+
+\bibitem{fm}
+E.~B. Fowlkes, C.~L. Mallows,
+  \href{https://doi.org/10.1080/01621459.1983.10478008}{A method for comparing
+  two hierarchical clusterings}, Journal of the American Statistical
+  Association 78~(383) (1983) 553--569.
+\newblock \href {https://doi.org/10.1080/01621459.1983.10478008}
+  {\path{doi:10.1080/01621459.1983.10478008}}.
+\newline\urlprefix\url{https://doi.org/10.1080/01621459.1983.10478008}
+
+\bibitem{mkbm}
+D.~Powers, Evaluation: From precision, recall and f-factor to roc,
+  informedness, markedness \& correlation, Mach. Learn. Technol. 2 (01 2008).
+
+\bibitem{pt}
+J.~Balayla, Prevalence threshold (phi(e)) and the geometry of screening curves,
+  PLoS One 15~(10) (2020) e0240215.
+
+\bibitem{kappa}
+M.~L. McHugh, \href{https://doi.org/10.11613/bm.2012.031}{Interrater
+  reliability: the kappa statistic}, Biochemia Medica (2012) 276--282\href
+  {https://doi.org/10.11613/bm.2012.031} {\path{doi:10.11613/bm.2012.031}}.
+\newline\urlprefix\url{https://doi.org/10.11613/bm.2012.031}
+
+\bibitem{isic2016}
+D.~Gutman, N.~Codella, M.~E. Celebi, B.~Helba, M.~Marchetti, N.~K. Mishra,
+  A.~Halpern, Skin lesion analysis toward melanoma detection: A challenge at
+  the international symposium on biomedical imaging (isbi) 2016, hosted by the
+  international skin imaging collaboration (isic), arXiv:1605.01397 [cs.CV] (05
+  2016).
+
+\bibitem{interval}
+R.~E. Moore, Introduction to interval analysis, Society for Industrial and
+  Applied Mathematics, Philadelphia, PA, 2009.
+
+\bibitem{morex2}
+A.~Piryatinska, B.~Darkhovsky, A.~Kaplan,
+  \href{https://doi.org/10.1016/j.cmpb.2017.09.001}{Binary classification of
+  multichannel-{EEG} records based on the $\epsilon$-complexity of continuous
+  vector functions}, Computer Methods and Programs in Biomedicine 152 (2017)
+  131--139.
+\newblock \href {https://doi.org/10.1016/j.cmpb.2017.09.001}
+  {\path{doi:10.1016/j.cmpb.2017.09.001}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.cmpb.2017.09.001}
+
+\bibitem{morex0}
+A.~Occhipinti, L.~Rogers, C.~Angione,
+  \href{https://doi.org/10.1016/j.eswa.2022.117193}{A pipeline and comparative
+  study of 12 machine learning models for text classification}, Expert Systems
+  with Applications 201 (2022) 117193.
+\newblock \href {https://doi.org/10.1016/j.eswa.2022.117193}
+  {\path{doi:10.1016/j.eswa.2022.117193}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.eswa.2022.117193}
+
+\bibitem{romex0}
+R.~Kubinski, J.-Y. Djamen-Kepaou, T.~Zhanabaev, A.~Hernandez-Garcia, S.~Bauer,
+  F.~Hildebrand, T.~Korcsmaros, S.~Karam, P.~Jantchou, K.~Kafi, R.~D. Martin,
+  \href{https://doi.org/10.3389/fgene.2022.784397}{Benchmark of data processing
+  methods and machine learning models for gut microbiome-based diagnosis of
+  inflammatory bowel disease}, Frontiers in Genetics 13 (Feb. 2022).
+\newblock \href {https://doi.org/10.3389/fgene.2022.784397}
+  {\path{doi:10.3389/fgene.2022.784397}}.
+\newline\urlprefix\url{https://doi.org/10.3389/fgene.2022.784397}
+
+\bibitem{rommor}
+T.~Rao, Mean of ratios or ratio of means or both?, Journal of Statistical
+  Planning and Inference 102~(1) (2002) 129--138.
+\newblock \href {https://doi.org/https://doi.org/10.1016/S0378-3758(01)00181-1}
+  {\path{doi:https://doi.org/10.1016/S0378-3758(01)00181-1}}.
+
+\bibitem{rommor2}
+C.~Salas, T.~G. Gregoire,
+  \href{https://doi.org/10.1007/s10342-009-0277-3}{Statistical analysis of
+  ratio estimators and their estimators of variances when the auxiliary variate
+  is measured with error}, European Journal of Forest Research 129~(5) (2009)
+  847--861.
+\newblock \href {https://doi.org/10.1007/s10342-009-0277-3}
+  {\path{doi:10.1007/s10342-009-0277-3}}.
+\newline\urlprefix\url{https://doi.org/10.1007/s10342-009-0277-3}
+
+\bibitem{nfl}
+T.~Lattimore, M.~Hutter, \href{https://doi.org/10.1007/978-3-642-44958-1_17}{No
+  free lunch versus occam's razor in supervised learning}, in: Algorithmic
+  Probability and Friends. Bayesian Prediction and Artificial Intelligence,
+  Springer Berlin Heidelberg, 2013, pp. 223--235.
+\newblock \href {https://doi.org/10.1007/978-3-642-44958-1_17}
+  {\path{doi:10.1007/978-3-642-44958-1_17}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-3-642-44958-1_17}
+
+\bibitem{estimationtheory}
+B.~C. Levy, Principles of Signal Detection and Parameter Estimation, 1st
+  Edition, Springer, 2008.
+
+\bibitem{ip}
+M.~Conforti, G.~Cornu{\'{e}}jols, G.~Zambelli,
+  \href{https://doi.org/10.1007/978-3-319-11008-0}{Integer Programming},
+  Springer International Publishing, 2014.
+\newblock \href {https://doi.org/10.1007/978-3-319-11008-0}
+  {\path{doi:10.1007/978-3-319-11008-0}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-3-319-11008-0}
+
+\bibitem{nonlinear}
+D.~Bertsekas, \href{https://books.google.hu/books?id=rC1EEAAAQBAJ}{Nonlinear
+  Programming}, Athena scientific optimization and computation series, Athena
+  Scientific, 2016.
+\newline\urlprefix\url{https://books.google.hu/books?id=rC1EEAAAQBAJ}
+
+\bibitem{pulp}
+J.~P.~A. Pereira, S.~Kroon, D.~Vandenbussche, Pulp,
+  \url{https://github.com/coin-or/pulp} (2022).
+
+\bibitem{keel}
+J.~Alcala-Fdez, A.~Fernández, J.~Luengo, J.~Derrac, S.~Garc'ia, L.~Sanchez,
+  F.~Herrera, Keel data-mining software tool: Data set repository, integration
+  of algorithms and experimental analysis framework, Journal of Multiple-Valued
+  Logic and Soft Computing 17 (2010) 255--287.
+
+\bibitem{sklearn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, et~al., Scikit-learn:
+  Machine learning in python, Journal of machine learning research 12~(Oct)
+  (2011) 2825--2830.
+
+\bibitem{intpart}
+J.~Arndt, \href{https://doi.org/10.1007/978-3-642-14764-7}{Matters
+  Computational}, Springer Berlin Heidelberg, 2011.
+\newblock \href {https://doi.org/10.1007/978-3-642-14764-7}
+  {\path{doi:10.1007/978-3-642-14764-7}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-3-642-14764-7}
+
+\bibitem{drive}
+J.~Staal, M.~D. Abr~{`a}moff, M.~Niemeijer, M.~A. Viergever, B.~Van~Ginneken,
+  Ridge-based vessel segmentation in color images of the retina, IEEE
+  transactions on medical imaging 23~(4) (2004) 501--509.
+
+\bibitem{exu}
+S.~Joshi, P.~Karule, \href{https://doi.org/10.1016/j.biopha.2017.11.009}{A
+  review on exudates detection methods for diabetic retinopathy}, Biomedicine
+  {\&} Pharmacotherapy 97 (2018) 1454--1460.
+\newblock \href {https://doi.org/10.1016/j.biopha.2017.11.009}
+  {\path{doi:10.1016/j.biopha.2017.11.009}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.biopha.2017.11.009}
+
+\bibitem{od}
+M.~Alawad, A.~Aljouie, S.~Alamri, M.~Alghamdi, B.~Alabdulkader, N.~Alkanhal,
+  A.~Almazroa, \href{https://doi.org/10.2147/opth.s348479}{Machine learning and
+  deep learning techniques for optic disc and cup segmentation {\textendash} a
+  review}, Clinical Ophthalmology Volume 16 (2022) 747--764.
+\newblock \href {https://doi.org/10.2147/opth.s348479}
+  {\path{doi:10.2147/opth.s348479}}.
+\newline\urlprefix\url{https://doi.org/10.2147/opth.s348479}
+
+\bibitem{tpehg}
+G.~Fele-{\v{Z}}or{\v{z}}, G.~Kav{\v{s}}ek, {\v{Z}}.~Novak-Antoli{\v{c}},
+  F.~Jager, \href{https://doi.org/10.1007/s11517-008-0350-y}{A comparison of
+  various linear and non-linear signal processing techniques to separate
+  uterine {EMG} records of term and pre-term delivery groups}, Medical {\&}
+  Biological Engineering {\&} Computing 46~(9) (2008) 911--922.
+\newblock \href {https://doi.org/10.1007/s11517-008-0350-y}
+  {\path{doi:10.1007/s11517-008-0350-y}}.
+\newline\urlprefix\url{https://doi.org/10.1007/s11517-008-0350-y}
+
+\bibitem{smote}
+A.~Fernández, S.~Garcia, F.~Herrera, N.~Chawla, Smote for learning from
+  imbalanced data: Progress and challenges, marking the 15-year anniversary,
+  Journal of Artificial Intelligence Research 61 (2018) 863--905.
+\newblock \href {https://doi.org/10.1613/jair.1.11192}
+  {\path{doi:10.1613/jair.1.11192}}.
+
+\bibitem{ehgflaw2}
+U.~R. Acharya, V.~K. Sudarshan, S.~Q. Rong, Z.~Tan, C.~M. Lim, J.~E. Koh,
+  S.~Nayak, S.~V. Bhandary,
+  \href{https://doi.org/10.1016/j.compbiomed.2017.04.013}{Automated detection
+  of premature delivery using empirical mode and wavelet packet decomposition
+  techniques with uterine electromyogram signals}, Computers in Biology and
+  Medicine 85 (2017) 33--42.
+\newblock \href {https://doi.org/10.1016/j.compbiomed.2017.04.013}
+  {\path{doi:10.1016/j.compbiomed.2017.04.013}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.compbiomed.2017.04.013}
+
+\bibitem{skinsurvey}
+M.~A. Kassem, K.~M. Hosny, R.~Dama{\v{s}}evi{\v{c}}ius, M.~M. Eltoukhy,
+  \href{https://doi.org/10.3390/diagnostics11081390}{Machine learning and deep
+  learning methods for skin lesion classification and diagnosis: A systematic
+  review}, Diagnostics 11~(8) (2021) 1390.
+\newblock \href {https://doi.org/10.3390/diagnostics11081390}
+  {\path{doi:10.3390/diagnostics11081390}}.
+\newline\urlprefix\url{https://doi.org/10.3390/diagnostics11081390}
+
+\bibitem{skin1}
+Y.~Yuan, M.~Chao, Y.-C. Lo,
+  \href{https://doi.org/10.1109/tmi.2017.2695227}{Automatic skin lesion
+  segmentation using deep fully convolutional networks with jaccard distance},
+  {IEEE} Transactions on Medical Imaging 36~(9) (2017) 1876--1886.
+\newblock \href {https://doi.org/10.1109/tmi.2017.2695227}
+  {\path{doi:10.1109/tmi.2017.2695227}}.
+\newline\urlprefix\url{https://doi.org/10.1109/tmi.2017.2695227}
+
+\bibitem{skin4}
+T.~J. Brinker, A.~Hekler, A.~H. Enk, J.~Klode, A.~Hauschild, C.~Berking,
+  B.~Schilling, S.~Haferkamp, D.~Schadendorf, T.~Holland-Letz, J.~S. Utikal,
+  C.~von Kalle, W.~Ludwig-Peitsch, J.~Sirokay, L.~Heinzerling, M.~Albrecht,
+  K.~Baratella, L.~Bischof, E.~Chorti, A.~Dith, C.~Drusio, N.~Giese,
+  E.~Gratsias, K.~Griewank, S.~Hallasch, Z.~Hanhart, S.~Herz, K.~Hohaus,
+  P.~Jansen, F.~Jockenh\"{o}fer, T.~Kanaki, S.~Knispel, K.~Leonhard,
+  A.~Martaki, L.~Matei, J.~Matull, A.~Olischewski, M.~Petri, J.-M. Placke,
+  S.~Raub, K.~Salva, S.~Schlott, E.~Sody, N.~Steingrube, I.~Stoffels,
+  S.~Ugurel, A.~Zaremba, C.~Gebhardt, N.~Booken, M.~Christolouka,
+  K.~Buder-Bakhaya, T.~Bokor-Billmann, A.~Enk, P.~Gholam, H.~H\"{a}n{\ss}le,
+  M.~Salzmann, S.~Sch\"{a}fer, K.~Sch\"{a}kel, T.~Schank, A.-S. Bohne,
+  S.~Deffaa, K.~Drerup, F.~Egberts, A.-S. Erkens, B.~Ewald, S.~Falkvoll,
+  S.~Gerdes, V.~Harde, A.~Hauschild, M.~Jost, K.~Kosova, L.~Messinger,
+  M.~Metzner, K.~Morrison, R.~Motamedi, A.~Pinczker, A.~Rosenthal, N.~Scheller,
+  T.~Schwarz, D.~St\"{o}lzl, F.~Thielking, E.~Tomaschewski, U.~Wehkamp,
+  M.~Weichenthal, O.~Wiedow, C.~M. B\"{a}r, S.~Bender-S\"{a}belkampf,
+  M.~Horbr\"{u}gger, A.~Karoglan, L.~Kraas, J.~Faulhaber, C.~Geraud, Z.~Guo,
+  P.~Koch, M.~Linke, N.~Maurier, V.~M\"{u}ller, B.~Thomas, J.~S. Utikal,
+  A.~S.~M. Alamri, A.~Baczako, C.~Berking, M.~Betke, C.~Haas, D.~Hartmann,
+  M.~V. Heppt, K.~Kilian, S.~Krammer, N.~L. Lapczynski, S.~Mastnik,
+  S.~Nasifoglu, C.~Ruini, E.~Sattler, M.~Schlaak, H.~Wolff, B.~Achatz,
+  A.~Bergbreiter, K.~Drexler, M.~Ettinger, S.~Haferkamp, A.~Halupczok,
+  M.~Hegemann, V.~Dinauer, M.~Maagk, M.~Mickler, B.~Philipp, A.~Wilm,
+  C.~Wittmann, A.~Gesierich, V.~Glutsch, K.~Kahlert, A.~Kerstan, B.~Schilling,
+  P.~Schr\"{u}fer, \href{https://doi.org/10.1016/j.ejca.2019.04.001}{Deep
+  learning outperformed 136 of 157 dermatologists in a head-to-head dermoscopic
+  melanoma image classification task}, European Journal of Cancer 113 (2019)
+  47--54.
+\newblock \href {https://doi.org/10.1016/j.ejca.2019.04.001}
+  {\path{doi:10.1016/j.ejca.2019.04.001}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.ejca.2019.04.001}
+
+\bibitem{skin6}
+U.-O. Dorj, K.-K. Lee, J.-Y. Choi, M.~Lee,
+  \href{https://doi.org/10.1007/s11042-018-5714-1}{The skin cancer
+  classification using deep convolutional neural network}, Multimedia Tools and
+  Applications 77~(8) (2018) 9909--9924.
+\newblock \href {https://doi.org/10.1007/s11042-018-5714-1}
+  {\path{doi:10.1007/s11042-018-5714-1}}.
+\newline\urlprefix\url{https://doi.org/10.1007/s11042-018-5714-1}
+
+\bibitem{isic2017}
+N.~C.~F. Codella, D.~Gutman, M.~E. Celebi, B.~Helba, M.~A. Marchetti, S.~W.
+  Dusza, A.~Kalloo, K.~Liopyris, N.~Mishra, H.~Kittler, A.~Halpern,
+  \href{https://doi.org/10.1109/isbi.2018.8363547}{Skin lesion analysis toward
+  melanoma detection: A challenge at the 2017 international symposium on
+  biomedical imaging ({ISBI}), hosted by the international skin imaging
+  collaboration ({ISIC})}, in: 2018 {IEEE} 15th International Symposium on
+  Biomedical Imaging ({ISBI} 2018), IEEE, 2018, pp. 168--172.
+\newblock \href {https://doi.org/10.1109/isbi.2018.8363547}
+  {\path{doi:10.1109/isbi.2018.8363547}}.
+\newline\urlprefix\url{https://doi.org/10.1109/isbi.2018.8363547}
+
+\bibitem{skin5}
+J.~Kawahara, S.~Daneshvar, G.~Argenziano, G.~Hamarneh,
+  \href{https://doi.org/10.1109/jbhi.2018.2824327}{Seven-point checklist and
+  skin lesion classification using multitask multimodal neural nets}, {IEEE}
+  Journal of Biomedical and Health Informatics 23~(2) (2019) 538--546.
+\newblock \href {https://doi.org/10.1109/jbhi.2018.2824327}
+  {\path{doi:10.1109/jbhi.2018.2824327}}.
+\newline\urlprefix\url{https://doi.org/10.1109/jbhi.2018.2824327}
+
+\bibitem{skin8}
+F.~Xie, H.~Fan, Y.~Li, Z.~Jiang, R.~Meng, A.~Bovik,
+  \href{https://doi.org/10.1109/tmi.2016.2633551}{Melanoma classification on
+  dermoscopy images using a neural network ensemble model}, {IEEE} Transactions
+  on Medical Imaging 36~(3) (2017) 849--858.
+\newblock \href {https://doi.org/10.1109/tmi.2016.2633551}
+  {\path{doi:10.1109/tmi.2016.2633551}}.
+\newline\urlprefix\url{https://doi.org/10.1109/tmi.2016.2633551}
+
+\bibitem{skin0}
+L.~Yu, H.~Chen, Q.~Dou, J.~Qin, P.-A. Heng,
+  \href{https://doi.org/10.1109/tmi.2016.2642839}{Automated melanoma
+  recognition in dermoscopy images via very deep residual networks}, {IEEE}
+  Transactions on Medical Imaging 36~(4) (2017) 994--1004.
+\newblock \href {https://doi.org/10.1109/tmi.2016.2642839}
+  {\path{doi:10.1109/tmi.2016.2642839}}.
+\newline\urlprefix\url{https://doi.org/10.1109/tmi.2016.2642839}
+
+\bibitem{skin2}
+N.~C.~F. Codella, Q.-B. Nguyen, S.~Pankanti, D.~A. Gutman, B.~Helba, A.~C.
+  Halpern, J.~R. Smith, \href{https://doi.org/10.1147/jrd.2017.2708299}{Deep
+  learning ensembles for melanoma recognition in dermoscopy images}, {IBM}
+  Journal of Research and Development 61~(4/5) (2017) 5:1--5:15.
+\newblock \href {https://doi.org/10.1147/jrd.2017.2708299}
+  {\path{doi:10.1147/jrd.2017.2708299}}.
+\newline\urlprefix\url{https://doi.org/10.1147/jrd.2017.2708299}
+
+\bibitem{skin3}
+J.~Zhang, Y.~Xie, Y.~Xia, C.~Shen,
+  \href{https://doi.org/10.1109/tmi.2019.2893944}{Attention residual learning
+  for skin lesion classification}, {IEEE} Transactions on Medical Imaging
+  38~(9) (2019) 2092--2103.
+\newblock \href {https://doi.org/10.1109/tmi.2019.2893944}
+  {\path{doi:10.1109/tmi.2019.2893944}}.
+\newline\urlprefix\url{https://doi.org/10.1109/tmi.2019.2893944}
+
+\bibitem{skin7}
+B.~Harangi, \href{https://doi.org/10.1016/j.jbi.2018.08.006}{Skin lesion
+  classification with ensembles of deep convolutional neural networks}, Journal
+  of Biomedical Informatics 86 (2018) 25--32.
+\newblock \href {https://doi.org/10.1016/j.jbi.2018.08.006}
+  {\path{doi:10.1016/j.jbi.2018.08.006}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.jbi.2018.08.006}
+
+\bibitem{skin9}
+M.~A. Al-masni, D.-H. Kim, T.-S. Kim,
+  \href{https://doi.org/10.1016/j.cmpb.2020.105351}{Multiple skin lesions
+  diagnostics via integrated deep convolutional networks for segmentation and
+  classification}, Computer Methods and Programs in Biomedicine 190 (2020)
+  105351.
+\newblock \href {https://doi.org/10.1016/j.cmpb.2020.105351}
+  {\path{doi:10.1016/j.cmpb.2020.105351}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.cmpb.2020.105351}
+
+\bibitem{skin7ref}
+M.~F.~J. Acosta, L.~Y.~C. Tovar, M.~B. Garcia-Zapirain, W.~S. Percybrooks,
+  \href{https://doi.org/10.1186/s12880-020-00534-8}{Melanoma diagnosis using
+  deep learning techniques on dermatoscopic images}, {BMC} Medical Imaging
+  21~(1) (Jan. 2021).
+\newblock \href {https://doi.org/10.1186/s12880-020-00534-8}
+  {\path{doi:10.1186/s12880-020-00534-8}}.
+\newline\urlprefix\url{https://doi.org/10.1186/s12880-020-00534-8}
+
+\bibitem{argenziano}
+G.~Argenziano, P.~Soyer, V.~De~Giorgi, D.~Piccolo, P.~Carli, M.~Delfino,
+  A.~Ferrari, R.~Hofmann-Wellenhof, D.~Massi, G.~Mazzocchetti, M.~Scalvenzi,
+  I.~Wolf, Interactive atlas of dermoscopy. Dermoscopy: a tutorial (Book) and
+  CD-ROM., Edra, 2000.
+
+\end{thebibliography}

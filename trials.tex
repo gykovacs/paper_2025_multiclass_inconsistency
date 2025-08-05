@@ -1,0 +1,130 @@
+
+\begin{table*}
+\begin{minipage}{0.2\textwidth}
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}[t]{r@{\hspace{4pt}}r@{\hspace{4pt}}r@{\hspace{4pt}}r@{\hspace{4pt}}r}
+\toprule
+fold & p & n & tp & tn \\
+\midrule
+m0 & 100 & 201 & 78 & 189 \\
+1 & 100 & 200 & 65 & 191 \\
+2 & 100 & 200 & 81 & 160 \\
+3 & 101 & 200 & 75 & 164 \\
+4 & 101 & 200 & 72 & 171 \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{center}
+
+\end{minipage}
+\begin{minipage}{0.75\textwidth}
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{l@{\hspace{2pt}}r@{\hspace{2pt}}r|l@{\hspace{2pt}}r@{\hspace{2pt}}r|l@{\hspace{2pt}}r@{\hspace{2pt}}r|l@{\hspace{2pt}}r@{\hspace{2pt}}r}
+\toprule
+score & MoS & SoM & score & MoS & SoM & score & MoS & SoM & score & MoS & SoM \\
+\midrule
+acc & 0.8290 & 0.8290 & bacc & 0.8066 & 0.8066 & pt & 0.2795 & 0.2921 & mcc & 0.6215 & 0.6147 \\
+sens & 0.7391 & 0.7390 & $f^1_+$ & 0.7443 & 0.7427 & lrp & 8.1202 & 5.8713 & ji & 0.5945 & 0.5908 \\
+spec & 0.8741 & 0.8741 & fm & 0.7471 & 0.7428 & lrn & 0.2975 & 0.2985 & kappa & 0.6165 & 0.6147 \\
+npv & 0.8706 & 0.8698 & $f^1_-$ & 0.8709 & 0.8719 & mk & 0.6312 & 0.6163 & gm & 0.8021 & 0.8038 \\
+ppv & 0.7606 & 0.7465 & bm & 0.6131 & 0.6132 & dor & 28.0174 & 19.6671 & upm & 0.8025 & 0.8022 \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{center}
+
+\end{minipage}
+\end{table*}
+
+\begin{table}
+%\caption{An example k-folding scenario (\ref{tab4a}) and the scores calculated by the two aggregations (\ref{tab4b}).}
+\label{tab4}
+%\begin{subtable}[t]{0.4\textwidth}
+%\caption{The outcome of a sample k-folding scenario with $5$-folds on a dataset containing $p=502$ positive and $n=1001$ negative samples.}\label{tab4a}
+%\begin{center}
+\begin{scriptsize}
+\begin{tabular}[t]{rrrrr}
+\toprule
+fold & p & n & tp & tn \\
+\midrule
+0 & 100 & 201 & 78 & 189 \\
+1 & 100 & 200 & 65 & 191 \\
+2 & 100 & 200 & 81 & 160 \\
+3 & 101 & 200 & 75 & 164 \\
+4 & 101 & 200 & 72 & 171 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+%\end{center}
+%\end{subtable}
+%\hspace{\fill}
+%\begin{subtable}[t]{0.4\textwidth}
+%\flushright
+%\caption{The scores calculated by the two schemes.} \label{tab4b}
+%\begin{center}
+\begin{scriptsize}
+\begin{tabular}[t]{lrr}
+\toprule
+score & MoS & SoM \\
+\midrule
+acc & 0.8290 & 0.8290 \\
+sens & 0.7391 & 0.7390 \\
+spec & 0.8741 & 0.8741 \\
+npv & 0.8706 & 0.8698 \\
+ppv & 0.7606 & 0.7465 \\
+bacc & 0.8066 & 0.8066 \\
+$f^1_+$ & 0.7443 & 0.7427 \\
+fm & 0.7471 & 0.7428 \\
+$f^1_-$ & 0.8709 & 0.8719 \\
+bm & 0.6131 & 0.6132 \\
+pt & 0.2795 & 0.2921 \\
+lrp & 8.1202 & 5.8713 \\
+lrn & 0.2975 & 0.2985 \\
+mk & 0.6312 & 0.6163 \\
+dor & 28.0174 & 19.6671 \\
+mcc & 0.6215 & 0.6147 \\
+ji & 0.5945 & 0.5908 \\
+kappa & 0.6165 & 0.6147 \\
+gm & 0.8021 & 0.8038 \\
+upm & 0.8025 & 0.8022 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+%\end{center}
+%\end{subtable}
+
+\end{table}
+
+
+\begin{table}[H]
+  \begin{subtable}[b]{0.4\textwidth}
+    % -----------------------------------------------------%
+    \caption{$^{108}$Ag} \label{lefttable}
+    \begin{tabular}{c@{\hskip 1cm} c}
+      \hline\noalign{\smallskip}
+      $T_{1/2}$ & $T_{1/2}$\\
+      (s) & (s)\\
+      \hline\noalign{\smallskip}
+      142.92 & 158 \\
+      \hline\noalign{\smallskip}
+    \end{tabular}
+    % -----------------------------------------------------%  
+  \end{subtable}
+  \begin{subtable}[b]{0.4\textwidth}
+    % -----------------------------------------------------%
+    \caption{$^{110}$Ag}     \label{righttable}
+    \begin{tabular}{c@{\hskip 1cm} c}
+      \hline\noalign{\smallskip}
+      $T_{1/2}$ & $T_{1/2}$\\
+      (s) & (s)\\
+      \hline\noalign{\smallskip}
+      24.6 & 21 \\
+      \hline\noalign{\smallskip}
+    \end{tabular}
+    % -----------------------------------------------------%
+  \end{subtable}
+  \caption{2 Column tables side by side}
+  \label{sidebysidetable}
+\end{table}

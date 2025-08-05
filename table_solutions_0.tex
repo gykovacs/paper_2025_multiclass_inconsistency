@@ -1,0 +1,22 @@
+\begin{tabular}{lll}
+\toprule
+score ($s$) & $tp$ formula ($f^{-1}_{s, tp}(s, tn, p, n)$) & $tn$ formula  ($f^{-1}_{s, tn}(s, tp, p, n)$)\\
+\midrule
+acc & $acc \cdot n + acc \cdot p - tn$ & $acc \cdot n + acc \cdot p - tp$ \\
+sens & $p \cdot sens$ &  \\
+spec &  & $n \cdot spec$ \\
+ppv & $\dfrac{ppv \left(- n + tn\right)}{ppv - 1}$ & $n + tp - \dfrac{tp}{ppv}$ \\
+npv & $p + tn - \dfrac{tn}{npv}$ & $\dfrac{npv \left(- p + tp\right)}{npv - 1}$ \\
+fbp & $\dfrac{f^\beta_{+} \left(\beta_{+}^{2} p + n - tn\right)}{\beta_{+}^{2} - f^\beta_{+} + 1}$ & $\dfrac{- \beta_{+}^{2} tp + f^\beta_{+} \left(\beta_{+}^{2} p + n + tp\right) - tp}{f^\beta_{+}}$ \\
+fbn & $\dfrac{- \beta_{-}^{2} tn + f^\beta_{-} \left(\beta_{-}^{2} n + p + tn\right) - tn}{f^\beta_{-}}$ & $\dfrac{f^\beta_{-} \left(\beta_{-}^{2} n + p - tp\right)}{\beta_{-}^{2} - f^\beta_{-} + 1}$ \\
+gm & $\dfrac{gm^{2} n p}{tn}$ & $\dfrac{gm^{2} n p}{tp}$ \\
+lrp & $\dfrac{lr_{+} p \left(n - tn\right)}{n}$ & $n - \dfrac{n \cdot tp}{lr_{+} p}$ \\
+lrn & $\dfrac{p \left(- lr_{-} tn + n\right)}{n}$ & $\dfrac{n \left(p - tp\right)}{lr_{-} p}$ \\
+bm & $\dfrac{p \left(n \left(bm + 1\right) - tn\right)}{n}$ & $\dfrac{n \left(p \left(bm + 1\right) - tp\right)}{p}$ \\
+pt & $\dfrac{p \left(n - tn\right)}{n}$ & $\dfrac{n \left(p - tp\right)}{p}$ \\
+dor & $\dfrac{dor \cdot p \left(n - tn\right)}{dor \cdot n - dor \cdot tn + tn}$ & $\dfrac{dor \cdot n \left(p - tp\right)}{dor \cdot p - dor \cdot tp + tp}$ \\
+ji & $ji \left(n + p - tn\right)$ & $n + p - \dfrac{tp}{ji}$ \\
+bacc & $\dfrac{p \left(2 bacc \cdot n - tn\right)}{n}$ & $\dfrac{n \left(2 bacc \cdot p - tp\right)}{p}$ \\
+kappa & $\dfrac{\kappa \left(n^{2} - n \cdot tn + p^{2} + p \cdot tn\right) + 2 n p - 2 p \cdot tn}{\kappa \left(- n + p\right) + 2 n}$ & $\dfrac{\kappa \left(n^{2} + n \cdot tp + p^{2} - p \cdot tp\right) + 2 n p - 2 n \cdot tp}{\kappa \left(n - p\right) + 2 p}$ \\
+\bottomrule
+\end{tabular}

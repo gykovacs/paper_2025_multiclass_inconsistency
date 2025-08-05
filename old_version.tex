@@ -1,0 +1,986 @@
+% Template for Elsevier CRC journal article
+% version 1.1 dated 16 March 2010
+
+% This file (c) 2010 Elsevier Ltd.  Modifications may be freely made,
+% provided the edited file is saved under a different name
+
+% This file contains modifications for Procedia Computer Science
+% but may easily be adapted to other journals
+
+% Changes since version 1.0
+% - elsarticle class option changed from 1p to 3p (to better reflect CRC layout)
+
+%-----------------------------------------------------------------------------------
+
+%% This template uses the elsarticle.cls document class and the extension package ecrc.sty
+%% For full documentation on usage of elsarticle.cls, consult the documentation "elsdoc.pdf"
+%% Further resources available at https://www.elsevier.com/latex
+
+%-----------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Important note on usage                  %%
+%% -----------------------                  %%
+%% This file must be compiled with PDFLaTeX %%
+%% Using standard LaTeX will not work!      %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The '3p' and 'times' class options of elsarticle are used for Elsevier CRC
+%\documentclass[3p,times]{elsarticle}
+\documentclass[5p, final]{elsarticle}
+
+%% The `ecrc' package must be called to make the CRC functionality available
+\usepackage{ecrc}
+\usepackage{amsmath}
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{multirow}
+%\usepackage{booktabs}
+%\usepackage{array}
+%\usepackage{tabularx}
+\usepackage{booktabs}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+%% The ecrc package defines commands needed for running heads and logos.
+%% For running heads, you can set the journal name, the volume, the starting page and the authors
+
+%% set the volume if you know. Otherwise `00'
+\volume{00}
+
+%% set the starting page if not 1
+\firstpage{1}
+
+%% Give the name of the journal
+\journalname{Applied Soft Computing}
+
+%% Give the author list to appear in the running head
+%% Example \runauth{C.V. Radhakrishnan et al.}
+\runauth{A. Fazekas and G. Kov\'acs}
+
+%% The choice of journal logo is determined by the \jid and \jnltitlelogo commands.
+%% A user-supplied logo with the name <\jid>logo.pdf will be inserted if present.
+%% e.g. if \jid{yspmi} the system will look for a file yspmilogo.pdf
+%% Otherwise the content of \jnltitlelogo will be set between horizontal lines as a default logo
+
+%% Give the abbreviation of the Journal.
+\jid{Appl. Soft Comput.}
+
+%% Give a short journal name for the dummy logo (if needed)
+\jnltitlelogo{Applied Soft Computing}
+
+%% Hereafter the template follows `elsarticle'.
+%% For more details see the existing template files elsarticle-template-harv.tex and elsarticle-template-num.tex.
+
+%% Elsevier CRC generally uses a numbered reference style
+%% For this, the conventions of elsarticle-template-num.tex should be followed (included below)
+%% If using BibTeX, use the style file elsarticle-num.bst
+
+%% End of ecrc-specific commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+% if you have landscape tables
+%\usepackage[figuresright]{rotating}
+
+% put your own definitions here:
+%   \newcommand{\cZ}{\cal{Z}}
+%   \newtheorem{def}{Definition}[section]
+%   ...
+
+% add words to TeX's hyphenation exception list
+%\hyphenation{author another created financial paper re-commend-ed Post-Script}
+
+% declarations for front matter
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+%\dochead{}
+%% Use \dochead if there is an article header, e.g. \dochead{Short communication}
+
+\title{Testing the Consistency of Performance Scores Reported for Binary Classification Problems}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+\author[1]{Attila Fazekas} 
+\ead{fazekas.attila@inf.unideb.hu}
+
+\author[2]{Gy\"orgy Kov\'acs}
+\ead{gyuriofkovacs@gmail.com}
+
+
+\affiliation[1]{organization={Faculty of Informatics, University of Debrecen},
+    addressline={Kassai út 26}, 
+    city={Debrecen},
+    postcode={4028}, 
+    country={Hungary}}
+\affiliation[2]{organization={Analytical Minds},
+    addressline={Árpád út 5}, 
+    city={Beregsurány},
+    postcode={4933}, 
+    country={Hungary}}
+
+\begin{abstract}
+Binary classification is one of the most fundamental tasks of machine learning, driving countless applications in various fields of science. Regardless of whether fundamental research is being conducted or applications are being improved, classification techniques are evaluated, compared and ranked in terms of performance metrics like \emph{accuracy}, \emph{sensitivity}, \emph{specificity}. In many cases, the reported performance scores do not provide a reliable basis for the ranking of research (undisclosed or unorthodox cross-validation and aggregation schemes, typos, etc.). Since the various performance scores describe the same evaluation results, they need to maintain some internal consistency, they cannot take any values independently. In this paper, we propose numerical techniques to test the internal consistency of reported performance scores in various evaluation scenarios. The tests are not statistical but numerical: inconsistencies are identified with certainty. In various applications we show how the proposed technique can be used to identify inconsistencies and prevent the derailing of research. For the benefit of the community, the tests are released in an open-source Python package.
+
+%Binary classifiers and their applications are crucial in many fields, and measuring the success of binary classification typically involves using performance metrics such as sensitivity, specificity, and accuracy. This paper introduces a mathematical toolkit to ensure the coherence of published performance metrics and detect any miscalculations or errors. Spotting errors in performance scores is important for the scientific community, as they can significantly impact algorithm rankings. Unfortunately, our experiments have shown that this problem is not insignificant. As a solution, we have developed a freely available Python software package to assist with this issue. We aspire to make a positive contribution towards minimizing errors that may arise during the publishing the results of scientific experiments.
+\end{abstract}
+
+\begin{keyword}
+binary classification
+\sep 
+performance metrics
+\sep
+ranking of binary classifiers
+\sep 
+coherence of performance metrics
+\end{keyword}
+
+
+\end{frontmatter}
+
+        
+% Research highlights
+%\begin{highlights}
+%\item Valami1.
+%\item Valami2.
+%\item Valami3.
+%\item Valami4.
+%\item Valami5.
+%\end{highlights}
+
+% Keywords
+% Each keyword is seperated by \sep
+% https://www.elsevier.com/journals/computers-and-education/0360-1315/guide-for-authors#txt42001
+
+%%% Introduction %%%
+\section{Introduction}\label{section:Introduction}
+
+Recently, numerous authors warned the scientific community about the so called \emph{reproducibility crisis} in artificial intelligence and machine learning based science \cite{leakage, reprcrisis, repr0, repr1}. Namely, there is an overwhelming amount of research results published that cannot be reproduced by independent experiments or follow flawed evaluation methodologies. Among several reasons, notable ones are the lack of code being shared \cite{leakage}, the improper use of statistics \cite{leakage, staterrors}, cosmetics applied to the findings \cite{fabrication}, but typos in the reported figures are also undoubtedly present.
+
+To fight the reproducibility crisis, numerous recommendations were proposed \cite{repr0, repr2} on how to report machine learning results properly. Unfortunately, the adaptation of these standards is fairly slow and they cannot eliminate the already existing problems in various fields. 
+In practice, many fields of machine learning related research operate as self-organized, perpetual competitions, where the goal is to reach the best results for certain problems and datasets. In these fields, the merit of research tends to be evaluated purely by the reported performance scores, despite this exercise was proven to be challenging even in well-organized competitions with controlled evaluation \cite{ranking}. Under these circumstances, the reliability of reported performance scores becomes crucial: once published, unrealistically high performance results can reassure flawed methodologies and get magnified by the publication bias \cite{publicationbias}, eventually skewing entire fields of research. For example, after multiple authors reported almost perfect prediction results for the premature delivery in pregnancy based on electrohysterograms (EHG) \cite{ehgreview}, it was shown in \cite{ehg} that the overly optimistic results in 11 papers were due to a systematic data leakage in the evaluation methodology.
+
+In general, most meta-analysis \cite{metaresearch} in the topic of reproducibility and reliability requires manual work. One option is to read through the papers of concern thoroughly and look for deviations from the scientific method and the best practices of statistics (as done in \cite{psychiatry}, \cite{csecurity}, \cite{satellite}). Another option is trying to reproduce various results by reimplementing the proposed techniques (as the authors of the EHG report \cite{ehg} did), which requires even more manual labor and is intractable at scale. It would be desired to have numerical techniques that can be used to test if the experimental setup described in a paper and the reported performance scores are consistent with each other, at all. In this paper, we develop such numerical techniques for binary classification.
+
+Being one of the most fundamental tasks in machine learning, the research and applications of binary classification \cite{1} also suffer from the aforementioned problems and the reporting of incomparable and irreproducible performance scores. Whether it is fundamental research or application, the performance of binary classification is usually evaluated by carrying out predictions on a test set (possibly in a cross-validation scheme \cite{cv1}), and determining the confusion matrix \cite{scores} of the experiment: the number of correctly/incorrectly predicted positive/negative instances. In practice, the confusion matrices are rarely reported, rather, the matrices are summarized by one or usually multiple numerical figures (for example, accuracy, sensitivity, specificity, f1-score, etc. \cite{scores}) which are usually aggregated over multiple dataset folds or even datasets. The various scores quantify various aspects of the problem and the performance of the classification technique. 
+
+Being derived from the same matrix, the performance scores cannot take arbitrary values independently from each other. For example, it can be readily proven that the \emph{accuracy} score -- being the weighted average of \emph{sensitivity} and \emph{specificity} -- needs to fall between them. 
+Inspired by the natural constraints the experimental setup imposes on the confusion matrix (for example, the sum of all entries needs to match the cardinality of the test set) and the the usually non-linear internal relations between the performance scores, one can raise the question: \emph{Given a set of reported performance scores and the description of the experiment, could the reported scores be the outcome of the experiment, at all?} Mathematically, the question addresses the existence of at least one confusion matrix which is compatible with the experimental setup and implies the reported performance scores up to the numerical uncertainty of rounding the figures. If this inverse problem is infeasible, any attempts of reproducing the results will fail with certainty. In practice, additional complexity comes from the aggregation (usually averaging) of multiple scores derived from the confusion matrices of multiple dataset folds or multiple datasets.
+
+The first approach to reconstruct the confusion matrix based on the reported scores and the experimental setup was a technique called \emph{DConfusion} \cite{dconfusion}, which was later successfully used to test the consistency of performance scores reported in machine learning research \cite{errorsml}.
+Independently, in a previous paper of ours, a similar approach was proposed to infer on the number of pixels used in the evaluation of retinal vessel segmentation techniques \cite{vesselsegm}. 
+By refining the numerical methods, we developed a test that was sensitive enough to recognize a systematic and impactful methodological inconsistency in the evaluation of retinal vessel segmentation techniques, leading to the improper ranking of algorithms in 100+ papers \cite{vessel}. 
+Inspired by the successful application of the concept, in this paper, we generalize the method further and develop consistency tests for many of the most commonly used performance scores and evaluation schemes of binary classification. The main differences of the proposed approach compared to \emph{DConfusion} \cite{dconfusion} are that (a) \emph{DConfusion} provides a recipe only for a handful of performance scores usually reported in the field of software fault prediction systems, while the proposed technique supports the majority of performance scores used in the literature; (b) \emph{DConfusion} neglects the effect of aggregations, while the proposed technique handles the aggregation of scores with mathematical rigor; (c) due to the neglecting of aggregations and the propagation of rounding errors, \emph{DConfusion} might result false alarms of inconsistency, however, due to its numerical rigor, the inconsistencies identified by the proposed technique are certain. 
+
+We highlight that the proposed consistency tests are numerical and not statistical, they have zero probability of type-I errors (no false positives): inconsistencies are identified with certainty, implying that either the assumed experimental setup or the reported scores are incorrect. Due to the strengths and the ease of use, we believe that the proposed techniques can be effective tools for meta-analysis and can contribute to improving the reproducibility of ML based science.
+
+The contributions of the paper to the field can be summarized as follows:
+\begin{enumerate}
+\item For experimental setups lacking the averaging of scores (the evaluation happens on one test set), we propose a consistency test supporting 21 of the most commonly used metrics, and note that the test can be easily extended to any further score functions.
+\item For experimental setups involving the averaging of scores over dataset folds or multiple datasets, we propose a consistency test supporting 4 commonly used scores (accuracy, sensitivity, specificity, balanced accuracy).
+\item Involving three real world problems, we demonstrate how the proposed technique can be used to identify research with flawed evaluation methodologies and inconsistent performance scores.
+\item For the benefit of the community, the proposed tests have been released in the open source Python package \verb|mlscorecheck| which is available in the standard PyPI repository and in GitHub at \url{http://github.com/gykovacs/mlscorecheck}.
+\end{enumerate}
+
+This paper is structured as follows: Section \ref{sec:problem} introduces the notation, the concept of binary classification, the performance scores and also outlines the problem of consistency testing. Section \ref{sec:individual} presents the proposed method for various evaluation schemes and scenarios. Section \ref{sec:applications} demonstrates how the results from Section \ref{sec:individual} can be applied in practice. Finally, conclusions are drawn in Section \ref{sec:conclusions}.
+
+%As one of the most fundamental tasks of machine learning, the research of binary classification \cite{1} and its applications also suffer from incomparable and unreliable performance scores being reported.
+
+
+
+%In binary classification tasks, the goal is to accurately assign elements from a given set into one of two predetermined classes. While this may seem straightforward in theory, it can be challenging in practice. Defining clear classification rules and obtaining accurate data for evaluation can be difficult, leading to errors in classification. As a result, achieving perfect binary classification can be a complex task.\cite{1}
+
+%To address the challenges of binary classification, various methods have been developed to compensate for the lack of precise knowledge about classification rules or imprecise data. These methods aim to provide the best possible solution given the specifics of the problem at hand. Some of the most commonly used methods for binary classification include decision trees, random forests, Bayesian networks, support vector machines, and neural networks.\cite{2}
+
+%The significance of binary classification is further highlighted by its applicability to multiclass classification problems, where instances must be classified into one of three or more classes. This can be achieved by reducing the multiclass problem into multiple binary classification problems using approaches such as one-vs-rest and one-vs-one.\cite{3}
+
+%The effectiveness of binary classification methods is typically evaluated using performance metrics that measure the number of correctly and incorrectly classified instances for each class. Common performance metrics include sensitivity, specificity, and accuracy, among others.\cite{4}
+
+%Binary classification algorithms have a wide range of applications across various fields. For example, in digital image processing, binary classification can be used for tasks such as cell segmentation and vessel network segmentation \cite{5,6}, or exudatum segmentation [?].
+
+%Binary classification is an active area of research, with numerous scientific publications released each year that evaluate the effectiveness of new methods using performance metrics. These metrics play a crucial role in the acceptance of new research by the scientific community, as new methods must demonstrate comparable or superior performance to previously published methods. This has led to a ‘war of numbers’ in the field, where researchers strive to achieve the best possible performance scores. \cite{vessel}
+
+%As a result of the emphasis on performance metrics in binary classification research, it is crucial to ensure the reliability of these metrics. Any inaccuracies in their calculation can impact the performance ranking of different algorithms, making it essential to accurately determine and evaluate these scores.
+
+%To accurately compare the performance of different binary classification algorithms, it is essential to calculate their performance metrics using the same principles and benchmarks. These benchmarks must have well-defined and clear steps to ensure consistency and reliability in performance evaluation.
+
+%This paper highlights the importance of using clear and easy-to-follow benchmarks when comparing the performance of binary classification algorithms. Additionally, it provides a mathematical toolkit for verifying the consistency of performance metrics, allowing for the early detection of potential errors. This method can also be used to evaluate previously published results, helping to prevent misunderstandings and mistakes from impacting the evaluation of new algorithms.
+
+
+
+%%% Binary classification and its performance %%%
+%\section{Binary classification and its performance}\label{section:BinaryClassification}
+\section{Problem formulation}
+\label{sec:problem}
+
+In this section, we introduce the notations related to binary classification and performance measurement, and formulate the problem we address in the rest of the paper. Both integer and real valued unknowns are denoted by lowercase letters or multiple letters (for example, $tp\in \lbrace 0, 1, \dots, p\rbrace$, $acc\in [0, 1]$). Vectors are denoted by boldface typesetting as $\mathbf{x}\in\mathbb{R}^{d}$. Sets are denoted by calligraphic typesetting as $\mathcal{S}\subset\lbrace 0, \dots, p\rbrace$. Throughout the paper we use the term \emph{performance score}, but note that they are also referred to as measures and metrics in various sources. We prefer using the term \emph{score} to avoid confusion with the mathematical notion of measures and metrics.
+
+There are numerous ways to formulate the problem of binary classification. Commonly, there is a set of paired training samples $\mathcal{S} = \lbrace(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \dots, (\mathbf{x}_N, y_N)\rbrace$, with $\mathbf{x}_i\in\mathbb{R}^d$ called feature vectors and $y_i\in\lbrace 0, 1\rbrace$ referred to as class labels (in some sources $y\in\lbrace{-1, +1}$), the classes denoted by $+1$ and $0$/$-1$ usually referred to as \emph{positive} and \emph{negative}, respectively. 
+The goal of binary classification is to infer a function $h: \mathbb{R}^d\rightarrow \lbrace 0, 1\rbrace$ from the training data, capable to predict the class label $y$ of a previously unseen feature vector $\mathbf{x}\in\mathbb{R}^d$ as $h(\mathbf{x})$. For a detailed and rigorous introduction into the fundamentals of various classification techniques, see \cite{mlbook, mlbook2}. 
+
+Since the optimization of functions with binary range is NP-hard, and the stochastic nature of most data generation processes imply that the class assignment is probabilistic (a feature vector can take both class labels with non-zero probabilities), most classifiers relax the problem of inferring $h$ and try to find smooth estimations for the probability density functions of the classes $g(\mathbb{x}|y)$: Bayesian techniques \cite{bayesiannetwork} by proper probabilistic foundations; decision trees \cite{mlbook} and nearest neighbor \cite{mlbook} techniques by locally estimated frequencies; and neural networks \cite{mlbook} by parametric surrogate functions. Then, the predicted class label is determined by the Bayesian rule
+\begin{equation}
+h(\mathbf{x}) = \argmax\limits_{c\in\lbrace 0, 1\rbrace} g(\mathbf{x}|y=c).
+\end{equation}
+Consequently, once fitted, all classification techniques can predict class labels, but many of them can also approximate the posterior distributions $\mathbb{P}(\mathbf{x}|y=0)$ and $\mathbb{P}(\mathbf{x}|y=1)$. Usually it is application dependent which outcome is preferred. For example, image segmentation needs crisp labels whether a pixel belongs to an object or not; on the other hand, in medical screening and grading systems, ranking cases by the probability of a condition being developed can be preferred. Consequently, when it comes to measuring the performance of a classification techniques, depending on the field of application, two approaches dominate: quantifying how well the estimated posterior probabilities rank the cases, and how accurate the assignment of labels is. One of the most commonly used metrics to quantify the quality of predicted posterior probabilities is the Area Under the Receiver Operator Characteristic Curve (ROC-AUC, AUC) \cite{auc}. In this paper we are concerned about those measures which characterize the quality of the label assignment of classifiers.
+
+Probably the simplest way to evaluate the performance of classifiers on unseen vectors is randomly splitting the available data into training $\mathcal{T}$ and validation $\mathcal{V}$ sets, $\mathcal{S}$ = $\mathcal{T} \cup \mathcal{V}, \mathcal{T} \cap \mathcal{V} = \emptyset$: the classifier $h$ is optimized using $\mathcal{T}$ and class labels $\hat{y}$ are predicted for the elements of $\mathcal{V}$. 
+Based on the combinations of corresponding $(y, \hat{y})$ pairs for the elements of $\mathcal{V}$ the \emph{confusion matrix} of the validation set can be constructed (see Table \ref{tptnfpfn}): the counts of true positive ($tp$), true negative ($tp$), false positive ($fp$) and false negative ($fn$) validation instances provide a holistic picture about the operation of the classifier. However, confusion matrices can hardly be used to compare various classification approaches directly. Hence, the matrices are usually summarized in certain performance scores. There is a large number of performance scores proposed in the literature \cite{scores}, each emphasizing various aspects of performance: in Table \ref{tab:scores} we provide a summary of the ones covered in this paper. Some scores like accuracy and $f^1_{+}$ are generally used in the field, others like the prevalence threshold and the likelihood ratios are more commonly used in medical applications.
+
+The strategy of evaluating a classifier on a hold-out set has some inherent randomness to it due to the random split. This randomness can be stabilized by repeating the random split and the evaluation and aggregating the results, however, there is a chance that the data is represented in the evaluation unequally. Probably the most commonly accepted strategy to overcome this is \emph{k-fold cross-validation}: the data $\mathcal{S}$ is split randomly to $k$ equal subsets (differing at most by one element), and iteratively each of the $k$ subsets are selected to be the validation set, while the remaining $k-1$ folds are used for training, and the scores are aggregated over all folds. This strategy guarantees that each data sample is used for validation once. For more stable statistics, the process can be repeated. In many cases, it is desired to have validation sets with similar class distribution as the overall dataset. A commonly used improvement to k-fold cross validation is adding stratification, ensuring that the folds have similar class distributions as the entire dataset. We also note that in many cases, the classifiers are evaluated on multiple datasets by k-fold cross-validation and the figures are also aggregated over the datasets.
+
+Most of the scores being fractions, the rounding/flooring/ceiling of scores to $k$ decimal places is unavoidable for reporting. Having a reported socre $0.9453$ -- according to the best practices of scientific writing - one can assume that the raw figure was rounded to $k=4$ decimal places, hence, with the numerical uncertainty of $\eps = 10^{-k}/2$, the raw score needs to be in the range $[0.9453-\eps, 0.9453+\eps]$. Being more conservative and assuming flooring or ceiling, the numerical uncertainty of a score reported to $k$ digits becomes $\eps = 10^{-k}$.
+
+The problem we address in the rest of the paper can be summarized as follows: given a binary classification dataset consisting of $p$ positive and $n$ negative instances; the description of the experimental setup (the details of the validation scheme and aggregation); and some performance scores reported with numerical uncertainty due to rounding/flooring/ceiling; could the experiment output the reported scores?
+
+\begin{table}[h!]
+\label{tptnfpfn}
+\caption{The potential outcome}
+\begin{tabular}{c@{\hspace{4pt}}|@{\hspace{4pt}}c@{\hspace{4pt}}c}
+& \multicolumn{2}{c}{predicted} \\
+& positive ($\hat{y}_i = 1$) & negative ($\hat{y}_i = 0$) \\ \hline
+positive ($y_i=1)$ & true positive & false negative \\
+negative ($y_i=0)$ & false positive & true negative \\
+\end{tabular}
+\end{table}
+
+\begin{table*}
+\caption{The summary of all performance scores covered in the paper. The standardized form refers to a formulation depending on $tp$ and $tn$ only, the original definition refers to the original form of the definition based on other scores, the description contains common synonyms. Some scores have complements with names, which are also mentioned in the description.}
+\label{tab:scores}
+\begin{scriptsize}
+\begingroup
+\renewcommand{\arraystretch}{3.0}
+\input{table_scores}
+\endgroup
+\end{scriptsize}
+\end{table*}
+
+\begin{table*}
+\caption{Scores with single solutions.}
+\label{tab2}
+\begin{scriptsize}
+\input{table_solutions_0}
+\end{scriptsize}
+\end{table*}
+
+\begin{table*}
+\caption{Scores with multiple solutions.}
+\label{tab3}
+\begin{scriptsize}
+\input{table_solutions_1}
+\end{scriptsize}
+\end{table*}
+
+%A binary classification task can be formally stated as: Let $X$ be a finite set of elements (data) $x_1,x_2,\dots,x_n$. Let $X_0$ and $X_1$ ($X_0\cup X_1=X$ and $X_0\cap X_1=\emptyset$) two classes. Our task is to determine the binary classifier $f$ that satisfies the following condition for all $x_i\in X$: 
+%\begin{equation}
+%f(x_i) = \begin{cases}
+  %0 &\hbox{if } x_i\in X_0, \\
+  %1 &\hbox{if } x_i\in X_1.
+%\end{cases}    
+%\end{equation}
+%Let $X_1$ be called the class of examples or positive examples and $X_0$ the class of counterexamples or negative examples. 
+%Given a classifier $f$ on a specific data set $X$, there are four basic combinations of actual data label and assigned label: 
+%\begin{itemize}
+    %\item True Positives (TP):  $X_{TP}=\{x_i\vert x_i\in X_1\hbox{ and }f(x_i)=1\}$
+    %\item True Negatives (TN):  $X_{TN}=\{x_i\vert x_i\in X_0\hbox{ and }f(x_i)=0\}$
+    %\item False Positives (FP): $X_{FP}=\{x_i\vert x_i\in X_0\hbox{ and }f(x_i)=1\}$
+    %\item False Negatives (FN): $X_{FN}=\{x_i\vert x_i\in X_1\hbox{ and }f(x_i)=0\}$
+%\end{itemize}
+ 
+%In the rest of the paper, we introduce the following notations for the number of elements of four above defined data sets: $\hbox{TP}=\vert X_{TP}\vert$, $\hbox{TN}=\vert X_{TN}\vert$, $\hbox{FP}=\vert X_{FP}\vert$, and $\hbox{FN}=\vert X_{FN}\vert$.
+
+%In actuality, binary classifiers can at times produce erroneous classifications. To quantify the nature and scope of such misclassifications, various performance metrics are conventionally employed in literature. Table~\ref{table1}, which is mainly based on \cite{9}, provides a summary of the most commonly used performance metrics.
+
+%\begin{table}
+%\begin{center}
+%\begin{tabular}{|c|c|c|}
+    %\hline
+    %Notation&Metric&Definition\\
+    %\hline
+%     &&\\
+     %sens&Sensitivity&$\frac{TP}{TP+FN}$\\
+     %&&\\
+     %spec&Specificity&$\frac{TN}{TN+FP}$  \\
+     %&&\\
+     %acc&Accuracy&$\frac{TP+TN}{TP+TN+FP+FN}$  \\
+     %&&\\
+     %ppv&Positive Predactive Value&$\frac{TP}{TP+FP}$\\
+     %&&\\
+     %npv&Negative Predactive Value&$\frac{TN}{TN+FN}$\\
+     %&&\\
+     %F${}_\textsc{1}$&$F_1$-score& $\frac{2 \cdot TP}{2\cdot TP+FP+FN}$\\
+     %&&\\
+     %\hline
+%\end{tabular}
+%\end{center}
+%\caption{The commonly used performance metrics and their definition}\label{table1}
+%\end{table}
+
+%The equations used to define the performance metrics in the table above clearly demonstrate that they can be expressed using the four metrics (TP, TN, FP, and FN) mentioned previously. Building upon this, we have developed a numerical method to test the coherence between performance metric values associated with a binary classification task.
+
+%The core concept of suggested method involves selecting two performance metrics from a set of known of binary classification for a specific data set. The number of elements belonging to the positive and negative classes are also known. This information is then used to formulate a four-equation system with four unknowns, namely TP, TN, FP, and FN. By solving this equation system, we can determine the values of the unknowns, which can be used to calculate any other performance metrics. The coherence test compares the performance metrics obtained through this method with the published other performance metrics.
+
+%The key component of our numerical approach is the expression of performance metrics using other two performance metrics.  For this, it is sufficient to be able to express the TP, TN, FP, FN values using the two selected performance metrics. In the case of the pairs of performance metrics most often used in the literature, we prepared two tables (Table~\ref{table:2} and Table~\ref{table:3}) that give these performance metrics as a function of the four parameters named above. The table which depicts the expression of TP, TN, FP, FN values for every conceivable pair of performance metrics included in these tables. However, utilizing the developed program package enables one to determine the values without any difficulty. 
+
+%\begin{table}[h!]
+    %\begin{center}
+    %\begin{tabular}{|c|c|c|}
+        %\hline
+        %&TP&TN\\
+        %\hline
+        %spec&&\\
+        %+&$p\cdot sens$&$n\cdot spec$\\
+        %sens&&\\
+        %\hline
+        %spec&&\\
+        %+&$acc\cdot n + acc\cdot p - n\cdot spec$&$n\cdot spec$\\
+        %acc&&\\
+        %\hline
+        %spec&&\\
+        %+&$\frac{n\cdot ppv\cdot (spec - 1)}{(ppv - 1)}$&$n\cdot spec$\\
+        %ppv&&\\
+        %\hline
+        %spec&&\\
+        %+&$n\cdot spec-\frac{n\cdot spec}{npv}+p$&$n\cdot spec$\\
+        %npv&&\\
+        %\hline
+        %spec&&\\
+        %+&$\frac{F_1\cdot (n\cdot spec-n-p)}{{F}_1-2}$&$n\cdot spec$\\
+        %F${}_\textsc{1}$&&\\
+        %\hline
+        %sens&&\\
+        %+&$p\cdot sens$&$acc\cdot n + acc\cdot p - p\cdot sens$\\
+        %acc&&\\
+        %\hline
+        %sens&&\\
+        %+&$p\cdot sens$&$n + p\cdot sens -\frac{p\cdot sens}{ppv}$\\
+%        ppv&&\\
+        %\hline
+        %sens&&\\
+        %+&$p\cdot sens$&$\frac{npv\cdot p\cdot (sens - 1)}{(npv - 1)}$\\
+%        npv&&\\
+        %\hline
+        %sens&&\\
+        %+&$p\cdot sens$&$n+p\cdot sens+p-\frac{2\cdot p\cdot sens}{F_1}$\\
+        %F${}_\textsc{1}$&&\\
+%        \hline
+        %acc&&\\
+        %+&$\frac{ppv\cdot (acc\cdot n + acc\cdot p - n)}{(2\cdot ppv - 1)}$&$\frac{(acc\cdot n\cdot ppv - acc\cdot n + %acc\cdot p\cdot ppv - acc\cdot p + n\cdot ppv)}{(2\cdot ppv - 1)}$\\
+%        ppv&&\\
+        %\hline
+%        acc&&\\
+        %+&$\frac{(acc\cdot n\cdot npv - acc\cdot n + acc\cdot npv\cdot p - acc\cdot p + npv\cdot p)}{(2\cdot npv - %1)}$&$\frac{npv\cdot (acc\cdot n + acc\cdot p - p)}{(2\cdot npv - 1)}$\\
+%        npv&&\\
+        %\hline
+%        acc&&\\
+        %+&$\frac{F_1\cdot (acc\cdot n + acc\cdot p - p - n)}{2\cdot(F_1 - 1)}$&$\frac{acc\cdot F_1\cdot n+acc\cdot F_1\cdot p-%2\cdot acc\cdot n-2\cdot acc\cdot p+F_1\cdot p}{2\cdot(F_1-1)}$\\
+        %F${}_\textsc{1}$&&\\
+%        \hline 
+        %ppv&&\\
+        %+&$\frac{ppv\cdot (n\cdot npv - n + npv\cdot p)}{(npv + ppv - 1)}$&$\frac{npv\cdot (n\cdot ppv + p\cdot ppv - p)}{(npv %+ ppv - 1)}$\\
+%        npv&&\\
+        %\hline
+%        ppv&&\\
+        %+&$\frac{-F_1\cdot p\cdot ppv}{F_1-2\cdot ppv}$&$\frac{F_1\cdot n-F_1\cdot p+ppv+F_1\cdot p-2\cdot n\cdot ppv}{F_1-%2\cdot ppv}$\\
+        %F${}_\textsc{1}$&&\\
+%        \hline
+        %npv&&\\
+        %+&$\frac{F_1\cdot(n\cdot npv-n+2\cdot npv\cdot p-p)}{F_1+2\cdot npv-2}$&$\frac{npv\cdot (F_1\cdot n+2\cdot F_1\cdot p-%2\cdot p)}{F_1+2\cdot npv-2}$\\
+        %F${}_\textsc{1}$&&\\
+%        \hline
+    %\end{tabular}
+%    \caption{Connection between the most used performance metrics and the values TP, TN.}\label{table:2}
+    %\end{center}
+%\end{table}
+
+%\begin{table}
+   %\begin{center}
+    %\begin{tabular}{|c|c|c|}
+     %   \hline
+      %  &FP&FN\\
+        %\hline
+        %spec&&\\
+        %+&$n\cdot (1 - spec)$&$p\cdot (1 - sens)$\\
+        %sens&&\\
+        %\hline
+        %spec&&\\
+        %+&$n\cdot (1 - spec)$&$-acc\cdot n - acc\cdot p + n\cdot spec + p$\\
+        %acc&&\\
+        %\hline
+        %spec&&\\
+        %+&$n\cdot (1 - spec)$&$\frac{(-n\cdot ppv\cdot spec + n\cdot ppv + p\cdot ppv - p)}{(ppv - 1)}$\\
+        %ppv&&\\
+        %\hline
+        %spec&&\\
+        %+&$n\cdot (1 - spec)$&$\frac{n\cdot spec\cdot (1 - npv)}{npv}$\\
+        %npv&&\\
+        %\hline
+        %spec&&\\
+        %+&$n\cdot (1 - spec)$&$\frac{-F_1\cdot n\cdot spec+F_1\cdot n+2\cdot F_1\cdot p-2\cdot p}{F_1-2}$\\
+        %F${}_1$&&\\
+        %\hline
+        %sens&&\\
+        %+&$-acc\cdot n - acc\cdot p + n + p\cdot sens$&$p\cdot (1 - sens)$\\
+        %acc&&\\
+        %\hline
+        %sens&&\\
+        %+&$\frac{p\cdot sens\cdot (1 - ppv)}{ppv}$&$p\cdot (1 - sens)$\\
+        %ppv&&\\
+%        \hline
+        %sens&&\\
+        %+&$\frac{(n\cdot npv - n - npv\cdot p\cdot sens + npv\cdot p)}{(npv - 1)}$&$p\cdot (1 - sens)$\\
+%        npv&&\\
+        %\hline
+        %sens&&\\
+        %+&$\frac{p\cdot (F_1\cdot sens-F_1+2\cdot sens)}{(F_1)}$&$p\cdot (1 - sens)$\\
+        %F${}_1$&&\\
+%        \hline
+ %       acc&&\\
+        %+&$\frac{(-acc\cdot n\cdot ppv + acc\cdot n - acc\cdot p\cdot ppv + acc\cdot p + n\cdot ppv - n)}{(2\cdot ppv - %1)}$&$\frac{(-acc\cdot n\cdot ppv - acc\cdot p\cdot ppv + n\cdot ppv + 2\cdot p\cdot ppv - p)}{(2\cdot ppv - 1)}$\\
+%        ppv&&\\
+        %\hline
+%        acc&&\\
+        %+&$\frac{(-acc\cdot n\cdot npv - acc\cdot npv\cdot p + 2\cdot n\cdot npv - n + npv\cdot p)}{(2\cdot npv - %1)}$&$\frac{(-acc\cdot n\cdot npv + acc\cdot n - acc\cdot npv\cdot p + acc\cdot p + npv\cdot p - p)}{(2\cdot npv - %1)}$\\
+%        npv&&\\
+        %\hline
+%        acc&&\\
+        %+&$\frac{(-acc\cdot n\cdot F_1 - acc\cdot F_1\cdot p + 2\cdot n\cdot acc+2\cdot p\cdot acc+F_1\cdot n-F_1\cdot p-%2\cdot n)}{2\cdot (F_1 - 1)}$&$\frac{(-acc\cdot F_1\cdot p + F_1\cdot n + 3\cdot F_1\cdot p - 2\cdot p)}{2\cdot (F_1-%1)}$\\
+        %F${}_1$&&\\
+%        \hline
+        %ppv&&\\
+        %+&$\frac{(-n\cdot npv\cdot ppv + n\cdot npv + n\cdot ppv - n - npv\cdot p\cdot ppv + npv\cdot p)}{(npv + ppv - %1)}$&$\frac{(-n\cdot npv\cdot ppv + n\cdot ppv - npv\cdot p\cdot ppv + npv\cdot p + p\cdot ppv - p)}{(npv + ppv - %1)}$\\
+%        npv&&\\
+        %\hline
+%        ppv&&\\
+        %+&$\frac{F_1\cdot p\cdot (ppv-1)}{F_1-2\cdot ppv}$&$\frac{p\cdot (F_1\cdot ppv+F_1-2\cdot ppv)}{F_1-2\cdot ppv}$\\
+        %F${}_1$&&\\
+%        \hline
+        %npv&&\\
+        %+&$\frac{-F_1\cdot n\cdot npv+F_1\cdot n-2\cdot F_1\cdot npv\cdot p+2\cdot n+2\cdot npv\cdot p}{(F_1 + 2\cdot npv - %2)}$&$\frac{-F_1\cdot n\cdot npv+F_1\cdot n-2\cdot F_1\cdot npv\cdot p+2\cdot F_1\cdot p+2\cdot npv\cdot p-2\cdot p}%{(F_1+2\cdot npv-2)}$\\
+%        F${}_1$&&\\
+        %\hline
+    %\end{tabular}
+%    \caption{Connection between the most used performance metrics and the values FP, FN.}\label{table:3}
+    %\end{center}
+%\end{table}
+
+%\begin{table}
+   %\begin{center}
+    %\begin{tabular}{|c|c|c|c|}
+        %\hline
+        %Metrics&&&\\
+%        \hline
+        %spec&&&\\
+        %sens&$spec=$&$sens=$&$acc=$\\
+%        acc&&&\\
+        %\hline
+        %spec&&&\\
+        %sens&$spec=$&$sens=$&$npv=$\\
+%        npv&&&\\
+        %\hline
+        %spec&&&\\
+        %sens&$spec=$&$sens=$&$ppv=$\\
+%        ppv&&&\\
+        %\hline
+        %spec&&&\\
+        %sens&$spec=$&$sens=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %spec&&&\\
+%        acc&$spec=$&$acc=$&$npv=$\\
+        %npv&&&\\
+%        \hline
+        %spec&&&\\
+%        acc&$spec=$&$acc=$&$ppv=$\\
+        %ppv&&&\\
+%        \hline
+        %spec&&&\\
+%        acc&$spec=$&$acc=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %spec&&&\\
+%        npv&$spec=$&$npv=$&$ppv=$\\
+        %ppv&&&\\
+%        \hline
+        %spec&&&\\
+%        npv&$spec=$&$npv=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+ %       spec&&&\\
+ %       ppv&$spec=$&$ppv=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %sens&&&\\
+%        acc&$sens=$&$acc=$&$npv=$\\
+        %npv&&&\\
+%        \hline
+        %sens&&&\\
+%        acc&$sens=$&$acc=$&$ppv=$\\
+        %ppv&&&\\
+%        \hline
+        %sens&&&\\
+%        acc&$sens=$&$acc=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %sens&&&\\
+%        npv&$sens=$&$npv=$&$ppv=$\\
+ %       ppv&&&\\
+        %\hline
+        %sens&&&\\
+%        npv&$sens=$&$npv=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %sens&&&\\
+%        ppv&$sens=$&$ppv=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %acc&&&\\
+%        npv&$acc=$&$npv=$&$ppv=$\\
+        %ppv&&&\\
+%        \hline
+        %acc&&&\\
+%        npv&$acc=$&$npv=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %acc&&&\\
+%        ppv&$acc=$&$ppv=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+        %npv&&&\\
+%        ppv&$npv=$&$ppv=$&$F_1=$\\
+        %F${}_1$&&&\\
+%        \hline
+    %\end{tabular}
+%    \caption{Connection between the most used performance metrics.}\label{table:4}
+    %\end{center}
+%\end{table}
+
+
+%%% Coharence of the performance metrics
+%\section{Coharence of the performance metrics}\label{section:Coharence}
+\section{The proposed method}
+\label{sec:individual}
+
+\subsection{Testing scores derived from one confusion matrix}
+
+\subsection{A note on the Mean-of-Ratios and Ratio-of-Means aggregations}
+
+\subsection{Testing scores aggregated by the Ratio-of-Means approach}
+
+\subsection{Testing scores aggregated by the Mean-of-Ratios approach}
+
+\subsection{Tests in the lack of knowing the aggregation or fold structure}
+
+In most cases, we encounter the reality that performance metrics, which describe the performance of a binary classifier, are only available with a fixed precision rounded to a specific decimal point. This renders it impossible to verify the consistency among performance metrics using the straightforward algebraic method presented in the previous chapter.
+
+To address this issue, we introduce a numerical approach in this chapter that enables us to examine coherence while accounting for a possible error margin of $\epsilon$ in the given performance metrics. Instead of relying on the conventional algebraic method, we utilize interval arithmetic to determine the range within which a third performance metric value should fall, considering two given performance metrics with rounded values, in order to establish that the values are consistent.
+
+To illustrate the coherence test, we will provide an example. Three metrics that are commonly used in binary classification literature to assess performance are sensitivity, specificity, and accuracy. For this demonstration, we will focus on sensitivity and specificity and analyze their relationship with accuracy. Our goal is to determine if the published accuracy aligns with the previous two performance metrics.
+
+So, consider a data set with $n$ elements on which we apply a binary classifier with known sensitivity, specificity, and accuracy performance metrics. These values can be understood as functions of the TP, TN, FP, and FN values. If the triplet of $(sensitivity, specificity, accuracy)$ is coherent, we can easily derive the corresponding TP, TN, FP, and FN values by solving the following system of equations:
+
+\begin{align}
+sensitivity - \epsilon &\leq \dfrac{TP}{P} \leq sensitivity + \epsilon,\label{eq0}\\
+specificity - \epsilon &\leq \dfrac{TN}{N} \leq specificity + \epsilon,\label{eq1}\\
+accuracy - \epsilon &\leq \dfrac{TP+TN}{P+N} \leq accuracy + \epsilon,\label{eq2}\\
+0 &\leq TP\leq P, \label{eq3}\\
+0 &\leq TN\leq N, \label{eq4}
+\end{align}
+
+\noindent
+with $\epsilon$ indicating the numerical uncertainty of the reported performance scores. The setting $\epsilon = 10^{-k}/2$ is the maximum numerical uncertainty when the performance scores reported to $k$ decimal places are expected to be rounded, and $\epsilon = 10^{-k}$ is the maximum uncertainty when truncation or ceiling to $k$ decimal places is supposed.
+
+Multiplying the first three conditions by $P$, $N$ and $(P+N)$, respectively, and eliminating the $TP$ and $TN$ variables from equations (\ref{eq0}) - (\ref{eq2}) by subtracting (\ref{eq3}) and (\ref{eq4}), one gets 6 conditions which need to hold, independently from the actual values of $TP$, $TN$, $FP$, and $FN$:
+\begin{align}
+0 &\geq (TN+FN)\cdot (acc-spec)+(TP+FP)\cdot (acc-sens)- 2\epsilon n, \nonumber\\
+0 &\leq (TN+FN)\cdot (acc-spec)+(TP+FP)\cdot (acc-sens)+ 2\epsilon n, \nonumber\\
+0 &\geq (TP+FP)\cdot (sens - \epsilon - 1),\nonumber\\
+0 &\leq (TP+FP)\cdot (sens + \epsilon),\nonumber\\
+0 &\geq (TN+FN)\cdot (spec - \epsilon - 1),\nonumber\\
+0 &\leq (TN+FN)\cdot (spec + \epsilon). \label{il-cond}
+\end{align}
+The conditions (\ref{il-cond}) enable the testing of the consistency of a particular triplet $(sens, spec, acc)$ of the given performance metrics, extracted from a data set with $\epsilon$ numerical uncertainty in $sens$, $spec$, and $acc$. 
+
+Ought to be kept in mind, when evaluating performance metrics reported in scientific publications, it is important to consider whether the metrics were calculated for the entire data set or for a subset of the data set. If the results were determined for a subset $X^\prime$ (with $\vert X^\prime\vert=n^\prime$) of the set $X$, then the total number of elements $n$ should be replaced with $n^\prime$ in any calculations.
+
+Through the example above, you can easily follow the course of the method, which is implemented in our freely available program package: As described in the previous chapter, we select two of the three available performance metrics. Using the equations that define them -- containing only the parameters $TP$, $TN$, $FP$, and $FN$ -- and equations $P=TP+FP$, $N=TN+FN$, we can calculate the current solution of $TP$, $TN$, $FP$, and $FN$ with interval arithmetic. Here we would like to emphasize that these solutions will actually now be intervals that define the set of possible values for the given $\epsilon$. Using the obtained intervals for $TP$, $TN$, $FP$, and $FN$, we can calculate the possible values of the third, so far unused, performance metric. The reported value of this performance metric must be compared with the result of our calculation. Coherency means that the reported value must fall within the interval we have calculated.
+
+%\section{Coherence of the performance scores determined on $k$-folds or collection of datasets}
+%\section{Tests for performance scores aggregated over multiple cross-validation folds or datasets}
+%\label{sec:aggregated}
+
+%\subsection{Mean-of-Ratios and Ratio-of-Means aggregations}
+
+%\subsection{Coherence of the performance scores determined on $k$-folds of the dataset}
+
+Suppose we have a dataset $X$ that is partitioned into non-empty subsets such that each element belongs to exactly one subset. Mathematically, this can be expressed as a set of subsets $\{X_i\hbox{\space} \vert\hbox{\space} i=1,\dots,k\in\Bbb{N}\}$ that form a partition of $X$ if the union of all subsets equals $X$ and the intersection of any two subsets is empty.
+
+If the partition has the additional property that the difference in size between any two subsets is at most 1, it is called a $k$-fold system on $X$ and the subsets $X_i$ are called $k$-folds.
+
+Consider a $k$-fold system on dataset $X$, denoted by $\{X_i\}$. Instead of having performance metrics for the entire dataset, we now have performance metrics for each $k$-fold, denoted by $sensitivity_i$, $specificity_i$, and $accuracy_i$.
+
+In this chapter, we present consistency tests for performance metrics calculated on k-folds of dataset X. The concept is similar to the dataset-level test. Given the exact counts of positive and negative instances for each fold in the dataset, we can formulate conditions that must hold if the evaluation was performed according to our assumptions. Specifically, let $P_i$ and $N_i$ denote the counts of positive and negative instances in the manual annotation of the $i$th fold under some assumption. If this assumption is true, then there must exist unknown integers $TP_i$ and $TN_i$ ($i=1, \dots, k$) such that certain conditions are satisfied:
+
+\begin{align}
+\dfrac{1}{k}\sum\limits_{i=1}^k{sensitivity_i} - \epsilon &\leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TP_i}{P_i} \leq \dfrac{1}{k}\sum\limits_{i=1}^k{sensitivity_i} + \epsilon, \label{cond-sens}\\
+\dfrac{1}{k}\sum\limits_{i=1}^k{specificity}_i - \epsilon &\leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TN_i}{N_i} \leq \dfrac{1}{k}\sum\limits_{i=1}^k{specificity}_i + \epsilon, \label{cond-spec}\\
+\dfrac{1}{k}\sum\limits_{i=1}^k{accuracy}_i - \epsilon &\leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TP_i + TN_i}{P_i + N_i} \leq \dfrac{1}{k}\sum\limits_{i=1}^k{accuracy}_i + \epsilon, \label{cond-acc}\\
+0 &\leq TP_i \leq P_i, i=1, \dots, k, \label{boundary-tp}\\
+0 &\leq TN_i \leq N_i, i=1, \dots, k. \label{boundary-tn}
+\end{align}
+
+Due to the $2*k$ free variables $TP_i$ and $TN_i$, this set of conditions is less straightforward to evaluate, however, one can recognize that all the conditions are linear, thus, the entire set of conditions can be interpreted as the condition set of a linear integer programming problem. In order to illustrate this by representing the problem in the standard form of linear programming, let $\mathbf{x}\in\mathbb{R}^{2*k}$ denote the vector of free variables, with $\mathbf{x}_i$, $i=1,\dots,k$ standing for $TP_i$ and $\mathbf{x}_i, i=k+1\dots,2*k$ representing $TN_i$. Then, introducing the matrix $A\in\mathbb{R}^{6\times 2*k}$ and the vector $\mathbf{b}\in\mathbb{R}^{6}$:
+\begin{equation}
+A= \dfrac{1}{k}\left[\begin{array}{cccccc}
+\frac{1}{P_1} & \dots & \frac{1}{P_{2*k}} & 0 & \dots & 0 \\
+-\frac{1}{P_1} & \dots & -\frac{1}{P_{2*k}} & 0 & \dots & 0 \\
+0 & \dots & 0 & \frac{1}{N_1} & \dots & \frac{1}{N_{2*k}}\\
+0 & \dots & 0 & -\frac{1}{N_1} & \dots & -\frac{1}{N_{2*k}}\\
+\frac{1}{P_1 + N_1} & \dots & \frac{1}{P_{2*k} + N_{2*k}} & \frac{1}{P_1+ N_1} & \dots & \frac{1}{P_{2*k}+N_{2*k}} \\
+-\frac{1}{P_1 + N_1} & \dots & -\frac{1}{P_{2*k} + N_{2*k}} & -\frac{1}{P_1 + N_1} & \dots & -\frac{1}{P_{2*k}+ N_{2*k}}
+\end{array}\right],
+\end{equation}
+\begin{equation}
+b= \left[\begin{array}{c}\dfrac{1}{k}\sum\limits_{i=1}^k{sensitivity_i} + \epsilon \\
+-(\dfrac{1}{k}\sum\limits_{i=1}^k{sensitivity_i} - \epsilon) \\
+\dfrac{1}{k}\sum\limits_{i=1}^k{specificity_i} + \epsilon \\
+-(\dfrac{1}{k}\sum\limits_{i=1}^k{specificity_i} - \epsilon) \\
+\dfrac{1}{k}\sum\limits_{i=1}^k{accuracy_i} + \epsilon \\
+-(\dfrac{1}{k}\sum\limits_{i=1}^k{accuracy_i} - \epsilon)
+\end{array}\right],
+\end{equation}
+the conditions (\ref{cond-sens})-(\ref{cond-acc}) can be rewritten in the standard form of linear programming
+$A\mathbf{x}  \leq \mathbf{b}$,
+with the boundary conditions (\ref{boundary-tp}), (\ref{boundary-tn}) and integer constraints on the free variables $\mathbf{x}$. In order to check if these conditions can be fulfilled, one can exploit any linear integer programming solver with a dummy objective function, and if the feasibility set is empty, the solver returns that the conditions cannot be satisfied, indicating that the aggregated performance scores are not consistent under the hypothesis which led to the $P_i$ and $N_i$ counts (using all elements of the datasets or a subsets of them).
+
+%\subsection{The analysis of aggregated performance metrics on collection of datasets}
+%\label{sec-agg}
+
+The common practice reporting performance metrics in several area of image processing is reporting aggregations of the image level performance metrics. In this subsection, we are developing consistency tests for the aggregated performance metrics on collection of datasets. It is important to note that the calculation of aggregated performance metrics is based on averaging, which we refer to as the mean-of-ratios approach (MoR).
+
+Another meaningful aggregation of data level performance metrics could be averaging the number of true positives and false positives over the test set and calculating the overall scores in terms of these aggregations, for example, accuracy as $\dfrac{\overline{TP} + \overline{TN}}{\overline{P} + \overline{N}}$. In statistics, this approach is referred to as the ratio-of-means (RoM) case and its relation to MoR is discussed in detail in the literature \citep{rommor}. 
+
+First, we focus on the MoR case. The concept of the consistency test is similar to that of the data level test. Given the exact counts of positives and negatives for each data set. Particularly, let $P_i^*, N_i^*, i=1, \dots, k$ denote the counts of positive and negative data in the manual annotation of the $k$th data set. In this case the following conditions must be feasible for some $TP_i$ and $TN_i$, $i=1, \dots, k$ unknown integers:
+
+\begin{align}
+\overline{sens} - \epsilon \leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TP_i}{P_i^*} \leq \overline{sens} + \epsilon, \label{cond-sens}\\
+\overline{spec} - \epsilon \leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TN_i}{N_i^*} \leq \overline{spec} + \epsilon, \label{cond-spec}\\
+\overline{acc} - \epsilon \leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TP_i + tn_i}{P_i^* + N_i^*} \leq \overline{acc} + \epsilon, \label{cond-acc}\\
+0 \leq TP_i \leq P_i^*, i=1, \dots, k, \label{boundary-tp}\\
+0 \leq TN_i \leq N_i^*, i=1, \dots, k. \label{boundary-tn}
+\end{align}
+Due to the $2*k$ free variables $TP_i$ and $TN_i$, this set of conditions is less straightforward to evaluate, however, one can recognize that all the conditions are linear, thus, the entire set of conditions can be interpreted as the condition set of a linear integer programming problem. In order to illustrate this by representing the problem in the standard form of linear programming, let $\mathbf{x}\in\mathbb{R}^{2*k}$ denote the vector of free variables, with $\mathbf{x}_i$, $i=1,\dots,k$ standing for $TP_i$ and $\mathbf{x}_i, i=k+1\dots,2*k$ representing $TN_i$. Then, introducing the matrix $A\in\mathbb{R}^{6\times 2*k}$ and the vector $b\in\mathbb{R}^{6}$:
+\begin{equation}
+A= \dfrac{1}{k}\left[\begin{array}{cccccc}
+\frac{1}{P_1^*} & \dots & \frac{1}{P_{k}^*} & 0 & \dots & 0 \\
+-\frac{1}{P_1^*} & \dots & -\frac{1}{P_{k}^*} & 0 & \dots & 0 \\
+0 & \dots & 0 & \frac{1}{N_1^*} & \dots & \frac{1}{N_{k}^*}\\
+0 & \dots & 0 & -\frac{1}{N_1^*} & \dots & -\frac{1}{N_{k}^*}\\
+\frac{1}{P_1^* + P_1^*} & \dots & \frac{1}{P_{k}^* + N_{k}^*} & \frac{1}{P_1^* + N_1^*} & \dots & \frac{1}{P_{k}^* + N_{k}^*} \\
+-\frac{1}{P_1^* + N_1^*} & \dots & -\frac{1}{P_{k}^* + N_{k}^*} & -\frac{1}{P_1^* + N_1^*} & \dots & -\frac{1}{P_{k}^* + N_{k}^*}
+\end{array}\right],
+\end{equation}
+\begin{equation}
+b= \left[\begin{array}{c}\overline{sens} + \epsilon \\
+-(\overline{sens} - \epsilon) \\
+\overline{spec} + \epsilon \\
+-(\overline{spec} - \epsilon) \\
+\overline{acc} + \epsilon \\
+-(\overline{acc} - \epsilon)
+\end{array}\right],
+\end{equation}
+the conditions (\ref{cond-sens})-(\ref{cond-acc}) can be rewritten in the standard form of linear programming
+$A\mathbf{x}  \leq \mathbf{b}$,
+with the boundary conditions (\ref{boundary-tp}), (\ref{boundary-tn}) and integer constraints on the free variables $\mathbf{x}$. In order to check if these conditions can be fulfilled, one can exploit any linear integer programming solver with a dummy objective function, and if the feasibility set is empty, the solver returns that the conditions cannot be satisfied, indicating that the aggregated performance metrics are not consistent.
+
+
+In the RoM case, one can formulate similar conditions which need to hold if the assumptions are correct:
+\begin{align}
+\overline{sens} - \epsilon \leq \dfrac{\overline{TP}}{\overline{P^*}} \leq \overline{sens} + \epsilon, \\
+\overline{spec} - \epsilon \leq \dfrac{\overline{TN}}{\overline{N^*}} \leq \overline{spec} + \epsilon, \\
+\overline{acc} - \epsilon \leq \dfrac{\overline{TP} + \overline{TN}}{\overline{P^*} + \overline{N^*}} \leq \overline{acc} + \epsilon, \\
+0 \leq TP_i \leq P_i^*, i=1, \dots, k, \\
+0 \leq TN_i \leq N_i^*, i=1, \dots, k.
+\end{align}
+Again, one can recognize the condition set of a linear integer programming problem, which can be tested for feasibility analogously to the MoR case.
+
+
+%%% Coherence of the performance metrics determined on k-folds of the data set %%%
+%\section{Coherence of the aggregated performance metrics determined on $k$ data sets}
+
+%Suppose we have a collection of data sets $\{X_i \hskip 1pt\vert\hskip 1pt i=1,\dots,k\in\mathbb{N}\}$. Consider the performance metrics for each data set, denoted by $acc_i$, $sens_i$, and $spec_i$.
+
+%Given the exact counts of positive and negative instances for each data set in the collection, we can formulate conditions that must hold if the evaluation was performed according to our assumptions. Specifically, let $P_i$ and $N_i$ denote the counts of positive and negative instances in the manual annotation of the $i$th data set under some assumption. If this assumption is true, then there must exist unknown integers $TP_i$ and $TN_i$ ($i=1, \dots, k$) such that certain conditions are satisfied:
+
+%\begin{align}
+%\dfrac{1}{k}\sum\limits_{i=1}^k{sens_i} - \epsilon \leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TP_i}{P_i} \leq \dfrac{1}{k}\sum\limits_{i=1}^k{sens_i} + \epsilon, \label{cond-sens}\\
+%\dfrac{1}{k}\sum\limits_{i=1}^k{spec}_i - \epsilon \leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TN_i}{N_i} \leq \dfrac{1}{k}\sum\limits_{i=1}^k{spec}_i + \epsilon, \label{cond-spec}\\
+%\dfrac{1}{k}\sum\limits_{i=1}^k{acc}_i - \epsilon \leq \dfrac{1}{k}\sum\limits_{i=1}^{k}\dfrac{TP_i + TN_i}{P_i + N_i} \leq \dfrac{1}{k}\sum%\limits_{i=1}^k{acc}_i + \epsilon, \label{cond-acc}\\
+% \leq TP_i \leq P_i, i=1, \dots, k, \label{boundary-tp}\\
+%0 \leq TN_i \leq N_i, i=1, \dots, k. \label{boundary-tn}
+%\end{align}
+
+%Due to the $2*k$ free variables $TP_i$ and $TN_i$, this set of conditions is less straightforward to evaluate, however, one can recognize that all the conditions are linear, thus, the entire set of conditions can be interpreted as the condition set of a linear integer programming problem. In order to illustrate this by representing the problem in the standard form of linear programming, let $\mathbf{x}\in\mathbb{R}^{2*k}$ denote the vector of free variables, with $\mathbf{x}_i$, $i=1,\dots,k$ standing for $TP_i$ and $\mathbf{x}_i, i=k+1\dots,2*k$ representing $TN_i$. Then, introducing the matrix $A\in\mathbb{R}^{6\times 2*k}$ and the vector $\mathbf{b}\in\mathbb{R}^{6}$:
+%\begin{equation}
+%A= \dfrac{1}{m}\left[\begin{array}{cccccc}
+%\frac{1}{P_1} & \dots & \frac{1}{P_{2*k}} & 0 & \dots & 0 \\
+%-\frac{1}{P_1} & \dots & -\frac{1}{P_{2*k}} & 0 & \dots & 0 \\
+%0 & \dots & 0 & \frac{1}{N_1} & \dots & \frac{1}{N_{2*k}}\\
+% & \dots & 0 & -\frac{1}{N_1} & \dots & -\frac{1}{N_{2*k}}\\
+%\frac{1}{P_1 + N_1} & \dots & \frac{1}{P_{2*k} + N_{2*k}} & \frac{1}{P_1+ N_1} & \dots & \frac{1}{P_{2*k}+N_{2*k}} \\
+%-\frac{1}{P_1 + N_1} & \dots & -\frac{1}{P_{2*k} + N_{2*k}} & -\frac{1}{P_1 + N_1} & \dots & -\frac{1}{P_{2*k}+ N_{2*k}}
+%\end{array}\right],
+%\end{equation}
+%\begin{equation}
+%b= \left[\begin{array}{c}\dfrac{1}{k}\sum\limits_{i=1}^k{sens_i} + \epsilon \\
+%-(\dfrac{1}{k}\sum\limits_{i=1}^k{sens_i} - \epsilon) \\
+%\dfrac{1}{k}\sum\limits_{i=1}^k{spec_i} + \epsilon \\
+%-(\dfrac{1}{k}\sum\limits_{i=1}^k{spec_i} - \epsilon) \\
+%\dfrac{1}{k}\sum\limits_{i=1}^k{acc_i} + \epsilon \\
+%-(\dfrac{1}{k}\sum\limits_{i=1}^k{acc_i} - \epsilon)
+%\end{array}\right],
+%\end{equation}
+%the conditions (\ref{cond-sens})-(\ref{cond-acc}) can be rewritten in the standard form of linear programming
+%$A\mathbf{x}  \leq \mathbf{b}$,
+%with the boundary conditions (\ref{boundary-tp}), (\ref{boundary-tn}) and integer constraints on the free variables $\mathbf{x}$. In order to check if these conditions can be fulfilled, one can exploit any linear integer programming solver with a dummy objective function, and if the feasibility set is empty, the solver returns that the conditions cannot be satisfied, indicating that the aggregated performance scores are not consistent under the hypothesis which led to the $P_i$ and $N_i$ counts (using all elements of the data sets or a subsets of them).
+
+%%% Overview of the first experiments %%%
+%\section{Overview of experimental results}
+
+%\section{Testing in the lack of assumptions on the evaluation}
+
+\section{Applications}
+\label{sec:applications}
+In this chapter, by providing three specific examples, we aim to demonstrate that published papers in this topics often contains non-negligible errors in its results. We hope that authors will take note of these examples and check their own work thoroughly prior to publication.
+
+\subsection{Retinal vessel segmentation}
+Binary classification is a common technique used in digital image processing to accurately detect objects. One example of its application is in retinal vessel segmentation, where the goal is to identify the vascular network on a retinal image \cite{8}. This information can be useful in diagnosing certain eye diseases.
+
+To achieve this, a binary classifier is created to determine whether each pixel in the retinal image belongs to the vascular network. The classifiers are compared using performance metrics such as sensitivity, specificity, and accuracy. The DRIVE database, which contains 20 annotated images of the same size taken with the same camera, is used for this benchmark.
+
+Annotation involves an expert manually selecting the pixels that belong to the vascular network. In the case of DRIVE, independent annotation by two experts is available, with the first expert’s annotation typically used. From this annotation, we can calculate the number of times the binary classifier accurately determined whether a pixel belonged to the vascular network or not. We can also calculate the number of false classifications for both possible errors. These values (TP, TN, FN and FP) are used to calculate the performance metrics. These performance metrics are reported at either the image level or at the level of the image database in various publications.
+
+Ranking lists were compiled based on the performance metrics of various algorithms, with the highest-ranked algorithm being the one with the best performance metrics. The ranking of these algorithms played a significant role in determining their publishability. As such, it was important for us to examine this area as an example of how common errors can occur when publishing performance metrics.
+
+In our previous paper \cite{vessel}, we analyzed 100 papers on retinal vessel segmentation testing the consistency of published performance metrics. Our study found that nearly 1/3 of the published algorithms had non-coherent performance metrics, resulting in 91\% of the rankings being incorrect. These results demonstrate the usefulness and applicability of this mathematical tool.
+
+\subsection{Exudatum detection}
+Another area of computerized examination of eye diseases, in addition to the examination of the vascular network, is the so-called examination of exudatum. Exudates can be identified as white or yellowish areas that vary in size, shape, and location. The reason for their origin is the rupture of damaged capillaries in the retina, which causes proteins and lipids to leak from the blood into the retina. Unfortunately, this disease can ultimately lead to blindness, so its automated recognition is an important challenge for researchers working in the field.
+
+Many scientific publications have been published in this field in the past period, we randomly selected 20 publications in which the conditions of the experiments were described, the publicly available DIARETDB0 database \cite{diaretdb1} was used, and among the performance metrics specificity, sensitivity and accuracy were reported.
+
+The publications included in the study and the performance metrics published there are described in tabular form in Table \ref{table:5}.
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    Algorithm&Sensitivity&Specificity&Accuracy\\
+    \hline
+    \cite{exu01}&70.48\%&98.84\%&21.32\%\\
+    \hline
+    \cite{exu02}&92.42\%&81.25\%&87.72\%\\
+    \hline
+    \cite{exu03}&95\%&96\%&98.91\%\\
+    \hline
+    \cite{exu04}&99\%&96\%&98.2\%\\
+    \hline
+    \cite{exu05}&94\%&97\%&93.57\%\\
+    \hline
+    \cite{exu06}&98\%&98\%&97.9\%\\
+    \hline
+    \cite{exu07}&92\%&95\%&95.5\%\\
+    \hline
+    \cite{exu08}&92.42\%&81.25\%&87.72\%\\
+    \hline
+    \cite{exu09}&98.64\%&99.69\%&99.4\%\\
+    \hline
+    \cite{exu10}&96.3\%&99.8\%&99.7\%\\
+    \hline
+    \cite{exu11}&98.8\%&98.25\%&98.65\%\\
+    \hline
+    \cite{exu12}&86\%&84\%&86\%\\
+    \hline
+    \cite{exu13}&97.1\%&98.7\%&98.3\%\\
+    \hline
+    \cite{exu14}&97.7\%&99.9\%&99.83\%\\
+    \hline
+    \cite{exu15}&89.3\%&99.3\%&99.4\%\\
+    \hline
+\end{tabular}
+\caption{The algorithms included in the study and the performance metrics published about them.}\label{table:5}
+\end{center}
+\end{table}
+
+For each of the methods listed in the table above, our tests showed that the coherence between the published performance metrics does not exist.
+    
+
+
+
+\subsection{Ide jön a harmadik, amit mondtál}
+
+
+%%% Conclusion, further work %%%
+\section{Conclusions}
+\label{sec:conclusions}
+Numerical methods have been described in the paper, which make it possible to check whether these data are coherent or incorrect when specifying at least three different performance metrics from the set of investigated performance metrics. The method can also be used in the aggregate case, when we know the average values of these performance metrics not for a specific data set, but for a series of data sets.
+
+A software tool was created in parallel with the development of the theory, which enables the simple and efficient use of the developed method to check the coherency of published performance metrics.
+
+We also summarize the experience of three specific cases that support the presence of the problem: on the one hand, we refer to our previous work \cite{vessel}, which initiated the development of this method and points out that in an active and important field such as retinal vessel segmentation, there are problems with the reported performance metrics in one third of the cases, on the other hand we carried out a similar -- if not as large -- examination of ten articles related to exudatum detection, where similar problems were revealed, there is also a third examination... 
+
+%%% Appendix %%%
+\section{Appendix}
+
+
+
+
+
+%% Loading bibliography style file
+% \bibliographystyle{model1-num-names}
+\bibliographystyle{elsarticle-num}
+
+% Loading bibliography database
+\bibliography{references}
+
+\end{document}
+
+sens=\frac{(acc*n + acc*p - n*spec)}{p}
+spec=(acc*n + acc*p - p*sens)/n
+acc=(n*spec + p*sens)/(n + p)
+ 1 ================
+{(p*sens, npv*p*(sens - 1)/(npv - 1), -(-n*npv + n + npv*p*sens - npv*p)/(npv - 1), -p*(sens - 1), npv*p*(sens - 1)/(n*(npv - 1)))}
+{((n*npv*spec - n*spec + npv*p)/npv, n*spec, -n*(spec - 1), -n*spec*(npv - 1)/npv, (n*npv*spec - n*spec + npv*p)/(npv*p))}
+{(p*sens, n*spec, -n*(spec - 1), -p*(sens - 1), -n*spec/(-n*spec + p*sens - p))}
+ 2 ============
+{(p*sens, (n*ppv + p*ppv*sens - p*sens)/ppv, -p*sens*(ppv - 1)/ppv, -p*(sens - 1), (n*ppv + p*ppv*sens - p*sens)/(n*ppv))}
+{(n*ppv*(spec - 1)/(ppv - 1), n*spec, -n*(spec - 1), (-n*ppv*spec + n*ppv + p*ppv - p)/(ppv - 1), n*ppv*(spec - 1)/(p*(ppv - 1)))}
+{(p*sens, n*spec, -n*(spec - 1), -p*(sens - 1), p*sens/(-n*spec + n + p*sens))}
+ 3 =============
+{(p*sens, (f1*n + f1*p*sens + f1*p - 2*p*sens)/f1, -p*(f1*sens + f1 - 2*sens)/f1, -p*(sens - 1), (f1*n + f1*p*sens + f1*p - 2*p*sens)/(f1*n))}
+{(-f1*(-n*spec + n + p)/(f1 - 2), n*spec, -n*(spec - 1), (-f1*n*spec + f1*n + 2*f1*p - 2*p)/(f1 - 2), -f1*(-n*spec + n + p)/(p*(f1 - 2)))}
+{(p*sens, n*spec, -n*(spec - 1), -p*(sens - 1), 2*p*sens/(-n*spec + n + p*sens + p))}
+ 4 ======
+{tp: (acc*n*npv - acc*n + acc*npv*p - acc*p + npv*p)/(2*npv - 1), tn: npv*(acc*n + acc*p - p)/(2*npv - 1), fp: (-acc*n*npv - acc*npv*p + 2*n*npv - n + npv*p)/(2*npv - 1), fn: (-acc*n*npv + acc*n - acc*npv*p + acc*p + npv*p - p)/(2*npv - 1), spec: npv*(acc*n + acc*p - p)/(n*(2*npv - 1))}
+{tp: n*spec - n*spec/npv + p, tn: n*spec, fp: n*(1 - spec), fn: n*spec*(1 - npv)/npv, acc: (2*n*npv*spec - n*spec + npv*p)/(npv*(n + p))}
+[(acc*n + acc*p - n*spec, n*spec, n*(1 - spec), -acc*n - acc*p + n*spec + p, -n*spec/(acc*n + acc*p - 2*n*spec - p))]
+ 5 ===================
+spec: (acc*n*ppv - acc*n + acc*p*ppv - acc*p + n*ppv)/(n*(2*ppv - 1))
+acc: n*(2*ppv*spec - ppv - spec)/(n*ppv - n + p*ppv - p)
+[(acc*n + acc*p - n*spec, n*spec, n*(1 - spec), -acc*n - acc*p + n*spec + p, (acc*n + acc*p - n*spec)/(acc*n + acc*p - 2*n*spec + n))]
+ 6 ===================
+spec: (acc*f1*n + acc*f1*p - 2*acc*n - 2*acc*p + f1*n + f1*p)/(2*n*(f1 - 1))
+acc: (2*f1*n*spec - f1*n - f1*p - 2*n*spec)/(f1*n + f1*p - 2*n - 2*p)
+[(acc*n + acc*p - n*spec, n*spec, n*(1 - spec), -acc*n - acc*p + n*spec + p, 2*(acc*n + acc*p - n*spec)/(acc*n + acc*p - 2*n*spec + n + p))]
+ 7 ===================
+spec: npv*(n*ppv + p*ppv - p)/(n*(npv + ppv - 1))
+[(n*ppv*(spec - 1)/(ppv - 1), n*spec, n*(1 - spec), (-n*ppv*spec + n*ppv + p*ppv - p)/(ppv - 1), n*spec*(ppv - 1)/(n*ppv - n*spec + p*ppv - p))]
+[(n*spec - n*spec/npv + p, n*spec, n*(1 - spec), n*spec*(1 - npv)/npv, (n*npv*spec - n*spec + npv*p)/(n*npv - n*spec + npv*p))]
+ 8 =======================
+spec: npv*(f1*n + 2*f1*p - 2*p)/(n*(f1 + 2*npv - 2))
+[(f1*(n*spec - n - p)/(f1 - 2), n*spec, n*(1 - spec), (-f1*n*spec + f1*n + 2*f1*p - 2*p)/(f1 - 2), n*spec*(f1 - 2)/(f1*n + 2*f1*p - 2*n*spec - 2*p))]
+[(n*spec - n*spec/npv + p, n*spec, n*(1 - spec), n*spec*(1 - npv)/npv, 2*(n*npv*spec - n*spec + npv*p)/(n*npv - n*spec + 2*npv*p))]
+ 9 ======================
+{tp: -f1*p*ppv/(f1 - 2*ppv), tn: (f1*n - f1*p*ppv + f1*p - 2*n*ppv)/(f1 - 2*ppv), fp: f1*p*(ppv - 1)/(f1 - 2*ppv), fn: p*(f1*ppv + f1 - 2*ppv)/(f1 - 2*ppv), spec: (f1*n - f1*p*ppv + f1*p - 2*n*ppv)/(n*(f1 - 2*ppv))}
+[(f1*(n*spec - n - p)/(f1 - 2), n*spec, n*(1 - spec), (-f1*n*spec + f1*n + 2*f1*p - 2*p)/(f1 - 2), f1*(-n*spec + n + p)/(f1*p - 2*n*spec + 2*n))]
+[(n*ppv*(spec - 1)/(ppv - 1), n*spec, n*(1 - spec), (-n*ppv*spec + n*ppv + p*ppv - p)/(ppv - 1), 2*n*ppv*(spec - 1)/(n*spec - n + p*ppv - p))]
+ 10 ======================
+sens: (acc*n*npv - acc*n + acc*npv*p - acc*p + npv*p)/(p*(2*npv - 1))
+acc: p*(2*npv*sens - npv - sens)/(n*npv - n + npv*p - p)
+[(p*sens, acc*n + acc*p - p*sens, -acc*n - acc*p + n + p*sens, p*(1 - sens), (acc*n + acc*p - p*sens)/(acc*n + acc*p - 2*p*sens + p))]
+ 11 ========================
+sens: ppv*(acc*n + acc*p - n)/(p*(2*ppv - 1))
+acc: (n*ppv + 2*p*ppv*sens - p*sens)/(ppv*(n + p))
+[(p*sens, acc*n + acc*p - p*sens, -acc*n - acc*p + n + p*sens, p*(1 - sens), -p*sens/(acc*n + acc*p - n - 2*p*sens))]
+ 12 ========================
+sens: f1*(acc*n + acc*p - n - p)/(2*p*(f1 - 1))
+{tp: p*sens, tn: n + p*sens + p - 2*p*sens/f1, fp: p*(-f1*sens - f1 + 2*sens)/f1, fn: p*(1 - sens), acc: (f1*n + 2*f1*p*sens + f1*p - 2*p*sens)/(f1*(n + p))}
+[(p*sens, acc*n + acc*p - p*sens, -acc*n - acc*p + n + p*sens, p*(1 - sens), 2*p*sens/(-acc*n - acc*p + n + 2*p*sens + p))]
+ 13 ========================
+sens: ppv*(n*npv - n + npv*p)/(p*(npv + ppv - 1))
+[(p*sens, n + p*sens - p*sens/ppv, p*sens*(1 - ppv)/ppv, p*(1 - sens), (n*ppv + p*ppv*sens - p*sens)/(n*ppv + p*ppv - p*sens))]
+[(p*sens, npv*p*(sens - 1)/(npv - 1), (n*npv - n - npv*p*sens + npv*p)/(npv - 1), p*(1 - sens), p*sens*(npv - 1)/(n*npv - n + npv*p - p*sens))]
+ 14 ========================
+sens: f1*(n*npv - n + 2*npv*p - p)/(p*(f1 + 2*npv - 2))
+[(p*sens, n + p*sens + p - 2*p*sens/f1, p*(-f1*sens - f1 + 2*sens)/f1, p*(1 - sens), (f1*n + f1*p*sens + f1*p - 2*p*sens)/(f1*n + 2*f1*p - 2*p*sens))]
+[(p*sens, npv*p*(sens - 1)/(npv - 1), (n*npv - n - npv*p*sens + npv*p)/(npv - 1), p*(1 - sens), 2*p*sens*(npv - 1)/(n*npv - n + 2*npv*p - p*sens - p))]
+ 15 ========================
+sens: -f1*ppv/(f1 - 2*ppv)
+[(p*sens, n + p*sens + p - 2*p*sens/f1, p*(-f1*sens - f1 + 2*sens)/f1, p*(1 - sens), -f1*sens/(f1 - 2*sens))]
+[(p*sens, n + p*sens - p*sens/ppv, p*sens*(1 - ppv)/ppv, p*(1 - sens), 2*ppv*sens/(ppv + sens))]
+ 16 ========================
+acc: (2*n*npv*ppv - n*ppv + 2*npv*p*ppv - npv*p)/(n*npv + n*ppv - n + npv*p + p*ppv - p)}
+[(ppv*(acc*n + acc*p - n)/(2*ppv - 1), (acc*n*ppv - acc*n + acc*p*ppv - acc*p + n*ppv)/(2*ppv - 1), -(ppv - 1)*(acc*n + acc*p - n)/(2*ppv - 1), (-acc*n*ppv - acc*p*ppv + n*ppv + 2*p*ppv - p)/(2*ppv - 1), (-acc*n*ppv + acc*n - acc*p*ppv + acc*p - n*ppv)/(acc*n + acc*p - 2*n*ppv - 2*p*ppv + p))]
+[((acc*n*npv - acc*n + acc*npv*p - acc*p + npv*p)/(2*npv - 1), npv*(acc*n + acc*p - p)/(2*npv - 1), (-acc*n*npv - acc*npv*p + 2*n*npv - n + npv*p)/(2*npv - 1), -(npv - 1)*(acc*n + acc*p - p)/(2*npv - 1), (-acc*n*npv + acc*n - acc*npv*p + acc*p - npv*p)/(acc*n + acc*p - 2*n*npv + n - 2*npv*p))]
+ 17 ========================
+acc: (2*f1*n*npv - f1*n + 4*f1*npv*p - f1*p - 2*npv*p)/(f1*n + f1*p + 2*n*npv - 2*n + 2*npv*p - 2*p)
+[(f1*(acc - 1)*(n + p)/(2*(f1 - 1)), (n + p)*(acc*f1 - 2*acc + f1)/(2*(f1 - 1)), (-acc*f1*n - acc*f1*p + 2*acc*n + 2*acc*p + f1*n - f1*p - 2*n)/(2*(f1 - 1)), (-acc*f1*n - acc*f1*p + f1*n + 3*f1*p - 2*p)/(2*(f1 - 1)), -(n + p)*(acc*f1 - 2*acc + f1)/(2*acc*n + 2*acc*p - 2*f1*n - 4*f1*p + 2*p))]
+[((acc*n*npv - acc*n + acc*npv*p - acc*p + npv*p)/(2*npv - 1), npv*(acc*n + acc*p - p)/(2*npv - 1), (-acc*n*npv - acc*npv*p + 2*n*npv - n + npv*p)/(2*npv - 1), -(npv - 1)*(acc*n + acc*p - p)/(2*npv - 1), 2*(-acc*n*npv + acc*n - acc*npv*p + acc*p - npv*p)/(acc*n + acc*p - 2*n*npv + n - 4*npv*p + p))]
+ 18 ========================
+{tp: -f1*p*ppv/(f1 - 2*ppv), tn: (f1*n - f1*p*ppv + f1*p - 2*n*ppv)/(f1 - 2*ppv), fp: f1*p*(ppv - 1)/(f1 - 2*ppv), fn: p*(f1*ppv + f1 - 2*ppv)/(f1 - 2*ppv), acc: (f1*n - 2*f1*p*ppv + f1*p - 2*n*ppv)/(f1*n + f1*p - 2*n*ppv - 2*p*ppv)}
+[(f1*(acc - 1)*(n + p)/(2*(f1 - 1)), (n + p)*(acc*f1 - 2*acc + f1)/(2*(f1 - 1)), (-acc*f1*n - acc*f1*p + 2*acc*n + 2*acc*p + f1*n - f1*p - 2*n)/(2*(f1 - 1)), (-acc*f1*n - acc*f1*p + f1*n + 3*f1*p - 2*p)/(2*(f1 - 1)), f1*(acc - 1)*(n + p)/(2*(acc*n + acc*p - f1*p - n)))]
+[(ppv*(acc*n + acc*p - n)/(2*ppv - 1), (acc*n*ppv - acc*n + acc*p*ppv - acc*p + n*ppv)/(2*ppv - 1), -(ppv - 1)*(acc*n + acc*p - n)/(2*ppv - 1), (-acc*n*ppv - acc*p*ppv + n*ppv + 2*p*ppv - p)/(2*ppv - 1), 2*ppv*(acc*n + acc*p - n)/(acc*n + acc*p - n + 2*p*ppv - p))]
+ 19 ========================
+[(-f1*p*ppv/(f1 - 2*ppv), (f1*n - f1*p*ppv + f1*p - 2*n*ppv)/(f1 - 2*ppv), f1*p*(ppv - 1)/(f1 - 2*ppv), p*(f1*ppv + f1 - 2*ppv)/(f1 - 2*ppv), (f1*n - f1*p*ppv + f1*p - 2*n*ppv)/(f1*n + 2*f1*p - 2*n*ppv - 2*p*ppv))]
+[(f1*(n*npv - n + 2*npv*p - p)/(f1 + 2*npv - 2), npv*(f1*n + 2*f1*p - 2*p)/(f1 + 2*npv - 2), (-f1*n*npv + f1*n - 2*f1*npv*p + 2*n*npv - 2*n + 2*npv*p)/(f1 + 2*npv - 2), -(npv - 1)*(f1*n + 2*f1*p - 2*p)/(f1 + 2*npv - 2), f1*(-n*npv + n - 2*npv*p + p)/(f1*p - 2*n*npv + 2*n - 2*npv*p))]
+[(ppv*(n*npv - n + npv*p)/(npv + ppv - 1), npv*(n*ppv + p*ppv - p)/(npv + ppv - 1), -(ppv - 1)*(n*npv - n + npv*p)/(npv + ppv - 1), -(npv - 1)*(n*ppv + p*ppv - p)/(npv + ppv - 1), 2*ppv*(n*npv - n + npv*p)/(n*npv - n + 2*npv*p + p*ppv - p))]
+ 20 ========================

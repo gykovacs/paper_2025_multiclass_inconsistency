@@ -1,0 +1,828 @@
+% Template for Elsevier CRC journal article
+% version 1.1 dated 16 March 2010
+
+% This file (c) 2010 Elsevier Ltd.  Modifications may be freely made,
+% provided the edited file is saved under a different name
+
+% This file contains modifications for Procedia Computer Science
+% but may easily be adapted to other journals
+
+% Changes since version 1.0
+% - elsarticle class option changed from 1p to 3p (to better reflect CRC layout)
+
+%-----------------------------------------------------------------------------------
+
+%% This template uses the elsarticle.cls document class and the extension package ecrc.sty
+%% For full documentation on usage of elsarticle.cls, consult the documentation "elsdoc.pdf"
+%% Further resources available at https://www.elsevier.com/latex
+
+%-----------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Important note on usage                  %%
+%% -----------------------                  %%
+%% This file must be compiled with PDFLaTeX %%
+%% Using standard LaTeX will not work!      %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The '3p' and 'times' class options of elsarticle are used for Elsevier CRC
+%\documentclass[3p,times]{elsarticle}
+\documentclass[5p, final]{elsarticle}
+
+%% The `ecrc' package must be called to make the CRC functionality available
+\usepackage{ecrc}
+\usepackage{amsmath}
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{multirow}
+%\usepackage{booktabs}
+%\usepackage{array}
+%\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[noend, nothen]{algorithm2e}
+\usepackage{enumitem}
+
+%\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{subfig}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+%% The ecrc package defines commands needed for running heads and logos.
+%% For running heads, you can set the journal name, the volume, the starting page and the authors
+
+%% set the volume if you know. Otherwise `00'
+\volume{00}
+
+%% set the starting page if not 1
+\firstpage{1}
+
+%% Give the name of the journal
+\journalname{Applied Soft Computing}
+
+%% Give the author list to appear in the running head
+%% Example \runauth{C.V. Radhakrishnan et al.}
+\runauth{A. Fazekas and G. Kov\'acs}
+
+%% The choice of journal logo is determined by the \jid and \jnltitlelogo commands.
+%% A user-supplied logo with the name <\jid>logo.pdf will be inserted if present.
+%% e.g. if \jid{yspmi} the system will look for a file yspmilogo.pdf
+%% Otherwise the content of \jnltitlelogo will be set between horizontal lines as a default logo
+
+%% Give the abbreviation of the Journal.
+\jid{Appl. Soft Comput.}
+
+%% Give a short journal name for the dummy logo (if needed)
+\jnltitlelogo{Applied Soft Computing}
+
+%% Hereafter the template follows `elsarticle'.
+%% For more details see the existing template files elsarticle-template-harv.tex and elsarticle-template-num.tex.
+
+%% Elsevier CRC generally uses a numbered reference style
+%% For this, the conventions of elsarticle-template-num.tex should be followed (included below)
+%% If using BibTeX, use the style file elsarticle-num.bst
+
+%% End of ecrc-specific commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+% if you have landscape tables
+%\usepackage[figuresright]{rotating}
+
+% put your own definitions here:
+%   \newcommand{\cZ}{\cal{Z}}
+%   \newtheorem{def}{Definition}[section]
+%   ...
+
+% add words to TeX's hyphenation exception list
+%\hyphenation{author another created financial paper re-commend-ed Post-Script}
+
+% declarations for front matter
+
+\usepackage{mathtools}
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+%\dochead{}
+%% Use \dochead if there is an article header, e.g. \dochead{Short communication}
+
+\title{Testing the Consistency of Performance Scores Reported for Binary Classification Problems}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+\author[1]{Attila Fazekas} 
+\ead{fazekas.attila@inf.unideb.hu}
+
+\author[2]{Gy\"orgy Kov\'acs}
+\ead{gyuriofkovacs@gmail.com}
+
+
+\affiliation[1]{organization={Faculty of Informatics, University of Debrecen},
+    addressline={Kassai út 26}, 
+    city={Debrecen},
+    postcode={4028}, 
+    country={Hungary}}
+\affiliation[2]{organization={Analytical Minds},
+    addressline={Árpád út 5}, 
+    city={Beregsurány},
+    postcode={4933}, 
+    country={Hungary}}
+
+\begin{abstract}
+%Binary classification is one of the most fundamental tasks of machine learning, driving countless applications in various fields of science. Regardless of whether fundamental research is being conducted or applications are being improved, classification techniques are evaluated, compared and ranked in terms of performance scores like \emph{accuracy}, \emph{sensitivity} and \emph{specificity}. In many cases, the reported performance scores do not provide a reliable basis for the ranking of research (undisclosed or unorthodox cross-validation and aggregation schemes, typos, etc.). Given the details of the experimental setup (the number of test items), most performance scores can take only certain values and when multiple scores are reported, they need to maintain some internal consistency. In this paper, we propose numerical techniques to test if performance scores reported in binary classification scenarios are consistent with each other and the presumed experimental setup. The tests are not statistical but numerical: inconsistencies are identified with certainty. In three applications we show how the proposed technique can be used to identify inconsistencies and prevent the derailing of research. For the benefit of the community, the tests are released in an open-source Python package.
+
+Binary classification stands as a fundamental task in machine learning, underpinning numerous applications across various scientific domains. Whether scientists are conducting fundamental research or refining practical applications, they typically assess and rank classification techniques based on performance metrics like \emph{accuracy}, \emph{sensitivity}, and \emph{specificity}. However, the reported performance scores may not always provide a reliable basis for research ranking. This can occur due to undisclosed or unconventional practices related to cross-validation, typographical errors, and other factors.
+
+Given the details of the experimental setup, including factors such as the number of positive and negative test items, most performance metrics can take specific values only. When multiple scores are presented, they should also exhibit internal consistency. In this paper, we present numerical techniques designed to test the consistency of performance scores reported in binary classification scenarios, both with each other and with the assumed experimental conditions. Importantly, the proposed approach does not rely on statistical inference but uses numerical methods to identify inconsistencies with certainty.
+
+Through three different applications, we demonstrate how these proposed techniques can effectively detect inconsistencies, thereby safeguarding the integrity of research outcomes. To benefit the scientific community, we have made these tests available through an open-source Python package.
+
+
+
+
+
+
+\end{abstract}
+
+\begin{keyword}
+binary classification
+\sep 
+performance metrics
+\sep
+ranking of binary classifiers
+\sep 
+coherence of performance metrics
+\end{keyword}
+
+
+\end{frontmatter}
+
+        
+% Research highlights
+%\begin{highlights}
+%\item Valami1.
+%\item Valami2.
+%\item Valami3.
+%\item Valami4.
+%\item Valami5.
+%\end{highlights}
+
+% Keywords
+% Each keyword is seperated by \sep
+% https://www.elsevier.com/journals/computers-and-education/0360-1315/guide-for-authors#txt42001
+
+%%% Introduction %%%
+\section{Introduction}\label{section:Introduction}
+
+%Recently, numerous authors warned the scientific community about the so called \emph{reproducibility crisis} in artificial intelligence and machine learning based science \cite{leakage, reprcrisis, repr0, repr1}. Namely, there is an overwhelming amount of research results published that cannot be reproduced by independent experiments or follow flawed evaluation methodologies. Among several reasons, notable ones are the lack of code being shared \cite{leakage}, the improper use of statistics \cite{leakage, staterrors}, cosmetics applied to the findings \cite{fabrication}, but typos in the reported figures are also undoubtedly present.
+
+Recently, numerous authors warned the scientific community about the so-called \emph{reproducibility crisis} in artificial intelligence and machine learning-based research \cite{leakage, reprcrisis, repr0, repr1}. Notably, there is a significant amount of research results published that cannot be reproduced by independent experiments or follow flawed evaluation methodologies. Among several reasons, notable ones are the lack of shared code \cite{leakage}, the improper use of statistics \cite{leakage, staterrors}, cosmetics applied to the findings \cite{fabrication}, but typos in the reported figures are also undoubtedly present.
+
+%To fight the reproducibility crisis, numerous recommendations were proposed \cite{repr0, repr2} on how to report machine learning results properly. Unfortunately, the adaptation of these standards is fairly slow and they cannot eliminate the already existing problems in various fields. 
+%In practice, many fields of machine learning related research operate as self-organized, perpetual competitions, where the goal is to reach the best results for certain problems and datasets. In these fields, the merit of research tends to be evaluated purely by the reported performance scores, despite this exercise was proven to be challenging even in well-organized competitions with controlled evaluation \cite{ranking}. Under these circumstances, the reliability of reported performance scores becomes crucial: once published, unrealistically high performance results can reassure flawed methodologies and get magnified by the publication bias \cite{publicationbias}, eventually skewing entire fields of research. For example, after multiple authors reported almost perfect prediction results for the premature delivery in pregnancy based on electrohysterograms (EHG) \cite{ehgreview}, it was shown in \cite{ehg} that the overly optimistic results in 11 papers were due to a systematic data leakage in the evaluation methodology.
+To combat the reproducibility crisis, various recommendations have been proposed \cite{repr0, repr2} regarding the proper reporting of machine learning results. Unfortunately, the adoption of these standards has been relatively slow, and they are unable to rectify existing issues in numerous fields.
+In practical terms, many domains within machine learning research operate as self-organized, ongoing competitions, with the primary goal of achieving the best outcomes for specific problems and datasets. Within these domains, the quality of research is often assessed solely based on reported performance scores, despite the proven difficulty of this task even in well-structured competitions with controlled evaluations \cite{ranking}. In such circumstances, the reliability of reported performance scores becomes crucial. Once published, unrealistically high performance results can inadvertently validate flawed methodologies and may be amplified by publication bias \cite{publicationbias}, ultimately distorting entire research fields.
+For instance, following the reports of nearly perfect predictive results for premature delivery in pregnancy based on electrohysterograms (EHG) by multiple authors \cite{ehgreview}, it was revealed in \cite{ehg} that the overly optimistic results in 11 papers were attributed to a systematic data leakage in the evaluation methodology.
+
+%In general, most meta-analysis \cite{metaresearch} in the topic of reproducibility and reliability requires manual work. One option is to read through the papers of concern thoroughly and look for deviations from the scientific method and the best practices of statistics (as done in \cite{psychiatry}, \cite{csecurity}, \cite{satellite}). Another option is trying to reproduce various results by reimplementing the proposed techniques (as the authors of the EHG report \cite{ehg} did), which requires even more manual labor and is intractable at scale. It would be desired to have numerical techniques that can be used to test if the experimental setup described in a paper and the reported performance scores are consistent with each other, at all. In this paper, we develop such numerical techniques for binary classification.
+In general, most meta-analyses \cite{metaresearch} related to reproducibility necessitate manual effort. One approach involves a thorough examination of the relevant papers, seeking deviations from the scientific method and established best practices of statistics, as demonstrated in studies such as \cite{psychiatry}, \cite{csecurity}, and \cite{satellite}. Another approach entails attempting to replicate various results by re-implementing the proposed techniques, as exemplified by the authors of the EHG report \cite{ehg}, which demands even more extensive manual labor and becomes impractical at a larger scale.
+To address this challenge, it is desirable to have numerical techniques capable of assessing the consistency between the experimental setup described in a paper and the reported performance scores. In this paper, we introduce such numerical techniques for binary classification.
+
+%Being one of the most fundamental tasks in machine learning, the research and applications of binary classification \cite{1} also suffer from the aforementioned problems and the reporting of incomparable and irreproducible performance scores. Whether it is fundamental research or application, the performance of binary classification is usually evaluated by carrying out predictions on a test set (possibly in a cross-validation scheme \cite{cv1}), and determining the confusion matrix \cite{scores} of the experiment: the number of correctly/incorrectly predicted positive/negative instances. In practice, the confusion matrices are rarely reported, rather, the matrices are summarized by one or usually multiple numerical figures (for example, accuracy, sensitivity, specificity, f1-score, etc. \cite{scores}) which are usually aggregated over multiple dataset folds or even datasets. The various scores quantify various aspects of the problem and the performance of the classification technique. 
+Being one of the most fundamental tasks in machine learning, the research and applications of binary classification \cite{1} also suffer from the aforementioned problems and the reporting of incomparable and irreproducible performance scores. Whether it is fundamental research or application, the performance of binary classification is usually evaluated by carrying out predictions on a test set (possibly in a cross-validation scheme \cite{cv1}), and determining the confusion matrix \cite{scores} of the experiment: the number of correctly/incorrectly predicted positive/negative instances. In practice, the confusion matrices are rarely reported; rather, the matrices are summarized by one or usually multiple numerical figures (for example, accuracy, sensitivity, specificity, f1-score, etc. \cite{scores}) which are usually aggregated over multiple dataset folds or even datasets. The various scores quantify various aspects of the problem and the performance of the classification technique.
+
+%Being derived from the same matrix, the performance scores cannot take arbitrary values independently from each other. For example, it can be readily proven that the \emph{accuracy} score -- being the weighted average of \emph{sensitivity} and \emph{specificity} -- needs to fall between them. 
+%Inspired by the natural constraints the experimental setup imposes on the confusion matrix (for example, the sum of all entries needs to match the cardinality of the test set) and the the usually non-linear internal relations between the performance scores, one can raise the question: \emph{Given a set of reported performance scores and the description of the experiment, could the reported scores be the outcome of the experiment, at all?} Mathematically, the question addresses the existence of at least one confusion matrix which is compatible with the experimental setup and implies the reported performance scores up to the numerical uncertainty of rounding the figures. If this inverse problem is infeasible, any attempts of reproducing the results will fail with certainty. In practice, additional complexity comes from the aggregation (usually averaging) of multiple scores derived from the confusion matrices of multiple dataset folds or multiple datasets.
+As these performance scores are derived from the same matrix, they cannot independently assume arbitrary values. For instance, it can be readily demonstrated that the \emph{accuracy} score, being the weighted average of \emph{sensitivity} and \emph{specificity}, must fall within the range defined by these two metrics.
+Drawing inspiration from the natural constraints imposed by the experimental setup on the confusion matrix (e.g., the sum of all entries must match the cardinality of the test set) and considering the typically non-linear relationships between performance scores, a pertinent question arises: \emph{Can the reported performance scores be a plausible outcome of the experiment, given a set of reported performance scores and the experiment's description?} Mathematically, this question pertains to the existence of at least one compatible confusion matrix that aligns with the experimental conditions and yields the reported performance scores, considering numerical uncertainties introduced during rounding. If this inverse problem proves to be infeasible, any attempts to reproduce the results are destined to fail with certainty. In practice, additional complexity arises from the aggregation, typically through averaging, of multiple scores derived from confusion matrices across various dataset folds or multiple datasets.
+
+%The first approach to reconstruct the confusion matrix based on the reported scores and the experimental setup was a technique called \emph{DConfusion} \cite{dconfusion}, which was later successfully used to test the consistency of performance scores reported in machine learning research \cite{errorsml}.
+An early method for reconstructing the confusion matrix based on the reported scores and the experimental setup was the \emph{DConfusion} technique \cite{dconfusion}. Subsequently, this technique was effectively applied to assess the consistency of various studies related to machine learning \cite{errorsml}.
+%Independently, in a previous paper of ours, a similar approach was proposed to infer on the number of pixels used in the evaluation of retinal vessel segmentation techniques \cite{vesselsegm}. By refining the numerical methods, we developed a test that was sensitive enough to recognize a systematic and impactful methodological inconsistency in the evaluation of retinal vessel segmentation techniques, leading to the improper ranking of algorithms in 100+ papers \cite{vessel}. 
+Independently, in a previous paper of ours, we introduced a similar approach to estimate the exact number of pixels used for evaluating retinal vessel segmentation techniques \cite{vesselsegm}. By enhancing our numerical methods, we developed a test that proved sensitive enough to identify systematic and significant methodological inconsistencies in the evaluation of retinal vessel segmentation. This analysis ultimately led to the conclusion that the rankings of algorithms in over 100 papers are based on figures that cannot be compared directly \cite{vessel}.
+%Inspired by the successful application of the concept, in this paper, we generalize the method further and develop consistency tests for many of the most commonly used performance scores and evaluation schemes of binary classification. The main differences of the proposed approach compared to \emph{DConfusion} \cite{dconfusion} are that (a) \emph{DConfusion} provides a recipe only for a handful of performance scores usually reported in the field of software fault prediction systems, while the proposed technique supports the majority of performance scores used in the literature; (b) \emph{DConfusion} neglects the effect of aggregations, while the proposed technique handles the aggregation of scores with mathematical rigor; (c) due to the neglecting of aggregations and the propagation of rounding errors, \emph{DConfusion} might result false alarms of inconsistency, however, due to its numerical rigor, the inconsistencies identified by the proposed technique are certain. 
+Drawing inspiration from the successful application of this concept, this paper generalizes the method and develops consistency tests for many of the most commonly used performance scores and evaluation schemes in binary classification. Notably, this approach differs from \emph{DConfusion} \cite{dconfusion} in several key ways: (a) while \emph{DConfusion} supports only a limited set of performance scores typically encountered in the field of software fault prediction systems, the proposed technique supports the majority of performance scores used in the literature; (b) \emph{DConfusion} neglects the impact of aggregations, whereas this method rigorously addresses the aggregation of scores with mathematical rigor; (c) due to the omission of aggregations and the propagation of rounding errors, \emph{DConfusion} might yield false alarms of inconsistency, whereas the inconsistencies identified by this proposed technique are certain due to its mathematical rigor.
+
+%We highlight that the proposed consistency tests are numerical and not statistical, they have zero probability of type-I errors (no false positives): inconsistencies are identified with certainty, implying that either the assumed experimental setup or the reported scores are incorrect. Due to the strengths and the ease of use, we believe that the proposed techniques can be effective tools for meta-analysis and can contribute to improving the reproducibility of ML based science.
+We emphasize that the proposed consistency tests are numerical rather than statistical, devoid of any probability of type-I errors (false positives). In other words, inconsistencies are conclusively identified, leaving no room for doubt. When inconsistencies are identified, it implies that either the assumed experimental setup or the reported scores are incorrect. Given their robustness and ease of use, we believe that the proposed techniques can serve as effective tools for meta-analysis and contribute to enhancing the reproducibility of machine learning-based science.
+
+%The contributions of the paper to the field can be summarized as follows:
+%\begin{enumerate}
+%\item For experimental setups lacking the averaging of scores (the evaluation happens on one test set), we propose a consistency test supporting 21 of the most commonly used metrics, and note that the test can be easily extended to any further score functions.
+%\item For experimental setups involving the averaging of scores over dataset folds or multiple datasets, we propose a consistency test supporting 4 commonly used scores (accuracy, sensitivity, specificity, balanced accuracy).
+%\item Involving three real world problems, we demonstrate how the proposed technique can be used to identify research with flawed evaluation methodologies and inconsistent performance scores.
+%\item For the benefit of the community, the proposed tests have been released in the open source Python package \verb|mlscorecheck| which is available in the standard PyPI repository and in GitHub at \url{http://github.com/gykovacs/mlscorecheck}.
+%\end{enumerate}
+The contributions of the paper to the field can be summarized as follows:
+\begin{enumerate}
+\item We introduce a consistency test that supports 20 of the most commonly used metrics for experimental setups without the averaging of scores. Additionally, we highlight that the test can be easily extended to accommodate further score functions.
+\item For experimental setups that involve the averaging of performance scores across dataset folds or multiple datasets, we present a consistency test that supports four widely used scores: accuracy, sensitivity, specificity, and balanced accuracy.
+\item We illustrate the practical application of the proposed techniques through three real-world problems, and showcase its effectiveness in identifying research with flawed evaluation methodologies and inconsistent performance scores.
+\item To benefit the research community, we have released the proposed tests as part of the open-source Python package \verb|mlscorecheck|. This package is available in the standard PyPI repository or on GitHub at the: \url{http://github.com/gykovacs/mlscorecheck}.
+\end{enumerate}
+
+The paper is organized as follows: Section \ref{sec:problem} introduces the notation, the concept of binary classification, the performance scores and also outlines the problem of consistency testing. Sections \ref{sec:proposed} and \ref{sec:agg} present the proposed techniques for various evaluation schemes and scenarios. Section \ref{sec:applications} demonstrates how the techniques can be applied in practice. Finally, conclusions are drawn in Section \ref{sec:conclusions}.
+
+%As one of the most fundamental tasks of machine learning, the research of binary classification \cite{1} and its applications also suffer from incomparable and unreliable performance scores being reported.
+
+
+
+%In binary classification tasks, the goal is to accurately assign elements from a given set into one of two predetermined classes. While this may seem straightforward in theory, it can be challenging in practice. Defining clear classification rules and obtaining accurate data for evaluation can be difficult, leading to errors in classification. As a result, achieving perfect binary classification can be a complex task.\cite{1}
+
+%To address the challenges of binary classification, various methods have been developed to compensate for the lack of precise knowledge about classification rules or imprecise data. These methods aim to provide the best possible solution given the specifics of the problem at hand. Some of the most commonly used methods for binary classification include decision trees, random forests, Bayesian networks, support vector machines, and neural networks.\cite{2}
+
+%The significance of binary classification is further highlighted by its applicability to multiclass classification problems, where instances must be classified into one of three or more classes. This can be achieved by reducing the multiclass problem into multiple binary classification problems using approaches such as one-vs-rest and one-vs-one.\cite{3}
+
+%The effectiveness of binary classification methods is typically evaluated using performance metrics that measure the number of correctly and incorrectly classified instances for each class. Common performance metrics include sensitivity, specificity, and accuracy, among others.\cite{4}
+
+%Binary classification algorithms have a wide range of applications across various fields. For example, in digital image processing, binary classification can be used for tasks such as cell segmentation and vessel network segmentation \cite{5,6}, or exudatum segmentation [?].
+
+%Binary classification is an active area of research, with numerous scientific publications released each year that evaluate the effectiveness of new methods using performance metrics. These metrics play a crucial role in the acceptance of new research by the scientific community, as new methods must demonstrate comparable or superior performance to previously published methods. This has led to a ‘war of numbers’ in the field, where researchers strive to achieve the best possible performance scores. \cite{vessel}
+
+%As a result of the emphasis on performance metrics in binary classification research, it is crucial to ensure the reliability of these metrics. Any inaccuracies in their calculation can impact the performance ranking of different algorithms, making it essential to accurately determine and evaluate these scores.
+
+%To accurately compare the performance of different binary classification algorithms, it is essential to calculate their performance metrics using the same principles and benchmarks. These benchmarks must have well-defined and clear steps to ensure consistency and reliability in performance evaluation.
+
+%This paper highlights the importance of using clear and easy-to-follow benchmarks when comparing the performance of binary classification algorithms. Additionally, it provides a mathematical toolkit for verifying the consistency of performance metrics, allowing for the early detection of potential errors. This method can also be used to evaluate previously published results, helping to prevent misunderstandings and mistakes from impacting the evaluation of new algorithms.
+
+
+
+%%% Binary classification and its performance %%%
+%\section{Binary classification and its performance}\label{section:BinaryClassification}
+\section{Problem formulation}
+\label{sec:problem}
+
+In this section, we introduce the notations, and formulate the problem we address in the rest of the paper. Scalars, vectors and sets are denoted by lowercase, boldface and calligraphic typsetting (for example, $tp\in \lbrace 0, 1, \dots, p\rbrace$, $acc\in [0, 1]$, $\mathbf{x}\in\mathbb{R}^d$, $\mathcal{S}\in\lbrace 0, \dots, p\rbrace$). Throughout the paper we use the term \emph{performance score}, to avoid confusion with the mathematical notations of \emph{measure} and \emph{metric} which are used synonymously in various sources.
+
+There are numerous ways to formulate the problem of binary classification. Commonly, there is a set of paired training samples $\mathcal{D} = \lbrace(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \dots, (\mathbf{x}_N, y_N)\rbrace$, with $\mathbf{x}_i\in\mathbb{R}^d$ called feature vectors and $y_i\in\lbrace 0, 1\rbrace$ referred to as class labels (in some sources $y\in\lbrace -1, +1\rbrace$), and the classes denoted by $0$ and $1$ usually referred to as \emph{negative} and \emph{positive}, respectively. 
+The goal of binary classification is to use the available paired samples to infer a function $h: \mathbb{R}^d\rightarrow \lbrace 0, 1\rbrace$, capable to predict the class label $y$ of a previously unseen feature vector $\mathbf{x}\in\mathbb{R}^d$ as $h(\mathbf{x})$. For detailed and rigorous introduction into the fundamentals of various classification techniques, see \cite{mlbook, mlbook2}. 
+
+All classification techniques can predict class labels, but many of them (Bayesian-networks \cite{bayesiannetwork}, decision trees \cite{mlbook}, nearest neighbors \cite{mlbook}, neural networks \cite{mlbook}, etc.) are built to approximate the posterior distributions $\mathbb{P}(\mathbf{x}|y=c)$, $c\in\lbrace 0, 1\rbrace$ and derive class labels by maximizing the posterior probability to reduce the probability of misclassification \cite{bayesclassifier}. Usually it is application dependent which outcome of a classifier is preferred. For example, image segmentation \cite{segmentation} needs crisp labels whether a pixel belongs to an object; however, in many medical applications, ranking cases by the probability (risk) of a condition is preferred \cite{binclasranking}. Consequently, depending on the field of application, two approaches dominate classifier performance measurement: quantifying how well the posterior probabilities rank the cases (typically using the AUC-score \cite{aucsurvey}); and how accurate the assignment of labels is \cite{scores}. In this paper, we are concerned with the quality of labeling.
+
+To avoid any bias, classifiers need to be evaluated on a set of paired feature vector and class label samples that were not used for training. In many problems, so called \emph{validation sets} are provided by the data supplier to be used for evaluation purposes. (In the rest of the paper, we use the term validation set, but we highlight that in the lack of consensus, many sources use the term \emph{test set} interchangebly.) In the lack of predefined validation sets, usually the \emph{hold-out} approach is followed, by randomly splitting the available data into disjoint training $\mathcal{T}$ and validation $\mathcal{V}$ sets. The classifier $h$ is optimized using samples from $\mathcal{T}$ and $\mathcal{V}$ is used for evaluation by predicting the class label $\hat{y} \doteq h(\mathbf{x})$ for each $(\mathbf{x}, y)\in\mathcal{V}$ and comparing them to the corresponding observed labels. 
+Based on the corresponding ($y$, $\hat{y}$) pairs, the \emph{confusion matrix} can be constructed (see Table \ref{tptnfpfn}): the counts of true positive ($tp$), true negative ($tp$), false positive ($fp$) and false negative ($fn$) validation instances provide a holistic picture about the performance of the classifier. To facilitate the comparison and ranking of classification approaches, the confusion matrices are usually summarized by scalar performance scores. There is a large number of scores proposed in the literature \cite{scores}, each emphasizing various aspects of performance, many scores being used generally (like \emph{accuracy}) and many related to the best practices of specific fields, like the \emph{diagnostic odds ratio} in medicine \cite{dor}. In Table \ref{tab:scores} we provide a summary of the scores covered in this paper. 
+
+\begin{table}[t!]
+\label{tptnfpfn}
+\caption{The potential outcome}
+\begin{tabular}{c@{\hspace{4pt}}|@{\hspace{4pt}}c@{\hspace{4pt}}c}
+& \multicolumn{2}{c}{predicted} \\
+& positive ($\hat{y}_i = 1$) & negative ($\hat{y}_i = 0$) \\ \hline
+positive ($y_i=1)$ & true positive & false negative \\
+negative ($y_i=0)$ & false positive & true negative \\
+\end{tabular}
+\end{table}
+
+Due to the random split, the hold-out strategy has some inherent uncertainty. This uncertainty can be eliminated to some extent by repeating the random split and evaluation and aggregating the results, however, there is a chance that despite many repetitions the data is unequally represented in the scores. Probably the most commonly accepted strategy to make the scores represent each available data point equally is \emph{k-fold cross-validation} (kFCV) \cite{cv1}. In a kFCV scheme, the data $\mathcal{D}$ is split randomly to $k$ disjoint subsets (folds); iteratively, each fold is selected to be the validation set, the classifier is trained on the remaining $k-1$ folds, and evaluated on the selected fold; finally, the scores are aggregated over all folds. This scheme guarantees that each data sample is used for validation once. For more stable statistics, the process can be repeated multiple times with different random partitionings of $\mathcal{D}$. Specifically in binary classification, a common improvement to kFCV is stratification, ensuring that the folds have similar class distributions as the entire dataset. We also note that in many cases, the classifiers are evaluated on multiple datasets by k-fold cross-validation and the figures are also aggregated over multiple datasets.
+
+Most of the scores being fractions, the truncation of scores to $k$ decimal places is unavoidable for reporting. Having a reported score, for example $0.945$, by the best practices of scientific writing, one can assume that the raw figure was rounded to $k=3$ decimal places. Hence, the raw score needs to be in the range $[0.945 - \epsilon, 0.945 + \epsilon]$ with $\epsilon = 10^{-k}/2$ numerical uncertainty. Allowing flooring or ceiling, the numerical uncertainty becomes $\epsilon = 10^{-k}$.
+
+The problem we address in the rest of the paper can be summarized as follows: \emph{given a binary classification dataset consisting of $p$ positive and $n$ negative instances; the description of the experimental setup (the details of the validation scheme and aggregation); and some performance scores reported with numerical uncertainty due to rounding/flooring/ceiling; could the experiment output the reported scores?}
+
+\begin{table*}
+\caption{The summary of all performance scores covered in the paper. The standardized form refers to a formulation depending on $tp$ and $tn$ only, the original definition refers to the original form of the definition based on other scores, the description contains common synonyms. Some scores have complements with names, which are also mentioned in the description.}
+\label{tab:scores}
+\begin{scriptsize}
+\begingroup
+\renewcommand{\arraystretch}{3.0}
+\input{table_scores}
+\endgroup
+\end{scriptsize}
+\end{table*}
+
+
+
+%\section{The proposed method}
+%\label{sec:proposed}
+
+%In this section, we introduce the proposed consistency tests for reported scores. The set of reported scores, the use of cross-validation, the mode of aggregation and the involvement of multiple datasets imposes constraints on what details of the raw experimental results can be reconstructed and tested for inconsistencies. The section is organized alongside these limitations, first we discuss the strongest tests for the case when the reported scores are derived from one confusion matrix, and then adapt the approach to more and more complex experimental setups.
+
+\section{Testing scores derived from one confusion matrix}
+\label{sec:ind}
+
+In this section, we assume that there is a well-specified validation set available for evaluation, with known $p$ positive and $n$ negative instances; and a set of reported scores $\mathcal{S}\subseteq\lbrace acc, sens, spec, \dots\rbrace$ (any of the scores in Table \ref{tab:scores}, or any further values derived from the confusion matrix) is also known, up to $\epsilon$ numerical uncertainty. And we are interested in the existence of a confusion matrix compatible with the validation set and leading to these scores. This experimental setup is commonly present in the field of computer vision, where image level evaluations of binary segmentations are shared, and also in the case of big datasets, where hold-out validation is preferred to reduce computational complexity. We note that most of the machine learning competition experiments with dedicated and open test sets also fall in this category.
+
+\subsubsection{The mathematical formulation}
+\label{sec:rommat}
+
+First, we note that the rows of any confusion matrix need to sum to the $p$ and $n$ figures, that is, $tp + fn = p$ and $tn + fp = n$ holds, hence, there are two free parameters left in the matrix. Without a loss of generality, we can pick $tp$ and $tn$ as the free parameters. Consequently, all performance scores defined on confusion matrices can be expressed as functions of $tp$, $tn$, $p$ and $n$. We refer to these parametrizations as the standardized forms of score functions, also given in Table \ref{tab:scores}. Let the standard form of the score function $s$ be denoted by $f_s(tp, tn, p, n)$ and the reported score (subject to truncation) by $\hat{v}_s$. The experimental setup and the recorded scores are consistent if there exist some $tp^* \in \mathcal{P} \doteq \lbrace 0, \dots, p\rbrace$ and $tn^*\in\mathcal{N}\doteq \lbrace 0, \dots, n\rbrace$ integers, such that
+\begin{equation}
+\label{eqtest0}
+f_s(tp^*, tn^*, p, n) \in [\hat{v}_s - \epsilon, \hat{v}_s + \epsilon],
+\end{equation}
+holds for each score $s\in\mathcal{S}$ simultaneously. This simple condition readily suggests an $O(p\cdot n\vert S\vert)$ time complexity algorithm based on exhaustive search: 
+%given that consistency testing is usually a one time exercise, if $p$ and $n$ are not too large (up to about 10k), 
+one can test each pair of $(tp, tn)\in \mathcal{P}\times\mathcal{N}$ scores if they satisfy these conditions. If there are no feasible $(tp, tn)$ pairs found, the experimental setup and the reported scores are inconsistent. Although this brute force algorithm is functional and can be applied to datasets of medium sizes, it is possible to reduce its time complexity and making it applicable to even big data datasets.
+
+\subsubsection{An algorithmic improvement}
+
+The idea behind the improvement is that inverting the functional form of a particular score $s$ analytically, then given a particular value of the score $v_s$ and $tp$, one can determine the corresponding value(s) of $tn$ leading to $v_s$. Particularly, from $v_s = f_s(tp, tn, p, n)$, one can solve 
+\begin{equation}
+v_s - f_s(tp, tn, p, n) = 0
+\end{equation}
+for $tp$ or $tn$, leading to the solutions
+\begin{align}
+\label{eq:solution}
+tn &= f_{s, tn}^{-1}(v_s, tp, p, n).
+\end{align}
+Due to the simple rational function form of the scores, these solutions exist for all scores, which we summarized in tables \ref{tab2} and \ref{tab3}.
+
+If we knew the exact values of the scores $v_s^*$, one would need to check if there exist any $tp\in\mathcal{P}$ such that $f_{s, tn}^{-1}(v_s^*, tp, p, n)$ gives the same integer result for each $s\in\mathcal{S}$. However, the exact values of the scores $v_s^*$ are not known, only the intervals they fall in $[\hat{v}_s - \epsilon, \hat{v}_s + \epsilon]$. Nevertheless, using interval arithmetics \cite{interval}, the expressions (\ref{eq:solution}) can be evaluated by substituting the interval s$[\hat{v}_s - \epsilon, \hat{v}_s + \epsilon]$, leading to interval estimates of $tp$. (In those cases when a score has multiple solutions for the base figures $tp$, one needs to take the union of the results.) 
+
+For example, given a dataset with $p=40$ and $n=70$, the reported accuracy score $\hat{v}_{acc} = 0.927$ with the numerical uncertainty $0.001$, one wants to determine which $tn$ values could lead to this accuracy score if $tp=30$. Selecting the solution $f^{-1}_{acc, tn}$ from Table \ref{tab2}, evaluating it with interval arithmetics one gets
+\begin{equation}
+f^{-1}_{acc, tn}([0.926, 0.928], 30, 40, 70) = [71.86, 72.08],
+\end{equation}
+that is, the only integer $tn$ can take to result the reported accuracy score is $tn=72$.
+
+Consequently, the consistency test can be carried out by iteratively testing if there exist $tp\in\mathcal{P}$  such that the intersection $f_{s, tn}^{-1}([\hat{v}_s - \epsilon, \hat{v}_s + \epsilon], tp, p, n)$ for all $s\in\mathcal{S}$ contains at least one integer. If no such $tp\in\mathcal{P}$ exists, the experimental setup and the reported scores are inconsistent with each other. In worst case, this test consists of one iteration through all potential values of $tp\in\mathcal{P}$ and the score functions, hence, implying the time complexity $O(p\cdot \vert S\vert)$. One can readily see, that the choice of $tp$ to iterate by is arbitrary, the consistency test could be implemented by iterating by $tn\in\mathcal{N}$ and solving for $tp$. Consequently, the time complexity can be further reduced by choosing the figure with the smallest domain for iteration, leading to the time complexity $O(\min(p, n)\cdot \vert S\vert)$, which should be feasible even with big data datasets containing millions of records. The pseudo-code of this advanced formulation is given in Algorithm \ref{alg1}. 
+
+
+By being an exhaustive search in the space specified by the experimental setup, the test is certain. If there are no pairs of $tp$ and $tn$ values fulfilling all conditions, the scores could not be the outcome of the assumed experiment. We note that the sensitivity of the test is highly dependent on the specifics of the evaluation set, and the number and precision of reported scores available. 
+
+We note, that the time complexity of the test could be further reduced to $O(\vert S\vert^2)$, by solving each pair of the performance score functions for the intervals of $tp$ and $tn$, eliminating the need for any iteration. However, we found that the pairs of scores with higher order terms of $tp$ and $tn$ lead to algebraic difficulties, whose discussion is beyond the scope of this paper.
+
+
+\SetKwComment{Comment}{/* }{ */}
+
+\begin{algorithm}
+\caption{Consistency testing for scores computed directly from the confusion matrix}\label{alg1}
+\begin{small}
+\KwData{$p$, $n$, $\epsilon$, the set of scores reported $\mathcal{S}$, the reported values $\hat{v}_s$, $s\in\mathcal{S}$}
+\KwResult{boolean flag weather inconsistency has been found}
+\Comment{Selecting the figure to solve for ($\beta$) and the domain ($\mathcal{A})$ of the figure to iterate by}
+\eIf{$p < $n}{
+$\mathcal{A} \gets \lbrace 0, \dots, p\rbrace$\; 
+$\beta \gets \text{'tn'}$\;
+}{
+$\mathcal{A} \gets \lbrace 0, \dots, n\rbrace$\;
+$\beta \gets \text{'tp'}$\;
+}
+\Comment{Iterate through the possible values}
+\For{$\alpha \in \mathcal{A}$}{
+    $I \gets \bigcap\limits_{s\in\mathcal{S}} f^{-1}_{s, \beta}([\hat{v}_s-\epsilon, \hat{v}_s+\epsilon], \alpha, p, n)$\;
+    \If{$I$ contains an integer}{
+     \Comment{Evidence found for feasibility}
+      \Return False\;
+    }
+}
+\Comment{The setup is inconsistent}
+\Return True\;
+\end{small}
+\end{algorithm}
+
+\begin{table*}[t!]
+\caption{Scores with single solutions.}
+\label{tab2}
+\begin{scriptsize}
+\input{table_solutions_0}
+\end{scriptsize}
+\end{table*}
+
+\begin{table*}[t!]
+\caption{Scores with multiple solutions.}
+\label{tab3}
+\begin{scriptsize}
+\input{table_solutions_1}
+\end{scriptsize}
+\end{table*}
+
+
+
+
+\subsubsection{Example}
+
+Suppose, there is a validation set of $p=1000$ positive and $n=6000$ negative samples, and the reported $acc = 0.6801$, $npv = 0.9401$ and $f_1 = 0.4004$. Being conservative, one can assume the scores are floored or ceilled, thus, the numerical uncertainty is $\epsilon = 0.0001$. Applying algorithm \ref{alg1}, one finds that there are two pairs of ($tp$, $tn$) values, compatible with the setup: (743, 4031); (743, 4032). If the scores were adjusted a little, for example, accuracy changed to $0.6811$, there are no ($tp$, $tn$) pairs fulfilling all conditions. Similarly, if the true $p$ were different, for example, 1100, these scores calculated by $p=1000$ would turn to inconsistent.
+
+\section{Testing scores derived by aggregations}
+\label{sec:agg}
+
+In the previous section, we described the consistency testing of performance scores derived from one confusion matrix. In this section, we develop tests for those scenarios when the scores are aggregated over multiple evaluation sets (folds and/or datasets). 
+The mode of aggregation (discussed in subsection \ref{sec:rommor}) leads to different tests that we cover in subsections \ref{sec:rom} and \ref{sec:mor}. The origin of the evaluation sets (whether they are produced by a k-folding scheme or are distinct datasets) has no effect on the tests. 
+The mapping of some commonly used k-folding schemes to this representation is discussed in subsection \ref{sec:kfold}. Finally, the scenario of not knowing the mode of aggregation is discussed in subsection \ref{sec:agg}.
+
+\subsection{Mean-of-Scores and Score-of-Means aggregations}
+\label{sec:rommor}
+
+We assume there is an experiment consisting of $N_e$ evaluation sets with $p_i$ and $n_i$, $i=1,\dots,N_e$ positive and negative samples, respectively, each leading to a separate confusion matrix with entries $tp_i \in\lbrace 0, \dots, p_i\rbrace$ and $tn_i\in\lbrace 0, \dots, n_i\rbrace$. We are concerned about how these figures are summarized by scalar scores describing the entire experiment. 
+
+A natural way of aggregation is to calculate the scores for each evaluation set, and take the averages of the scores. Formally, for a particular score $s$, the overall score is calculated as
+\begin{equation}
+\label{estmor}
+v_s^{MoS} = \dfrac{1}{N_e}\sum\limits_{i=1}^{N_e} f_s(tp_{i}, tn_{i}, p_{i}, n_{i}),
+\end{equation}
+where we introduced the notion of \emph{Mean of Scores} (MoS) to indicate the way of aggregation. We note that the MoS mode of aggregation is extremely common in the evaluation of binary classifiers in cross-validation scenarios, with the benefit that the $N_e$-sized sample of scores enables the estimation of confidence intervals \cite{morex2} and the use of  hypothesis testing for the comparison of classification techniques \cite{morex0}.
+
+Alternatively, one can calculate the averages of the $tp$, $tn$, $fp$ and $fn$ figures first, for example, $\overline{tp} = \dfrac{1}{N_e}\sum\limits_{i=1}^{N_e} tp_i$, and compute the scores from the mean figures as
+\begin{equation}
+\label{estrom}
+v_s^{SoM} = f_s\left(\overline{tp}, \overline{tn}, \overline{p}, \overline{n}\right),
+\end{equation}
+where we introduced the notion of \emph{Score of Means} (SoM) to reflect the way of aggregation. One can readily see, that the SoM aggregation is equivalent to a weighted MoS aggregation, when the weights are defined as the denominators of the scores. SoM aggregation is beneficial when the scores for some individual evaluation sets might become undefined, typically with small and imbalanced data \cite{romex0} (for example, if a fold has only a handful of positive samples, $tp=0$ and $fp=0$ leads to an undefined positive predictive value, which is a less likely scenario for $\overline{tp}$ and $\overline{fp}$).
+
+The terms used for the aggregations are inspired by the analogous concepts of Ratio of Means (RoM) and Mean of Ratios (MoR) estimations for ratio statistics \cite{rommor, rommor2}, but generalized to accommodate the non-linearities in the numerators and denominators of some scores (like Matthews correlation coefficient).
+
+From the theoretical point of view, the goal of using multiple evaluation sets and aggregating the results is to get a more reliable estimation of performance for the population of problems represented by the evaluation sets. (We note that this concept already leads to difficulties when multiple datasets are involved, as the population of classification problems represented by the datasets is hard to define -- by the no free lunch theorem, any binary classifier expresses the same performance when averaged on all possible classification problems.) Nevertheless, estimation theory can be expected to provide a guideline on which aggregation is more reasonable. Interestingly, already for the simplest scores (with linear terms in the numerator and denominator) it turns out that both aggregation schemes (\ref{estmor}) and (\ref{estrom}) are biased estimators of the population level statistics \cite{rommor2}. Moreover, even in the same experiment and under the same aggregation, different scores can lead to different interpretations regarding their meaning. For example, in a k-fold cross validation, if the total number of samples ($p + n$) is divisible by the number of folds, the fold-level accuracy scores have the same denominator with no randomness, the MoS and SoM aggregations become the same, the aggregated accuracy being an unbiased estimator of the population level proportion of correctly classified items. In the same scenario, sensitivity has randomness in the denominator since the various folds can have varying number of positive samples. In this case, one can argue that weighting by the number of positive samples in a fold (using SoM) is a meaningful way to reduce the noise originating from folds with a small number of positives. Finally, positive predictive value has correlated randomness in its numerator and denominator (through the presence of $tp$) leading to both the SoM and MoS aggregations becoming biased ratio estimators \cite{rommor2}.
+
+In practice, if the data is approximately equally distributed in the evaluation sets, the scores calculated by the two aggregations are almost the same (see Table \ref{tab4}, therefore authors usually pay little to no attention to explicitly describe the method of aggregation, since it is not expected to change the qualitative outcome of research. A particular choice could be motivated by multiple factors, for example: the best practices of a field; the available implementation in machine learning packages;
+%(for example, \verb|sklearn| \cite{sklearn} supports the MoS aggregation); 
+the need to estimate the uncertainty of the scores through their distributions; small and imbalanced data (with an increased likelihood for undefined scores on small evaluation sets).
+Nevertheless, since we develop sharp tests to check the consistency of reported scores, even minor differences must be handled with mathematical rigour. Therefore, in subsections \ref{sec:rom} and \ref{sec:mor} we develop consistency tests for the two types of aggregations separately.
+
+\begin{table*}
+\caption{Comparison of the MoS and SoM evaluations on sample data in a k-fold cross-validation scenario with $k=5$: the fold structure \ref{tab4a} and the scores \ref{tab4b}. One can observe that the more non-linearities are present in a score, the more the two aggregations deviate.}
+\begin{center}
+\begin{footnotesize}
+\subfloat[(a)][The folding structure.\label{tab4a}]{
+\begin{tabular}[t]{r@{\hspace{8pt}}r@{\hspace{8pt}}r@{\hspace{8pt}}r@{\hspace{8pt}}r}
+\toprule
+fold ($i$) & $p_i$ & $n_i$ & $tp_i$ & $tn_i$ \\
+\midrule
+0 & 100 & 201 & 78 & 189 \\
+1 & 100 & 200 & 65 & 191 \\
+2 & 100 & 200 & 81 & 160 \\
+3 & 101 & 200 & 75 & 164 \\
+4 & 101 & 200 & 72 & 171 \\
+\bottomrule
+\end{tabular}
+}
+\subfloat[(b)][The scores calculated by the two aggregation techniques.\label{tab4b}]{
+\begin{tabular}{l@{\hspace{8pt}}r@{\hspace{8pt}}r@{\hspace{8pt}}|l@{\hspace{8pt}}r@{\hspace{8pt}}r@{\hspace{8pt}}|l@{\hspace{8pt}}r@{\hspace{8pt}}r@{\hspace{8pt}}|l@{\hspace{8pt}}r@{\hspace{8pt}}r}
+\toprule
+score & MoS & SoM & score & MoS & SoM & score & MoS & SoM & score & MoS & SoM \\
+\midrule
+acc & 0.8290 & 0.8290 & $f^1_+$ & 0.7443 & 0.7427 & lrn & 0.2975 & 0.2985 & ppv & 0.7606 & 0.7465 \\
+bacc & 0.8066 & 0.8066 & fm & 0.7471 & 0.7428 & lrp & 8.1202 & 5.8713 & pt & 0.2795 & 0.2921 \\
+bm & 0.6131 & 0.6132 & gm & 0.8021 & 0.8038 & mcc & 0.6215 & 0.6147 & sens & 0.7391 & 0.7390 \\
+dor & 28.0174 & 19.6671 & ji & 0.5945 & 0.5908 & mk & 0.6312 & 0.6163 & spec & 0.8741 & 0.8741 \\
+$f^1_-$ & 0.8709 & 0.8719 & kappa & 0.6165 & 0.6147 & npv & 0.8706 & 0.8698 & upm & 0.8025 & 0.8022 \\
+\bottomrule
+\end{tabular}
+}
+\end{footnotesize}
+\end{center}
+\end{table*}
+
+\subsection{Testing scores aggregated by the Score-of-Means approach}
+\label{sec:rom}
+
+Although we introduced the term Score-of-Means to reflect the analogy with the concept of Ratio-of-Means in statistics, taking the mean of the figures $tp$, $tn$, $p$ and $n$ is unnecessary: it can be readily seen that all scores covered in the paper (Table \ref{tab:scores}) are invariant to scaling, namely, for any score $s$, $f_s(tp, tn, p, n) = f_s(\alpha\cdot tp, \alpha\cdot tn, \alpha\cdot p, \alpha\cdot n)$ holds for $\alpha \in\mathbb{R}^{+}$, and consequently, $f_s(\overline{tp}, \overline{tn}, \overline{p}, \overline{n}) = f_s(N_e\cdot\overline{tp}, N_e\cdot\overline{tn}, N_e\cdot\overline{p}, N_e\cdot\overline{n})$, where $N_e\cdot\overline{x}$ is equivalent to $\sum\limits_{i=1}^{N_e} x_i$. Therefore, any score calculated by the SoR approach can be treated as if it was calculated from the confusion matrix of a problem with $p'=\sum\limits_{i=1}^{N_e} p_i$ and $n'=\sum\limits_{i=1}^{N_e} n_i$ positive and negative samples, respectively. Consequently, the consistency tests developed in Section \ref{sec:ind} are applicable with the total $p'$ and $n'$ figures.
+
+\subsection{Testing scores aggregated by the Mean-of-Scores approach}
+\label{sec:mor}
+
+Due to the non-linearities and raw figures in the numerators and denominators of most scores, the averaging of scores over multiple evaluation sets cannot be simplified in the MoS case. Given some scores $s\in\mathcal{S}$ with reported values $\hat{v}_{s}^{MoS}$, by averaging over $N_e$ evaluation sets with known $p_i$ and $n_i$, $i=1, \dots, N_e$ positive and negatives samples in each, the degrees of freedom in this inverse problem is $2N_e$. Similarly to the approach introduced in subsection \ref{sec:rommat}, one could enumerate all possible combinations of the $0 \leq tp_i\leq p_i$ and $0\leq tn_i\leq n_i$, $i=1, \dots, N_e$ figures and check if any of them leads scores within the presumed numerical uncertainty $\epsilon$ from the reported scores $\hat{v}_s^{MoS}$, $s\in\mathcal{S}$. However, the time complexity $O\left(\prod_{i=1}^{N_e}p_in_i\right)$ of this brute force approach renders it intractable in practice, even in the simplest cases: the 5-fold structure with $p_i\sim 10$ positive and $n_i\sim 10$ negative records leads to approximately $10^10$ different evaluations. 
+
+\subsubsection{Mathematical formulation}
+
+Mathematically, we are interested in the joint feasibility of the inequalities
+\begin{equation}
+\label{nlopt}
+\hat{v}_s^{MoS} - \epsilon \leq \dfrac{1}{N_e}\sum\limits_{i=1}^{N_e} f_s(tp_i, tn_i, p_i, n_i) \leq \hat{v}_s^{MoS} + \epsilon, s\in\mathcal{S},
+\end{equation}
+with $0 \leq tp_i \leq p_i$ and $0\leq tn_i \leq n_i$ being integer variables, and $p_i$, $n_i$, $i=1,\dots,N_e$ known. The condition set (\ref{nlopt}) can be interpreted as the definition of the feasibility region of a non-linear integer programming problem (with any dummy objective function). In general, non-linear integer programming is NP-complete \cite{ip}, with no efficient algorithms with guaranteed solutions -- which is needed for sharp consistency tests. However, for those subset of scores which lead to linear conditions, linear integer programming can be exploited, which is solvable by numerous techniques \cite{ip}. Consequently, the proposed consistency test for MoS aggregations supports only those scores which are linear functions of $tp$ and $tn$, namely, accuracy, sensitivity, specificity and balanced accuracy. Although this test is limited to these four scores only, we note that these scores are among the most commonly cited scores.
+
+Expanding (\ref{nlopt}) for the linear scores leads to the condition set
+\begin{align}
+\label{aggtest}
+\hat{v}_{acc}^{MoS} - \epsilon & \leq \dfrac{1}{N_e} \sum\limits_{i=1}^{N_e} \dfrac{tp_i + tn_i}{p_i + n_i} \leq \hat{v}_{acc}^{MoS} + \epsilon, \nonumber \\
+\hat{v}_{sens}^{MoS} - \epsilon & \leq \dfrac{1}{N_e} \sum\limits_{i=1}^{N_e} \dfrac{tp_i}{p_i} \leq \hat{v}_{sens}^{MoS} + \epsilon, \nonumber \\
+\hat{v}_{spec}^{MoS} - \epsilon & \leq \dfrac{1}{N_e} \sum\limits_{i=1}^{N_e} \dfrac{tn_i}{n_i} \leq \hat{v}_{spec}^{MoS} + \epsilon, \nonumber \\
+\hat{v}_{bacc}^{MoS} - \epsilon & \leq \dfrac{1}{N_e} \sum\limits_{i=1}^{N_e} \dfrac{tp_i}{2p_i} + \dfrac{tn_i}{2n_i} \leq \hat{v}_{bacc}^{MoS} + \epsilon, \nonumber \\
+0 &\leq tp_i \leq p_i, i=1,\dots,N_e, tp_i \text{ integer}\nonumber \\
+0 &\leq tn_i \leq n_i, i=1,\dots,N_e, tn_i \text{ integer}\\
+\end{align}
+which is the most general set of conditions that is compatible with linear integer programming. The consistency test consists of writing up the conditions for the available scores (acc, sens, spec, bacc), and using any linear integer programming solver to check the feasibility of the condition set. If the conditions are feasibly, there is no inconsistency in the scores, if the feasibility region is empty, the reported scores and the assumptions on the experimental setup are inconsistent.
+
+We note that under special circumstances (stratified k-fold), for certain subsets of the scores possibly fractional or convex programming with certain relaxation techniques could be exploited \cite{nonlinear}. However, the discovery of these special cases is beyond the score of the paper.
+
+\subsubsection{Example}
+
+The usage of the test is illustrated through the sample problem shared in Table \ref{tab4}. Suppose the scores
+\begin{equation}
+\hat{v}_{acc}^{MoS} = 0.829, \quad
+\hat{v}_{sens}^{MoS} = 0.7391, \quad
+\hat{v}_{spec}^{MoS} = 0.8741
+\end{equation}
+are reported, with a conservative choice of numerical uncertainty being $\epsilon=0.0001$. Substituting the scores and the specifications of the folds from Table \ref{tab4a} into (\ref{aggtest}), and checking the feasibility with any dummy objective by linear integer programming solver (we used \verb|pulp| \cite{pulp}), it returns that the problem is feasible, indicating that there are feasibly configurations leading to the reported scores up to the numerical uncertainty. However, if accuracy is incorrectly reported as $\hat{v}_{acc}^{MoS} = 0.830$, the solver returns that the configuration is infeasible, indicating that the scores are incompatible with the assumptions on the experiment.
+
+\subsection{k-fold cross-validation and the aggregated consistency testing}
+\label{sec:kfold}
+
+In the previous sections we introduced consistency tests for two different aggregations in terms of $N_e$ evaluation sets. In this section we discuss how various experiments can be transformed into this representation.
+
+In principle, given a dataset of $p$ positive and $n$ negative samples, k-fold cross-validation (KFCV) evaluates each element of the dataset once. In order to improve the stability of the scores, it is common, that KFCV is repeated multiple ($N_r$) times.
+
+In the case of SoM aggregation, as discussed in subsection \ref{sec:rom}, it is only the overall number of positive and negative samples which is needed for the testing. Therefore, in a repeated KFCV scenario, $p'=N_r\cdot p$ and $n'=N_r\cdot n$ need to be used to execute the testing, the fold structure is inrrelevant.
+
+In the case of MoS aggregations, the number of positive ($p_i$) and negative ($n_i$) samples in the folds $i=1,\dots,N_e$ needs to be known to formulate the linear programming problem (\ref{aggtest}) which constitutes the core of the test. Although there are some data providers that supply folding structures to the data (for example, the KEEL repository \cite{keel}), in general, the folding structure is not known. There are however special cases, when the folding structure can be inferred. If the KFCV is carried out in a stratified manner, the stratification technique can be used to infer the structure of the folds. For example, the stratification implemented in \verb|sklearn| \cite{sklearn} ensures that folds differ at most in 1 samples in terms of all samples, positives, and negatives, as well. This requirement leads to the unique configuration that can be inferred from $p$, $n$ and $N_f$. Let $p_{mod} = p\mod N_f$, $n_{mod} = n\mod N_f$, $p_{div} = \lfloor p \ N_f\rfloor$ and $n_{div} = \lfloor n \ N_f\rfloor$ the fold structures are given in Table \ref{tab:strfolds}.
+\begin{table}
+    \caption{Fold structures depending on $p_{mod}$, $n_{mod}$, $p_{div}$, $n_{div}$ by the stratified k-folding implemented in sklearn \cite{sklearn}}
+    \label{tab:strfolds}
+    \begin{center}
+    \begin{small}
+    \subfloat[(a)][If $p_{mod} + n_{mod} > N_f$]{
+    \begin{tabular}{ccc}
+    \toprule
+    count of folds & positives ($p_i$) & negatives ($n_i$) \\
+    \midrule
+    $p_{mod} + n_{mod} - N_f$ & $p_{div} + 1$ & $n_{div} + 1$\\
+    $N_f - n_{mod}$ & $p_{div} + 1$ & $n_{div}$\\
+    $N_f - p_{mod}$ & $p_{div}$ & $n_{div} + 1$\\
+    \bottomrule
+    \end{tabular}
+    }\\
+    \subfloat[(a)][If $p_{mod} + n_{mod} \leq N_f$]{
+    \begin{tabular}{ccc}
+    \toprule
+    count of folds & positives ($p_i$) & negatives ($n_i$) \\
+    \midrule
+    $N_f - p_{mod} - n_{mod}$ & $p_{div}$ & $n_{div}$\\
+    $p_{mod}$ & $p_{div} + 1$ & $n_{div}$\\
+    $n_{mod}$ & $p_{div}$ & $n_{div} + 1$\\
+    \bottomrule
+    \end{tabular}
+    }
+    \end{small}
+    \end{center}
+\end{table}
+
+Unfortunately, in the most general case, when stratification is not specified, any fold structure can appear randomly. In order to support these scenarios, we note that if the number of folds is in the usual range (5-10) and the dataset is not too big, preferrably imbalanced, it is feasible to enumerate all possible k-fold fold configurations and test all of them. If all possible k-fold configurations lead to inconsistencies, one can safely say, that the scores are incompatible with the presumed experimental settings. In the rest of this subsection, we provide an algorithm for the enumeration of all possible k-fold structures. The algorithm is based on the observation that k-folding is basically equivalent to the integer partitioning problem, where $p$ (or $n$) is decomposed various ways as a sum $p=p_1 + \dots p_{N_f}$, where $N_f$ is the number of folds. Generally, there is no closed form solution to the number of possible partitions, however, algorithms for the enumeration of all unique partitions were proposed \cite{intpart}, and we adapt that to the slightly constrained case of generating all k-fold structures in Algorithm \ref{alg2} with an outline as follows:
+\begin{enumerate}
+\item Determine the number of items present in each fold $N_{items} = (p + n) \mod N_{f}$ and the excess number of negative items $N_{exc} = \lfloor(p + n) / N_{f}\rfloor$. Each fold has $N_{items}$ or $N_{items}+1$ elements.
+\item Iterate through all partitions of the integer $p$ to $N_f$ parts according to the algorithm in \cite{intpart}, and throw away those partitions which do not match the constraint any $p_i > N_{items}$. Each fold with exactly $p_i = N_{items}$ need to get one from the excess negatives.
+\item Complement each remaining partitioning $p_1, \dots, p_{N_f}$ by $n_i = N_{items} - p_i$.
+\item Distribute the excess negative items $N_{exc.}$ across the folds uniquely.
+\end{enumerate}
+For example, for $p=5$, $n=8$, $k=3$, one gets the configurations:
+\begin{align}
+\mathcal{F} = \lbrace 
+& ((1, 1, 3), (3, 3, 1)),
+ ((1, 1, 3), (3, 3, 2)),\nonumber\\
+& ((1, 2, 2), (3, 2, 2)),
+ ((1, 2, 2), (3, 2, 3))\rbrace\nonumber,
+\end{align}
+with the interpretation that there are 4 different k-fold configurations, and regarding the first configuration, the evaluation set specifications are ($p_0=1, n_0=3$), ($p_1=1, n_1=3$), ($p_2=3, n_2=1$).
+
+%\begin{algorithm}[t]
+%\begin{enumerate}
+%\item Input: the number of positive ($p$) and negative ($n$) samples, and the number of folds ($N_f$)
+%\item Output: the set $\mathcal{F} \subset \mathbb{R}^{2N_f}$ consisting of all fold structures, composed of the tuples of vectors $\mathbf{p} = (p_1, \dots, p_{N_f})$ and $\mathbf{n} = (n_1, \dots, n_{N_f})$.
+%\item Initialize the excess amount of negatives available on top of a fully equalized k-folding structure: $N_{exc.} = (p + n) \mod N_f$ and initialize the ideal number of elements in a fold: $N_{items} = \lfloor (p + n) / N_f \rfloor$.
+%\item Apply the algorithm proposed at page 343 in \cite{inpart} to iterate through all unique integer partitions of $p$ to $N_f$ partitions, and to each partitioning $\mathbf{p}^{part.}$ apply the following steps:
+%\begin{enumerate}
+%\item If any $p_i > N_f$ or the number of $p_i$ components equal to $N_{items}$ is greater than $N_{rem.}$, throw the partitioning and continue with the next one.
+%\item In this step, we initialize the vector $\mathbf{n}$ by complementing the vector $\mathbf{p}$ and assigning some of the excess negative samples to those folds where all entries are positive. Initialize $\mathbf{n}$ by $n_i = N_{items} - p_i$, initialize $N_{add} \leftarrow N_{items}$ and for all $i$ with $p_i = N_{items}$, let $n_i \leftarrow n_i + 1$ and $N_{add} \leftarrow N_{add} - 1$. 
+%\item Finally, distribute the remaining excess negative samples $N_{add}$ uniquely across the folds having $p_i + n_i = N_{items}$, and add each configuration $(\mathbf{p}, \mathbf{n})$ to the result set $\mathcal{F}$.
+%\end{enumerate}
+%\end{enumerate}
+%\caption{The algorithm to generate all k-fold configurations for given $p$, $n$ and $N_f$.}
+%\label{alg2}
+%\end{algorithm}
+
+\begin{algorithm}[t]
+\caption{The algorithm to generate all k-fold configurations for given $p$, $n$ and $N_f$.}\label{alg3}
+\begin{small}
+
+\KwData{$p$, $n$, $N_f$}
+\KwResult{the set $\mathcal{F} \subset \mathbb{R}^{N_f\times N_f}$ of all fold structures}
+
+\SetKwFunction{FMain}{KFoldConfigurations}
+\SetKwProg{Fn}{Function}{:}{}
+\SetKwProg{Gen}{Generator}{:}{}
+\SetKwFunction{FGenerator}{MPartition}
+\SetKwFunction{FDistribution}{Distribution}
+\SetKwFunction{FCombination}{Combinations}
+
+\Fn{\FMain{$p$, $n$, $N_f$}}{
+$N_{exc} \gets (p + n) \mod N_f$\;
+$N_{items} \gets \lfloor (p + n) /N_f \rfloor$\; 
+$\mathcal{F}\gets\emptyset$\;
+\For {$\mathbf{p}$ in \FGenerator{$p$, $N_f$}}{
+$\mathbf{n} \gets N_{items} - \mathbf{p}$\;
+\If{$\sum\mathbb{I}_{\mathbf{n} < 0}$ or $\sum\mathbb{I}_{\mathbf{n} = 0} > N_{exc}$}{
+continue with the next partitioning\;
+}
+$\mathbf{n}[{\mathbf{n} = 0}] \gets \mathbf{n}[{\mathbf{n} = 0}] + 1$\;
+$N_{rem}\gets N_{exc} - \sum\mathbb{I}_{\mathbf{n} = 0}$\;
+
+\For {$\mathbf{n}'$ in \FDistribution{$\mathbf{p}$, $\mathbf{n}$, $N_{rem}$}}{
+Add $(\mathbf{p}, \mathbf{n}')$ to $\mathcal{F}$\;
+}
+}
+
+\Return $\mathcal{F}$\;
+}
+\Fn{\FDistribution{$\mathbf{p}$, $\mathbf{n}$, $N_{rem}$}}{
+$\mathcal{N} \gets \emptyset$\;
+\For{$\mathbf{c}$ in \FCombination{$\mathbf{p}[\mathbf{p} < N_{items}]$, $N_{rem}$}}{
+    $\mathbf{t} \gets \mathbf{n}$\;
+    \For{$i$ in 1 to $N_{rem}$}{
+        $k \gets \max\lbrace j | \mathbf{p}_j = \mathbf{c}_i$ and $\mathbf{t}_j < N_{items}\rbrace$\;
+        $\mathbf{t}[k] \gets \mathbf{t}[k] + 1$\;
+    }
+    add $\mathbf{t}$ to $\mathcal{N}$\;
+}
+\Return $\mathcal{N}$\;
+}
+%\Fn{\FCombination{$\mathbf{p}$, $N_{items}$, $N_{add}$}}{
+%$\mathcal{C} \gets \emptyset$\;
+%\For{$\mathbf{c}$ in $C(\mathbf{n}, $N_{add}$)$}{
+%
+%}
+%}
+\Gen{\FGenerator{$p$, $N_{f}$}}{
+\Comment{Implements the algorithm on page 343 in \cite{intpart}}
+}
+\end{small}
+\end{algorithm}
+
+If the k-fold structure is not known, one can iterate through all configurations and if all configurations are incompatible with the scores, one can conclude that the reported scores cannot be the outcome of the presumed experiment.
+
+%([1, 1, 3], [3, 3, 1])
+%([1, 1, 3], [3, 3, 2])
+%([1, 2, 2], [3, 2, 2])
+%([1, 2, 2], [3, 2, 3])
+
+\subsection{Testing in the lack of knowing the aggregation}
+\label{sec:lackagg}
+
+If there the experimental setup is partially defined and the mode of aggregation (MoS or SoM) is unknown, one can still apply the proposed consistency tests to discover inconsistencies. The scores can be tested assuming both aggregations, and if both tests lead to inconsistencies, one can safely conclude that the reported scores could not be the outcome of the experimental setup under assuming any of the two reasonable aggregations.
+
+
+\section{Applications}
+\label{sec:applications}
+
+In this section, we illustrate the use of the proposed consistency tests in three problems and also discuss potential further applications.
+
+\subsection{Retinal vessel segmentation and further applications in retina image processing}
+\label{sec:retina}
+
+This paper being inspired and generalized from our previous work \cite{vessel}, in this subsection we briefly cover the results and potential further applications in related fields. Retinal vessel segmentation is a popular field of research for nearly 20 years \cite{vessel}, with DRIVE \cite{drive} being one of the most popular datasets, providing 20 training and 20 test images. Due to the well specified test set, one expects that the performance scores of segmentation (usually treated as a binary classification problem with accuracy, sensitivity and specificity reported) provide a reliable basis for the comparison of segmentation techniques. One entry of the DRIVE dataset is plotted in Figure \ref{fig:retina}. Due to the specialities of the image acquisition technique, the useful image content resides in a disk shaped area in the center of a rectangular image, referred as the Field-of-View (FoV). Textual evidence suggested that some authors evaluate the performance of segmentation in the FoV region only, while others using all pixels of the images. The problem is that the pixels outside the FoV region can easily be identified as non-vessel pixels, and accounting to about 30\% of all pixels, counting these pixels as true negatives boosts the accuracy and specificity scores compared to the case when the pixels covered by the FoV mask are used for evaluation.
+
+Some authors report performance scores at the image level, and almost all authors report the average accuracy, sensitivity and specificity scores for the 20 test images. Using a simplified versions of the proposed consistency tests, in \cite{vessel}, we tested if the reported image level or aggregated scores are consistent with any of the following two assumptions: using only the pixels in the FoV region or using all pixels of the images. We found that about 30\% of the authors reported scores that were consistent with the assumption of using the FoV pixels, but inconsistent with the assumption of using all pixels; another 30\% of the reported scores were consistent with the assumption of using all pixels, but inconsistent with the assumption of using the FoV pixels; and the rest of the scores were inconsistent with any of the two reasonable assumption. Based on these results, we concluded that the performance score based comparison and ranking of techniques is flawed in 100+ papers in the field, and we also managed to derive a new ranking where only comparable figures were used to rank the algorithms.
+
+There are numerous other lesions and structures in retinal images that are in the interest of segmentation and detection, for example, exudates \cite{exu}, the optic disk \cite{od}, etc. Since the nature of retina images is such that useful image content resides in the FoV region, the problem of whether to evaluate in the FoV region or using all pixels is potentially present in all related problems. Following the successful application of the proposed method for vessel segmentation, one can expect that the papers and results related to other segmentation problems can be validated, as well.
+
+\begin{figure}[t]
+\begin{center}
+\subfloat[(a)][Retina image\label{retimg}]{
+\includegraphics[width=0.24\textwidth]{21_training.png}
+}
+\subfloat[(b)][Vessel mask\label{retves}]{
+\includegraphics[width=0.24\textwidth]{21_manual1.png}
+}\\
+\subfloat[(c)][Field of View mask\label{retfov}]{
+\includegraphics[width=0.24\textwidth]{21_training_mask.png}
+}
+\end{center}
+\caption{One entry of the DRIVE retinal vessel segmentation dataset: one retina image (\ref{retimg}); the vessel mask (white pixels indicate the region to be segmented) (\ref{retves}); the Field-of-View mask, white pixels indicating the Field-of-View region (\ref{retfov}).}
+\label{figretina}
+\end{figure}
+    
+\subsection{Preterm delivery prediction from EHG}
+\label{sec:ehg}
+
+The prediction of preterm delivery from electrohysterogram (EHG) signals \cite{ehgreview} gained interest in the recent years, due to the appearance of the TPEHG dataset \cite{tpehg}, containing $p=38$ positive and $n=262$ negative records. At some point multiple authors reported almost perfect prediction scores in k-fold cross validation scenarios. The authors of \cite{ehg} found that none of these extremely high performance scores can be reproduced, and the overly optimistic scores are likely to be caused by a methodological flaw: the improper use of minority oversampling. The synthetic minority oversampling technique (SMOTE) \cite{smote} and its variations are commonly used techniques to improve the performance of binary classification on highly imbalanced data, by artificially generating additional training samples for the minority class to compensate the one-sided degeneracy of the learning process to the detriment of the minority class. It turned out that in all the 10+ papers reporting almost perfect results for preterm delivery prediction, SMOTE and its variations were used. However, using minority oversampling in a k-fold scenario, it is crucial that the oversampling needs to be applied to each training set separately, without involving any elements of the test set. If the oversampling is applied to the entire dataset prior to the k-fold validation, the highly correlated samples generated lead to a severe data leakage. The authors of \cite{ehg} reproduced all of the 10+ papers with overly optimistic scores reported and identified the pattern that most likely the improper use of oversampling lead to the overly optimistic results.
+
+The cumbersome and time consuming work of reimplementing the algorithms with suspicious evaluations, the techniques proposed in this paper could be used to show that those optimistic results cannot be the outcome of a proper k-fold cross-validation on the dataset. For example, one of the papers identified with the methodological flaw was \cite{ehgflaw}, reporting $\hat{v}_{acc}^{MoS} = 0.9552$, $\hat{v}_{sens}^{MoS} = 0.9351$ and $\hat{v}_{spec}^{MoS} = 0.9713$, achieved by 10-fold cross-validation. With a conservative choice, one can assume the numerical uncertainty is $\epsilon = 0.0001$. Unfortunately, the authors did not refer to use stratification, therefore, the fold structure is unknown. Nevertheless, due to the relatively small size of the dataset, one can generate all variations of the folds -- 2534 different configurations in this case -- and test each of them by the proposed consistency test for MoS tests. Doing so, one finds that the scores are inconsistent with all potential 10-fold configurations, and it can be concluded that these scores could not be the outcome of by applying 10-fold cross validation to the dataset.
+
+\subsection{Classification of skin lesions}
+\label{sec:third}
+In this section, we illustrate applications of the proposed methods in the problem of classifying skin lesion images. An analysis as detailed as the one we did in retinal vessel segmentation \cite{vessel} is clearly beyond the scope of the paper, however, we can test 10 of the reported scores in 10 of the most influential papers to see if ambiguities are present. The analysis is based on the highly cited survey \cite{skinsurvey} providing a systematic overview of research up until 2021. We have selected the 10 research with the most citations according to Google Scholar at the time of writing this paper, the papers are listed in Table \ref{tab:skin}.
+
+\begin{figure}[t]
+\begin{center}
+\subfloat[(a)][\emph{Nevus}\label{skinn}]{
+\includegraphics[width=0.24\textwidth]{ISIC_0012147.jpg}
+}
+\subfloat[(b)][\emph{Seborrheic keratosis}\label{skinsk}]{
+\includegraphics[width=0.24\textwidth]{ISIC_0012134_sk.jpg}
+}\\
+\subfloat[(c)][\emph{Melanoma}\label{skinm}]{
+\includegraphics[width=0.24\textwidth]{ISIC_0012369_m.jpg}
+}
+\end{center}
+\caption{Entries of the ISIC 2017 \cite{isic2017} dataset: \emph{Nevus} (\ref{skinn}); \emph{Seborrheic keratosis} (\ref{skinsk}); \emph{Melanoma} (\ref{skinm}).}
+\label{figskin}
+\end{figure}
+
+\begin{table*}
+\caption{Summary of consistency checking in skin lesion classification}
+\label{tab:skin}
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{l@{\hspace{5pt}}r@{\hspace{5pt}}p{75pt}@{\hspace{5pt}}r@{\hspace{5pt}}p{75pt}@{\hspace{5pt}}l@{\hspace{5pt}}l@{\hspace{5pt}}p{240pt}@{\hspace{5pt}}}
+\toprule
+ref. & cit. & dataset & digits & scores & $N_{sc.}$ & $N_{inc.}$ & conclusion \\
+\midrule
+\cite{skin0} & 991 & ISIC2016 \cite{isic2016} & 3 & acc, sens, spec & 18 & 1 & Potentially typos present. \\
+\cite{skin1} & 603 & ISIC2016 \cite{isic2016} & - & - & - & - & The paper is about image segmentation performance. \\
+\cite{skin2} & 574 & ISIC2016 \cite{isic2016} & 3 & acc, sens, spec & 27 & 3 & Potentially typos present. \\
+\cite{skin3} & 389 & ISIC2017 \cite{isic2017} m/sk & 3 & acc, sens, spec & 32 & 2 & Potentially typos present. \\
+\cite{skin4} & 389 & ISIC2016 \cite{isic2016} (custom selection) & - & - & - & - & Not enough details shared. \\
+\cite{skin5} & 322 & Argenziano's \cite{argenziano} & 3 & ppv, sens, spec & 16 & 0 & No inconsistency identified. \\
+\cite{skin6} & 313 & custom & - & - & - & - & Not enough details shared. \\
+\cite{skin7} & 312 & ISIC2017 \cite{isic2017} m/sk & 3 & acc, sens, spec & 20 & 20 & All accuracy, sensitivity and specificity scores reported for the two binary classification tasks M and SK are inconsistent. \\
+\cite{skin8} & 259 & custom & 4 & acc, sens, spec & 18 & 0 & No inconsistency identified. \\
+\cite{skin9} & 238 & ISIC2016 \cite{isic2016} & 4 & acc, sens, spec, f1 & 8 & 4 & Unorthodox weighting of the scores. \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{center}
+\end{table*}
+
+%%% Conclusion, further work %%%
+\section{Conclusions}
+\label{sec:conclusions}
+
+The meta-analysis of research is a crucial tool to fight the reproducibility crisis in the research and applications of AI, however, in the lack of numerical techniques it requires enormous manual labor. To facilitate meta-analysis and the recognition of methodological inconsistencies, we proposed numerical tests to check the consistency of performance scores reported for binary classification and the description of the experimental setup.
+
+The proposed tests cover numerous evaluation scenarios: the test developed for performance scores derived from individual evaluation sets supports 20 different scores (support for further scores can be added analogously) (Section \ref{sec:ind}); for scores aggregated on multiple evaluation sets, we showed that the score-of-means evaluation falls back to the case of scores derived from individual evaluation sets (subsection \ref{sec:rom}); for mean-of-scores aggregations we developed a test supporting four of the most commonly reported scores when the specifics of the evaluation sets are known (subsection \ref{sec:mor}); and we also propose the exhaustive evaluation of all fold structures when the specifics of the evaluation sets are unknown (subsection \ref{sec:kfold}). In the body of Section \ref{sec:proposed}, we also shared multiple opportunities to improve the efficiency or extend the coverage of the tests.
+
+Regarding applications, we briefly discussed the previous application of some simplified forms of the proposed method in the field retinal vessel segmentation (subsection \ref{sec:retina}), and also discussed potential further applications related to retinal image processing. We also showed that the proposed techniques are suitable to replace the manual labor of reimplementation in situations similar to the problem of preterm delivery prediction from EHG signals (subsection \ref{sec:ehg}), and that application also illustrates that the proposed methods can recognize a common methodological pitfall when synthetic minority oversampling is used. Finally, another application in subsection \ref{sec:third}.
+
+Finally, for the benefit of the communigy, the proposed consistency tests are released as an open source Python package with an intuitive interface available in the standard Python repository PyPI on the name \verb|mlscorecheck| and in GitHub at \url{http://github.com/gykovacs/mlscorecheck}.
+
+
+%Numerical methods have been described in the paper, which make it possible to check whether these data are coherent or incorrect when specifying at least three different performance metrics from the set of investigated performance metrics. The method can also be used in the aggregate case, when we know the average values of these performance metrics not for a specific data set, but for a series of data sets.
+
+%A software tool was created in parallel with the development of the theory, which enables the simple and efficient use of the developed method to check the coherency of published performance metrics.
+
+%We also summarize the experience of three specific cases that support the presence of the problem: on the one hand, we refer to our previous work \cite{vessel}, which initiated the development of this method and points out that in an active and important field such as retinal vessel segmentation, there are problems with the reported performance metrics in one third of the cases, on the other hand we carried out a similar -- if not as large -- examination of ten articles related to exudatum detection, where similar problems were revealed, there is also a third examination... 
+
+%%% Appendix %%%
+%\section{Appendix}
+
+
+
+
+
+%% Loading bibliography style file
+% \bibliographystyle{model1-num-names}
+\bibliographystyle{elsarticle-num}
+
+% Loading bibliography database
+\bibliography{references}
+
+\end{document}
