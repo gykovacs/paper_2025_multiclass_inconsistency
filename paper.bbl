@@ -90,34 +90,6 @@ S.~B. Nissen, T.~Magidson, K.~Gross, C.~T. Bergstrom,
   {\path{doi:10.7554/elife.21451}}.
 \newline\urlprefix\url{https://doi.org/10.7554/elife.21451}
 
-\bibitem{ehgreview}
-J.~Garcia-Casado, Y.~Ye-Lin, G.~Prats-Boluda, J.~Mas-Cabo, J.~Alberola-Rubio,
-  A.~Perales,
-  \href{https://doi.org/10.1088/1361-6579/aaad56}{Electrohysterography in the
-  diagnosis of preterm birth: a review}, Physiological Measurement 39~(2)
-  (2018) 02TR01.
-\newblock \href {https://doi.org/10.1088/1361-6579/aaad56}
-  {\path{doi:10.1088/1361-6579/aaad56}}.
-\newline\urlprefix\url{https://doi.org/10.1088/1361-6579/aaad56}
-
-\bibitem{ehg}
-G.~Vandewiele, I.~Dehaene, G.~Kov\'acs, L.~Sterckx, O.~Janssens, F.~Ongenae,
-  F.~D. Backere, F.~D. Turck, K.~Roelens, J.~Decruyenaere, S.~V. Hoecke,
-  T.~Demeester, Overly optimistic prediction results on imbalanced data: a case
-  study of flaws and benefits when applying over-sampling, Artificial
-  Intelligence in Medicine 111 (2021) 101987.
-\newblock \href {https://doi.org/10.1016/j.artmed.2020.101987}
-  {\path{doi:10.1016/j.artmed.2020.101987}}.
-
-\bibitem{metaresearch}
-J.~P.~A. Ioannidis, D.~Fanelli, D.~D. Dunne, S.~N. Goodman,
-  \href{https://doi.org/10.1371/journal.pbio.1002264}{Meta-research: Evaluation
-  and improvement of research methods and practices}, {PLOS} Biology 13~(10)
-  (2015) e1002264.
-\newblock \href {https://doi.org/10.1371/journal.pbio.1002264}
-  {\path{doi:10.1371/journal.pbio.1002264}}.
-\newline\urlprefix\url{https://doi.org/10.1371/journal.pbio.1002264}
-
 \bibitem{psychiatry}
 R.~A. Poldrack, G.~Huckins, G.~Varoquaux,
   \href{https://doi.org/10.1001/jamapsychiatry.2019.3671}{Establishment of best
@@ -169,35 +141,6 @@ A.~Tharwat, \href{https://doi.org/10.1016/j.aci.2018.08.003}{Classification
   {\path{doi:10.1016/j.aci.2018.08.003}}.
 \newline\urlprefix\url{https://doi.org/10.1016/j.aci.2018.08.003}
 
-\bibitem{mccbetter}
-D.~Chicco, G.~Jurman, \href{http://dx.doi.org/10.1186/s13040-023-00322-4}{The
-  matthews correlation coefficient (mcc) should replace the roc auc as the
-  standard metric for assessing binary classification}, BioData Mining 16~(1)
-  (Feb. 2023).
-\newblock \href {https://doi.org/10.1186/s13040-023-00322-4}
-  {\path{doi:10.1186/s13040-023-00322-4}}.
-\newline\urlprefix\url{http://dx.doi.org/10.1186/s13040-023-00322-4}
-
-\bibitem{add1}
-A.~E. Yilmaz, H.~Demirhan,
-  \href{https://www.sciencedirect.com/science/article/pii/S1568494623000388}{Weighted
-  kappa measures for ordinal multi-class classification performance}, Applied
-  Soft Computing 134 (2023) 110020.
-\newblock \href {https://doi.org/https://doi.org/10.1016/j.asoc.2023.110020}
-  {\path{doi:https://doi.org/10.1016/j.asoc.2023.110020}}.
-\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1568494623000388}
-
-\bibitem{add0}
-S.~Szabó, I.~J. Holb, V.~Éva Abriha-Molnár, G.~Szatmári, S.~K. Singh,
-  D.~Abriha,
-  \href{https://www.sciencedirect.com/science/article/pii/S1568494624002424}{Classification
-  assessment tool: A program to measure the uncertainty of classification
-  models in terms of class-level metrics}, Applied Soft Computing 155 (2024)
-  111468.
-\newblock \href {https://doi.org/https://doi.org/10.1016/j.asoc.2024.111468}
-  {\path{doi:https://doi.org/10.1016/j.asoc.2024.111468}}.
-\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1568494624002424}
-
 \bibitem{dconfusion}
 D.~Bowes, T.~Hall, D.~Gray,
   \href{https://doi.org/10.1007/s10515-013-0129-8}{{DConfusion}: a technique to
@@ -206,17 +149,6 @@ D.~Bowes, T.~Hall, D.~Gray,
 \newblock \href {https://doi.org/10.1007/s10515-013-0129-8}
   {\path{doi:10.1007/s10515-013-0129-8}}.
 \newline\urlprefix\url{https://doi.org/10.1007/s10515-013-0129-8}
-
-\bibitem{errorsml}
-M.~Shepperd, Y.~Guo, N.~Li, M.~Arzoky, A.~Capiluppi, S.~Counsell,
-  G.~Destefanis, S.~Swift, A.~Tucker, L.~Yousefi,
-  \href{https://doi.org/10.1007/978-3-030-33607-3_12}{The prevalence of errors
-  in machine learning experiments}, in: Intelligent Data Engineering and
-  Automated Learning {\textendash} {IDEAL} 2019, Springer International
-  Publishing, 2019, pp. 102--109.
-\newblock \href {https://doi.org/10.1007/978-3-030-33607-3_12}
-  {\path{doi:10.1007/978-3-030-33607-3_12}}.
-\newline\urlprefix\url{https://doi.org/10.1007/978-3-030-33607-3_12}
 
 \bibitem{vesselsegm}
 G.~Kov\'acs, A.~Hajdu, A self-calibrating approach for the segmentation of
@@ -457,6 +389,16 @@ M.~Alawad, A.~Aljouie, S.~Alamri, M.~Alghamdi, B.~Alabdulkader, N.~Alkanhal,
   {\path{doi:10.2147/opth.s348479}}.
 \newline\urlprefix\url{https://doi.org/10.2147/opth.s348479}
 
+\bibitem{ehgreview}
+J.~Garcia-Casado, Y.~Ye-Lin, G.~Prats-Boluda, J.~Mas-Cabo, J.~Alberola-Rubio,
+  A.~Perales,
+  \href{https://doi.org/10.1088/1361-6579/aaad56}{Electrohysterography in the
+  diagnosis of preterm birth: a review}, Physiological Measurement 39~(2)
+  (2018) 02TR01.
+\newblock \href {https://doi.org/10.1088/1361-6579/aaad56}
+  {\path{doi:10.1088/1361-6579/aaad56}}.
+\newline\urlprefix\url{https://doi.org/10.1088/1361-6579/aaad56}
+
 \bibitem{tpehg}
 G.~Fele-{\v{Z}}or{\v{z}}, G.~Kav{\v{s}}ek, {\v{Z}}.~Novak-Antoli{\v{c}},
   F.~Jager, \href{https://doi.org/10.1007/s11517-008-0350-y}{A comparison of
@@ -466,6 +408,15 @@ G.~Fele-{\v{Z}}or{\v{z}}, G.~Kav{\v{s}}ek, {\v{Z}}.~Novak-Antoli{\v{c}},
 \newblock \href {https://doi.org/10.1007/s11517-008-0350-y}
   {\path{doi:10.1007/s11517-008-0350-y}}.
 \newline\urlprefix\url{https://doi.org/10.1007/s11517-008-0350-y}
+
+\bibitem{ehg}
+G.~Vandewiele, I.~Dehaene, G.~Kov\'acs, L.~Sterckx, O.~Janssens, F.~Ongenae,
+  F.~D. Backere, F.~D. Turck, K.~Roelens, J.~Decruyenaere, S.~V. Hoecke,
+  T.~Demeester, Overly optimistic prediction results on imbalanced data: a case
+  study of flaws and benefits when applying over-sampling, Artificial
+  Intelligence in Medicine 111 (2021) 101987.
+\newblock \href {https://doi.org/10.1016/j.artmed.2020.101987}
+  {\path{doi:10.1016/j.artmed.2020.101987}}.
 
 \bibitem{smote}
 A.~Fernández, S.~Garcia, F.~Herrera, N.~Chawla, Smote for learning from
@@ -502,6 +453,18 @@ M.~A. Kassem, K.~M. Hosny, R.~Dama{\v{s}}evi{\v{c}}ius, M.~M. Eltoukhy,
 \newblock \href {https://doi.org/10.3390/diagnostics11081390}
   {\path{doi:10.3390/diagnostics11081390}}.
 \newline\urlprefix\url{https://doi.org/10.3390/diagnostics11081390}
+
+\bibitem{isic2017}
+N.~C.~F. Codella, D.~Gutman, M.~E. Celebi, B.~Helba, M.~A. Marchetti, S.~W.
+  Dusza, A.~Kalloo, K.~Liopyris, N.~Mishra, H.~Kittler, A.~Halpern,
+  \href{https://doi.org/10.1109/isbi.2018.8363547}{Skin lesion analysis toward
+  melanoma detection: A challenge at the 2017 international symposium on
+  biomedical imaging ({ISBI}), hosted by the international skin imaging
+  collaboration ({ISIC})}, in: 2018 {IEEE} 15th International Symposium on
+  Biomedical Imaging ({ISBI} 2018), IEEE, 2018, pp. 168--172.
+\newblock \href {https://doi.org/10.1109/isbi.2018.8363547}
+  {\path{doi:10.1109/isbi.2018.8363547}}.
+\newline\urlprefix\url{https://doi.org/10.1109/isbi.2018.8363547}
 
 \bibitem{skin1}
 Y.~Yuan, M.~Chao, Y.-C. Lo,
@@ -553,18 +516,6 @@ U.-O. Dorj, K.-K. Lee, J.-Y. Choi, M.~Lee,
 \newblock \href {https://doi.org/10.1007/s11042-018-5714-1}
   {\path{doi:10.1007/s11042-018-5714-1}}.
 \newline\urlprefix\url{https://doi.org/10.1007/s11042-018-5714-1}
-
-\bibitem{isic2017}
-N.~C.~F. Codella, D.~Gutman, M.~E. Celebi, B.~Helba, M.~A. Marchetti, S.~W.
-  Dusza, A.~Kalloo, K.~Liopyris, N.~Mishra, H.~Kittler, A.~Halpern,
-  \href{https://doi.org/10.1109/isbi.2018.8363547}{Skin lesion analysis toward
-  melanoma detection: A challenge at the 2017 international symposium on
-  biomedical imaging ({ISBI}), hosted by the international skin imaging
-  collaboration ({ISIC})}, in: 2018 {IEEE} 15th International Symposium on
-  Biomedical Imaging ({ISBI} 2018), IEEE, 2018, pp. 168--172.
-\newblock \href {https://doi.org/10.1109/isbi.2018.8363547}
-  {\path{doi:10.1109/isbi.2018.8363547}}.
-\newline\urlprefix\url{https://doi.org/10.1109/isbi.2018.8363547}
 
 \bibitem{skin5}
 J.~Kawahara, S.~Daneshvar, G.~Argenziano, G.~Hamarneh,

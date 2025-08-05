@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  3 JUN 2024 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.9)  5 AUG 2025 19:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/gykovacs/workspaces/paper_mlscorecheck/paper.tex
-(/home/gykovacs/workspaces/paper_mlscorecheck/paper.tex
+**/home/gykovacs/workspaces/paper_2025_multiclass_inconsistency/paper.tex
+(/home/gykovacs/workspaces/paper_2025_multiclass_inconsistency/paper.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 Document Class: elsarticle 2020/11/20, 3.3: Elsevier Ltd
@@ -852,176 +852,181 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 198.
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 223.
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 223.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 209.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 231.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 231.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 223.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 231.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 223.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 231.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 223.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 231.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 223.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 231.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 223.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 231.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./table_scores.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (7.77011pt too wide) in paragraph at lines 252--253
+[]\T1/txr/m/n/10 Traditional ap-proaches to scru-ti-niz-ing the re-li-a-bil-ity of pub-lished ma-chine learn-ing re-sults typ-i-cally in-volve painstak-
+ []
+
+[2] [3] (./table_scores.tex
 Underfull \hbox (badness 2689) in paragraph at lines 7--7
 []\T1/txr/m/n/7 The pro-por-tion of cor-rectly clas-si-fied neg-a-tive
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--322
+Underfull \hbox (badness 10000) in paragraph at lines 1--333
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--322
+Underfull \hbox (badness 10000) in paragraph at lines 1--333
 
  []
 
-<flowchart/figure.pdf, id=242, 694.66025pt x 219.486pt>
+<flowchart/figure.pdf, id=228, 694.66025pt x 219.486pt>
 File: flowchart/figure.pdf Graphic file (type pdf)
 <use flowchart/figure.pdf>
-Package pdftex.def Info: flowchart/figure.pdf  used on input line 326.
+Package pdftex.def Info: flowchart/figure.pdf  used on input line 337.
 (pdftex.def)             Requested size: 468.0pt x 147.86867pt.
-[4] [5] [6 <./flowchart/figure.pdf>]
+[4 <./flowchart/figure.pdf>] [5]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <9> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 385.
- (./table_solutions_0.tex) (./table_solutions_1.tex) [7] [8] [9] [10] [11] [12] [13] [14]
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 734.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 393.
+ (./table_solutions_0.tex) (./table_solutions_1.tex) [6] [7] [8] [9] [10] [11] [12] [13] [14]
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 733.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<21_training.png, id=462, 425.33907pt x 439.6425pt>
+<21_training.png, id=450, 425.33907pt x 439.6425pt>
 File: 21_training.png Graphic file (type png)
 <use 21_training.png>
-Package pdftex.def Info: 21_training.png  used on input line 751.
+Package pdftex.def Info: 21_training.png  used on input line 753.
 (pdftex.def)             Requested size: 145.07886pt x 149.95947pt.
-<21_manual1.png, id=464, 425.33907pt x 439.6425pt>
+<21_manual1.png, id=452, 425.33907pt x 439.6425pt>
 File: 21_manual1.png Graphic file (type png)
 <use 21_manual1.png>
-Package pdftex.def Info: 21_manual1.png  used on input line 754.
+Package pdftex.def Info: 21_manual1.png  used on input line 756.
 (pdftex.def)             Requested size: 145.07886pt x 149.95947pt.
-<21_training_mask.png, id=465, 425.33907pt x 439.6425pt>
+<21_training_mask.png, id=453, 425.33907pt x 439.6425pt>
 File: 21_training_mask.png Graphic file (type png)
 <use 21_training_mask.png>
-Package pdftex.def Info: 21_training_mask.png  used on input line 757.
+Package pdftex.def Info: 21_training_mask.png  used on input line 759.
 (pdftex.def)             Requested size: 145.07886pt x 149.95947pt.
- [15] [16 <./21_training.png> <./21_manual1.png> <./21_training_mask.png>]
+ [15 <./21_training.png> <./21_manual1.png> <./21_training_mask.png>]
 Package epstopdf Info: Source file: <power-tpehg.eps>
-(epstopdf)                    date: 2024-06-03 12:26:17
+(epstopdf)                    date: 2025-08-05 14:40:26
 (epstopdf)                    size: 19982 bytes
 (epstopdf)             Output file: <power-tpehg-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-03 12:26:20
+(epstopdf)                    date: 2025-08-05 14:40:26
 (epstopdf)                    size: 14599 bytes
 (epstopdf)             Command: <repstopdf --outfile=power-tpehg-eps-converted-to.pdf power-tpehg.eps>
-(epstopdf)             \includegraphics on input line 783.
+(epstopdf)             \includegraphics on input line 786.
 Package epstopdf Info: Output file is already uptodate.
-<power-tpehg-eps-converted-to.pdf, id=511, 231.86626pt x 231.86626pt>
+<power-tpehg-eps-converted-to.pdf, id=494, 231.86626pt x 231.86626pt>
 File: power-tpehg-eps-converted-to.pdf Graphic file (type pdf)
 <use power-tpehg-eps-converted-to.pdf>
-Package pdftex.def Info: power-tpehg-eps-converted-to.pdf  used on input line 783.
+Package pdftex.def Info: power-tpehg-eps-converted-to.pdf  used on input line 786.
 (pdftex.def)             Requested size: 163.80286pt x 163.80536pt.
- [17 <./power-tpehg-eps-converted-to.pdf>]
-<ISIC_0012147.jpg, id=597, 3019.28pt x 2007.5pt>
+ [16] [17 <./power-tpehg-eps-converted-to.pdf>]
+<ISIC_0012147.jpg, id=595, 3019.28pt x 2007.5pt>
 File: ISIC_0012147.jpg Graphic file (type jpg)
 <use ISIC_0012147.jpg>
-Package pdftex.def Info: ISIC_0012147.jpg  used on input line 812.
+Package pdftex.def Info: ISIC_0012147.jpg  used on input line 814.
 (pdftex.def)             Requested size: 145.07886pt x 96.45999pt.
-<ISIC_0012134_sk.jpg, id=598, 3019.28pt x 2007.5pt>
+<ISIC_0012134_sk.jpg, id=596, 3019.28pt x 2007.5pt>
 File: ISIC_0012134_sk.jpg Graphic file (type jpg)
 <use ISIC_0012134_sk.jpg>
-Package pdftex.def Info: ISIC_0012134_sk.jpg  used on input line 815.
+Package pdftex.def Info: ISIC_0012134_sk.jpg  used on input line 817.
 (pdftex.def)             Requested size: 145.07886pt x 96.45999pt.
-<ISIC_0012369_m.jpg, id=599, 4304.08pt x 2858.68pt>
+<ISIC_0012369_m.jpg, id=597, 4304.08pt x 2858.68pt>
 File: ISIC_0012369_m.jpg Graphic file (type jpg)
 <use ISIC_0012369_m.jpg>
-Package pdftex.def Info: ISIC_0012369_m.jpg  used on input line 818.
+Package pdftex.def Info: ISIC_0012369_m.jpg  used on input line 820.
 (pdftex.def)             Requested size: 145.07886pt x 96.35632pt.
 Package epstopdf Info: Source file: <power-isic2016.eps>
-(epstopdf)                    date: 2024-06-03 12:26:17
+(epstopdf)                    date: 2025-08-05 14:40:26
 (epstopdf)                    size: 19961 bytes
 (epstopdf)             Output file: <power-isic2016-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-03 12:26:21
+(epstopdf)                    date: 2025-08-05 14:40:26
 (epstopdf)                    size: 14611 bytes
 (epstopdf)             Command: <repstopdf --outfile=power-isic2016-eps-converted-to.pdf power-isic2016.eps>
-(epstopdf)             \includegraphics on input line 851.
-Package epstopdf Info: Output file is already uptodate.
-<power-isic2016-eps-converted-to.pdf, id=626, 231.86626pt x 231.86626pt>
-File: power-isic2016-eps-converted-to.pdf Graphic file (type pdf)
-<use power-isic2016-eps-converted-to.pdf>
-Package pdftex.def Info: power-isic2016-eps-converted-to.pdf  used on input line 851.
-(pdftex.def)             Requested size: 145.07886pt x 145.08232pt.
-Package epstopdf Info: Source file: <power-isic2017m.eps>
-(epstopdf)                    date: 2024-06-03 12:26:17
-(epstopdf)                    size: 19749 bytes
-(epstopdf)             Output file: <power-isic2017m-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-03 12:26:21
-(epstopdf)                    size: 14496 bytes
-(epstopdf)             Command: <repstopdf --outfile=power-isic2017m-eps-converted-to.pdf power-isic2017m.eps>
-(epstopdf)             \includegraphics on input line 852.
-Package epstopdf Info: Output file is already uptodate.
-<power-isic2017m-eps-converted-to.pdf, id=627, 231.86626pt x 231.86626pt>
-File: power-isic2017m-eps-converted-to.pdf Graphic file (type pdf)
-<use power-isic2017m-eps-converted-to.pdf>
-Package pdftex.def Info: power-isic2017m-eps-converted-to.pdf  used on input line 852.
-(pdftex.def)             Requested size: 145.07886pt x 145.08232pt.
-Package epstopdf Info: Source file: <power-isic2017sk.eps>
-(epstopdf)                    date: 2024-06-03 12:26:17
-(epstopdf)                    size: 20345 bytes
-(epstopdf)             Output file: <power-isic2017sk-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-03 12:26:21
-(epstopdf)                    size: 14795 bytes
-(epstopdf)             Command: <repstopdf --outfile=power-isic2017sk-eps-converted-to.pdf power-isic2017sk.eps>
 (epstopdf)             \includegraphics on input line 853.
 Package epstopdf Info: Output file is already uptodate.
-<power-isic2017sk-eps-converted-to.pdf, id=628, 231.86626pt x 231.86626pt>
+<power-isic2016-eps-converted-to.pdf, id=624, 231.86626pt x 231.86626pt>
+File: power-isic2016-eps-converted-to.pdf Graphic file (type pdf)
+<use power-isic2016-eps-converted-to.pdf>
+Package pdftex.def Info: power-isic2016-eps-converted-to.pdf  used on input line 853.
+(pdftex.def)             Requested size: 145.07886pt x 145.08232pt.
+Package epstopdf Info: Source file: <power-isic2017m.eps>
+(epstopdf)                    date: 2025-08-05 14:40:26
+(epstopdf)                    size: 19749 bytes
+(epstopdf)             Output file: <power-isic2017m-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-08-05 14:40:26
+(epstopdf)                    size: 14496 bytes
+(epstopdf)             Command: <repstopdf --outfile=power-isic2017m-eps-converted-to.pdf power-isic2017m.eps>
+(epstopdf)             \includegraphics on input line 854.
+Package epstopdf Info: Output file is already uptodate.
+<power-isic2017m-eps-converted-to.pdf, id=625, 231.86626pt x 231.86626pt>
+File: power-isic2017m-eps-converted-to.pdf Graphic file (type pdf)
+<use power-isic2017m-eps-converted-to.pdf>
+Package pdftex.def Info: power-isic2017m-eps-converted-to.pdf  used on input line 854.
+(pdftex.def)             Requested size: 145.07886pt x 145.08232pt.
+Package epstopdf Info: Source file: <power-isic2017sk.eps>
+(epstopdf)                    date: 2025-08-05 14:40:26
+(epstopdf)                    size: 20345 bytes
+(epstopdf)             Output file: <power-isic2017sk-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-08-05 14:40:26
+(epstopdf)                    size: 14795 bytes
+(epstopdf)             Command: <repstopdf --outfile=power-isic2017sk-eps-converted-to.pdf power-isic2017sk.eps>
+(epstopdf)             \includegraphics on input line 855.
+Package epstopdf Info: Output file is already uptodate.
+<power-isic2017sk-eps-converted-to.pdf, id=626, 231.86626pt x 231.86626pt>
 File: power-isic2017sk-eps-converted-to.pdf Graphic file (type pdf)
 <use power-isic2017sk-eps-converted-to.pdf>
-Package pdftex.def Info: power-isic2017sk-eps-converted-to.pdf  used on input line 853.
+Package pdftex.def Info: power-isic2017sk-eps-converted-to.pdf  used on input line 855.
 (pdftex.def)             Requested size: 145.07886pt x 145.08232pt.
- [18 <./ISIC_0012147.jpg> <./ISIC_0012134_sk.jpg> <./ISIC_0012369_m.jpg>] [19 <./power-isic2016-eps-converted-to.pdf> <./power-isic2017m-eps-converted-to.pdf> <./power-isic2017sk-eps-converted-to.pdf>] (./paper.bbl [20]
-Underfull \hbox (badness 4739) in paragraph at lines 148--154
+ [18 <./ISIC_0012147.jpg> <./ISIC_0012134_sk.jpg> <./ISIC_0012369_m.jpg>] (./paper.bbl [19 <./power-isic2016-eps-converted-to.pdf> <./power-isic2017m-eps-converted-to.pdf> <./power-isic2017sk-eps-converted-to.pdf>]
+Underfull \hbox (badness 4739) in paragraph at lines 120--126
 []\T1/txr/m/n/8 S. Shalev-Shwartz, S. Ben-David, []Un-der-stand-ing Ma-chine Learn-ing[], Cam-bridge Uni-ver-sity Press, 2014.  []$\T1/cmtt/m/n/8 doi : 10 . 1017 /
  []
 
-[21]
-Underfull \hbox (badness 3525) in paragraph at lines 402--408
+[20]
+Underfull \hbox (badness 3525) in paragraph at lines 334--340
 []\T1/txr/m/n/8 M. Con-forti, G. Cor-nuéjols, G. Zam-belli, []In-te-ger Pro-gram-ming[], Springer In-ter-na-tional Pub-lish-ing, 2014.  []$\T1/cmtt/m/n/8 doi : 10 . 1007 /
  []
 
-[22]) [23] (./paper.aux)
+[21] [22]) [23] (./paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 570C055CABD25C67EEAF4BA6899C6331;6282.
+(rerunfilecheck)             Checksum: D8B52E00A3D9CCD143658396A735B49F;6302.
  ) 
 Here is how much of TeX's memory you used:
- 16968 strings out of 478287
- 265494 string characters out of 5849289
- 603890 words of memory out of 5000000
- 34676 multiletter control sequences out of 15000+600000
+ 16952 strings out of 478287
+ 265283 string characters out of 5849290
+ 603883 words of memory out of 5000000
+ 34662 multiletter control sequences out of 15000+600000
  554827 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,23n,79p,1916b,733s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,23n,79p,1934b,733s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (23 pages, 11802390 bytes).
+Output written on paper.pdf (23 pages, 11799444 bytes).
 PDF statistics:
- 1113 PDF objects out of 1200 (max. 8388607)
- 896 compressed objects within 9 object streams
- 175 named destinations out of 1000 (max. 500000)
+ 1088 PDF objects out of 1200 (max. 8388607)
+ 871 compressed objects within 9 object streams
+ 173 named destinations out of 1000 (max. 500000)
  256 words of extra memory for PDF output out of 10000 (max. 10000000)
 
